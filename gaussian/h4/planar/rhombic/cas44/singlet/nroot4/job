@@ -1,0 +1,23 @@
+#!/bin/bash
+#run casscf(6,6) E calculations for the rhombic system with constant sidelengths and varying angles
+#uses program writecmatrix.f to write the input file 'rhombicH4.com' for a given length of the diagonal
+# extracts the resulting E from the output file 'rhombicH4.log'  and writes to fort.12
+
+declare -i numsteps=69
+declare -i counter=1
+declare -x stepsize=0.05
+declare -i linenum
+declare -x y=0.5
+while [ $counter -le $numsteps ]; do
+	echo $y > writecmatrix.inp
+	./writecmatrix < writecmatrix.inp >& rhombich4.com
+	g09 < rhombich4.com >& rhombich4.log
+	linenumstring=$(grep -n '... Do an extra-iteration for final printing.' rhombich4.log)
+	linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+	let linenum=$linenum-1
+	estring=$(head -$linenum rhombich4.log | tail -1)
+	e=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+	echo $y $e >> fort.12
+ 	y=$(echo $y + $stepsize | bc)
+	counter+=1
+done

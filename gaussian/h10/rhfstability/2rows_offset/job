@@ -1,0 +1,92 @@
+#!/bin/bash
+# run hf stability calculations for the h8singlet
+
+declare -i linenum
+declare -i mult=1
+declare -x yi=0.25
+declare -x yf=2.5
+declare -x y=$yi
+declare -x step=0.01
+declare -x tinystep=0.001
+declare -i keepgoing=1
+declare -x dist
+declare -i gt0
+declare -i usefinemesh
+declare -a sigpts=( 4.0 ) 
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+declare -a e
+declare -a mult=( 1 3 )
+comfile='h10.com'
+logfile='h10.log'
+chkfile='h10.chk'
+
+echo '#HF isntabilities: hessian eigenvalues' > fort.12
+echo '#y','rrhf','crhf','ruhf' >> fort.12
+#while loop for desired values of y
+while [ $keepgoing -eq 1 ]; do
+#create input file for gaussian
+        echo '%chk='$chkfile > $comfile
+        echo ' ' >> $comfile
+        echo '#t rhf/gen scf(tight,novaracc,noincfock) stable(crhf) guess=mix geom=nocrowd test' >> $comfile
+        echo ' ' >> $comfile
+        x=$(bc <<< "scale=6; $rrt3 / $y")
+        x2=$(bc <<< "scale=6; 2 * $x")
+        x3=$(bc <<< "scale=6; 3 * $x")
+        y2=$(bc <<< "scale=6; 2 * $y")
+        echo 'scf stability calculation for a triangular configuration of 10 H atoms (made up of 8 iscosceles triangles)' >> $comfile
+        echo ' ' >> $comfile
+        echo '0 '$mult >> $comfile
+        echo 'H '$x' 0.0 '$y2 >> $comfile
+        echo 'H '$x3' 0.0 '$y2 >> $comfile
+        echo 'H 0.0 0.0 '$y >> $comfile
+        echo 'H '$x2' 0.0 '$y >> $comfile
+        echo 'H -'$x' 0.0 0.0' >> $comfile
+        echo 'H '$x' 0.0 0.0' >> $comfile
+        echo 'H -'$x2' 0.0 -'$y >> $comfile
+        echo 'H 0.0 0.0 -'$y >> $comfile
+        echo 'H -'$x3' 0.0 -'$y2 >> $comfile
+        echo 'H -'$x' 0.0 -'$y2 >> $comfile
+        echo ' ' >> $comfile
+        echo '@H.gbs' >> $comfile
+        echo ' ' >> $comfile
+        g09 < $comfile >& $logfile
+#grab eigenvals from ouput
+#rrhf
+        stabstring=$(grep -E 'Internal RHF' $logfile)
+        rrhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        linenum=$linenum+1
+#crhf
+        stabstring=$(grep -E 'RRHF.*CRHF' $logfile)
+        crhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#ruhf
+        stabstring=$(grep -E 'RRHF.*RUHF' $logfile)
+        ruhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#write to file stable
+        echo $y $rrhf $crhf $ruhf >> fort.12
+#check if y is near a significant value, and if so use $tinystep
+#if not, use $step
+	usefinemesh=0
+	for p in "${sigpts[@]}"
+	do
+# take abs val of the distance between y and p
+		dist=$(echo $y - $p | bc)
+		gt0=$(echo "$dist > 0.0" | bc -l)
+		if [ $gt0 -eq 0 ] # if dist < 0, multiply by -1
+		then
+			dist=$(bc <<< "scale=6; -1 *  $dist ")
+		fi
+		if [ $usefinemesh -eq 0 ] #only reset usefinemesh if it is 0/false. if true do not modify. 
+		then
+			usefinemesh=$(echo "0.1 > $dist" | bc -l) #usefinemesh is 1/true if .1 > dist
+		fi
+	done
+	if [ $usefinemesh -eq 1 ]
+	then
+ 		y=$(echo $y + $tinystep | bc)
+	else
+ 		y=$(echo $y + $step | bc)
+	fi
+#check if y has surpassed the max. if so keepgoing = 0, is not keepgoing = 1.
+	keepgoing=$(echo "$yf > $y" | bc -l)
+#end of y loop
+done

@@ -1,0 +1,15 @@
+#T RHF/6-31G(d) Test POpt=Z-Matrix
+
+propene single point E
+
+0 1
+C1
+C2 C1 1.34
+C3 C2 1.52 C1  120.0
+H1 C1 1.09 C2 -120.0 C3   0.0
+H2 C1 1.09 C2  120.0 C3   0.0
+H3 C2 1.09 C1 -120.0 C3   0.0
+H4 C3 1.09 C2  109.5 C1   0.0
+H5 C3 1.09 C2  109.5 C1  54.75
+H6 C3 1.09 C2  109.5 C1 -54.75
+

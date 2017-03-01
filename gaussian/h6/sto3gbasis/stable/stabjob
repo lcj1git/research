@@ -1,0 +1,45 @@
+#!/bin/bash
+#run casscf(6,6) E calculations for 6 H atoms in a planar pyramid of isosceles triangles, distorting length of third side relative to others
+#uses program writecmatrix.f to write the input file 'H6.com' for a given side length
+# extracts the resulting E from the output file 'H6.log'  and writes to fort.12
+
+declare -i linenum
+declare -i n=1
+declare -i mult=1
+declare -x y=0.5
+declare -x stepsize=0.025
+declare -i nsteps=140
+declare -i step=1
+declare -i count
+declare -a linnums
+declare -a eigenvals
+
+echo '#HF isntabilities: hessian eigenvalues' > fort.12
+echo '#y','rrhf','crhf','ruhf' >> fort.12
+while [ $step -le $nsteps ]; do
+	echo $y > inp
+	echo $n >> inp
+	echo $mult >> inp
+	echo 'h6.chk' >>inp
+	./writestabinp < inp > h6.com
+	g09 < h6.com >& h6.log
+#grab eigenvals from ouput
+g09 < h6.com >& h6.log
+#grab eigenvals from ouput
+        linenumstring=$(grep -n 'Matrix         Lowest Root    Major Pairs' h6.log)
+        linenumstring=$(echo $linenumstring | grep -o -E '[0-9]+\:')
+        linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+        linenum=$linenum+2
+        stabstring=$(head -$linenum h6.log | tail -1)
+        rrhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]+')
+        linenum=$linenum+1
+        stabstring=$(head -$linenum h6.log | tail -1)
+        crhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]+')
+        linenum=$linenum+1
+        stabstring=$(head -$linenum h6.log | tail -1)
+        ruhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]+')
+        echo $y $rrhf $crhf $ruhf >>fort.12
+	y=$(echo $y + $stepsize | bc)
+	step=$step+1
+done
+

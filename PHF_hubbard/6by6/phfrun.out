@@ -1,0 +1,727 @@
+
+ +------------------------------------------------------+
+ |                                                      |
+ | phflat - program to perform projected HF / HFB based |
+ |          calculations on 1D / 2D spin lattices       |
+ |                                                      |
+ |                             CAJH, v0.02  --  11.2012 |
+ +------------------------------------------------------+
+
+
+  phflat started on sulu.rice.edu at Thu Nov 17 14:46:42 2016.
+  phflat running on up to      4 thread(s).
+
+
+  Hamiltonian parameters :
+
+    iham   =            1  --  Hubbard Hamiltonian
+    uhub   =       8.0000
+    t1hub  =       1.0000
+    t2hub  =       0.0000
+    t3hub  =       0.0000
+
+  Lattice parameters :
+
+    ilatty =            1  --  square 1D / 2D lattice
+    inx    =            6
+    iny    =            6
+    lpbc   =            T
+
+  Number of electrons :
+
+    nup    =           18
+    ndn    =           18
+
+  Method selection :
+
+    iwfnty =            2  --  UHF determinant
+    imethd =            8  --  SG + spin-projected HF
+
+  Optimization parameters :
+
+    iprint =            0
+    igstyp =            0
+    igsnbf =            1
+    igsmix =            5
+    igsnmx =            0
+    maxit  =          512
+    mxfunc =         2048
+    nbuf   =           20
+    gtol   =    1.000E-04
+    iopt   =            1  --  FED type optimization
+
+  Projection parameters :
+
+    imult  =            1
+    ngrdb  =           20
+    igrdb  =            2
+    ikx    =            0
+    iky    =            0
+    sx     =            1
+    sy     =            1
+    sxy    =            1
+
+  State control :
+
+    lread  =            T
+    lsave  =            T
+    lnewdt =            F
+    lnewst =            F
+
+
+  SCF start.
+
+
+ initial values:
+
+ f     =     -15.631299757771
+ gnorm =       0.334410585611
+
+ iter  =                    1
+ nfunc =                    3
+ f     =     -15.651188823204
+ gnorm =       0.224379445862
+ step  =         1.082676E-01
+
+ iter  =                    2
+ nfunc =                    4
+ f     =     -15.671815480923
+ gnorm =       0.166120343322
+ step  =         1.000000E+00
+
+ iter  =                    3
+ nfunc =                    6
+ f     =     -15.675132689051
+ gnorm =       0.096172981790
+ step  =         4.644901E-01
+
+ iter  =                    4
+ nfunc =                    7
+ f     =     -15.676696649968
+ gnorm =       0.075102131898
+ step  =         1.000000E+00
+
+ iter  =                    5
+ nfunc =                    8
+ f     =     -15.680053484966
+ gnorm =       0.058652804577
+ step  =         1.000000E+00
+
+ iter  =                    6
+ nfunc =                    9
+ f     =     -15.680707420768
+ gnorm =       0.103264395289
+ step  =         1.000000E+00
+
+ iter  =                    7
+ nfunc =                   10
+ f     =     -15.681647405644
+ gnorm =       0.039715346342
+ step  =         1.000000E+00
+
+ iter  =                    8
+ nfunc =                   11
+ f     =     -15.682043410609
+ gnorm =       0.024060499980
+ step  =         1.000000E+00
+
+ iter  =                    9
+ nfunc =                   12
+ f     =     -15.682329100763
+ gnorm =       0.027510513140
+ step  =         1.000000E+00
+
+ iter  =                   10
+ nfunc =                   13
+ f     =     -15.682753027822
+ gnorm =       0.041920604217
+ step  =         1.000000E+00
+
+ iter  =                   11
+ nfunc =                   14
+ f     =     -15.683147186799
+ gnorm =       0.030758990603
+ step  =         1.000000E+00
+
+ iter  =                   12
+ nfunc =                   15
+ f     =     -15.683380821920
+ gnorm =       0.018624746817
+ step  =         1.000000E+00
+
+ iter  =                   13
+ nfunc =                   16
+ f     =     -15.683620029198
+ gnorm =       0.017592703784
+ step  =         1.000000E+00
+
+ iter  =                   14
+ nfunc =                   17
+ f     =     -15.683757671547
+ gnorm =       0.016292805864
+ step  =         1.000000E+00
+
+ iter  =                   15
+ nfunc =                   18
+ f     =     -15.683849501849
+ gnorm =       0.029163251172
+ step  =         1.000000E+00
+
+ iter  =                   16
+ nfunc =                   19
+ f     =     -15.683987493121
+ gnorm =       0.013253778791
+ step  =         1.000000E+00
+
+ iter  =                   17
+ nfunc =                   20
+ f     =     -15.684056084418
+ gnorm =       0.012510038773
+ step  =         1.000000E+00
+
+ iter  =                   18
+ nfunc =                   21
+ f     =     -15.684173137725
+ gnorm =       0.015883241731
+ step  =         1.000000E+00
+
+ iter  =                   19
+ nfunc =                   23
+ f     =     -15.684229365216
+ gnorm =       0.016270015029
+ step  =         4.581431E-01
+
+ iter  =                   20
+ nfunc =                   24
+ f     =     -15.684287581947
+ gnorm =       0.010720720402
+ step  =         1.000000E+00
+
+ iter  =                   21
+ nfunc =                   25
+ f     =     -15.684357128251
+ gnorm =       0.010561136450
+ step  =         1.000000E+00
+
+ iter  =                   22
+ nfunc =                   26
+ f     =     -15.684419588259
+ gnorm =       0.013859819281
+ step  =         1.000000E+00
+
+ iter  =                   23
+ nfunc =                   27
+ f     =     -15.684481682940
+ gnorm =       0.014930333399
+ step  =         1.000000E+00
+
+ iter  =                   24
+ nfunc =                   28
+ f     =     -15.684540125498
+ gnorm =       0.009449729472
+ step  =         1.000000E+00
+
+ iter  =                   25
+ nfunc =                   29
+ f     =     -15.684603167993
+ gnorm =       0.011317596710
+ step  =         1.000000E+00
+
+ iter  =                   26
+ nfunc =                   30
+ f     =     -15.684657973356
+ gnorm =       0.014042171695
+ step  =         1.000000E+00
+
+ iter  =                   27
+ nfunc =                   31
+ f     =     -15.684738254792
+ gnorm =       0.012231701454
+ step  =         1.000000E+00
+
+ iter  =                   28
+ nfunc =                   32
+ f     =     -15.684799897208
+ gnorm =       0.012975763353
+ step  =         1.000000E+00
+
+ iter  =                   29
+ nfunc =                   33
+ f     =     -15.684847252265
+ gnorm =       0.010201055569
+ step  =         1.000000E+00
+
+ iter  =                   30
+ nfunc =                   34
+ f     =     -15.684877631983
+ gnorm =       0.008843298683
+ step  =         1.000000E+00
+
+ iter  =                   31
+ nfunc =                   35
+ f     =     -15.684919309741
+ gnorm =       0.008736451460
+ step  =         1.000000E+00
+
+ iter  =                   32
+ nfunc =                   36
+ f     =     -15.684954792129
+ gnorm =       0.012470664941
+ step  =         1.000000E+00
+
+ iter  =                   33
+ nfunc =                   37
+ f     =     -15.684986913395
+ gnorm =       0.007208180097
+ step  =         1.000000E+00
+
+ iter  =                   34
+ nfunc =                   38
+ f     =     -15.685006564650
+ gnorm =       0.006073019987
+ step  =         1.000000E+00
+
+ iter  =                   35
+ nfunc =                   39
+ f     =     -15.685018324971
+ gnorm =       0.009492831014
+ step  =         1.000000E+00
+
+ iter  =                   36
+ nfunc =                   40
+ f     =     -15.685039235920
+ gnorm =       0.006245073877
+ step  =         1.000000E+00
+
+ iter  =                   37
+ nfunc =                   41
+ f     =     -15.685057958002
+ gnorm =       0.006224863331
+ step  =         1.000000E+00
+
+ iter  =                   38
+ nfunc =                   42
+ f     =     -15.685070918087
+ gnorm =       0.005949025967
+ step  =         1.000000E+00
+
+ iter  =                   39
+ nfunc =                   43
+ f     =     -15.685086485714
+ gnorm =       0.006227524123
+ step  =         1.000000E+00
+
+ iter  =                   40
+ nfunc =                   44
+ f     =     -15.685101093518
+ gnorm =       0.006473708020
+ step  =         1.000000E+00
+
+ iter  =                   41
+ nfunc =                   45
+ f     =     -15.685111716143
+ gnorm =       0.004523725310
+ step  =         1.000000E+00
+
+ iter  =                   42
+ nfunc =                   46
+ f     =     -15.685121725506
+ gnorm =       0.004028609194
+ step  =         1.000000E+00
+
+ iter  =                   43
+ nfunc =                   47
+ f     =     -15.685133262122
+ gnorm =       0.005563015182
+ step  =         1.000000E+00
+
+ iter  =                   44
+ nfunc =                   48
+ f     =     -15.685143631219
+ gnorm =       0.005489717034
+ step  =         1.000000E+00
+
+ iter  =                   45
+ nfunc =                   49
+ f     =     -15.685152538256
+ gnorm =       0.004088747794
+ step  =         1.000000E+00
+
+ iter  =                   46
+ nfunc =                   50
+ f     =     -15.685165344703
+ gnorm =       0.004928810748
+ step  =         1.000000E+00
+
+ iter  =                   47
+ nfunc =                   51
+ f     =     -15.685183333616
+ gnorm =       0.007776147470
+ step  =         1.000000E+00
+
+ iter  =                   48
+ nfunc =                   52
+ f     =     -15.685216631616
+ gnorm =       0.009849794269
+ step  =         1.000000E+00
+
+ iter  =                   49
+ nfunc =                   53
+ f     =     -15.685267277396
+ gnorm =       0.013246762986
+ step  =         1.000000E+00
+
+ iter  =                   50
+ nfunc =                   54
+ f     =     -15.685352188212
+ gnorm =       0.013189354220
+ step  =         1.000000E+00
+
+ iter  =                   51
+ nfunc =                   55
+ f     =     -15.685471466482
+ gnorm =       0.015781423441
+ step  =         1.000000E+00
+
+ iter  =                   52
+ nfunc =                   57
+ f     =     -15.685493756558
+ gnorm =       0.015810466605
+ step  =         7.841292E-02
+
+ iter  =                   53
+ nfunc =                   59
+ f     =     -15.685585513941
+ gnorm =       0.017378937473
+ step  =         2.714508E-01
+
+ iter  =                   54
+ nfunc =                   60
+ f     =     -15.685692716597
+ gnorm =       0.016779714784
+ step  =         1.000000E+00
+
+ iter  =                   55
+ nfunc =                   61
+ f     =     -15.685771403194
+ gnorm =       0.018989408155
+ step  =         1.000000E+00
+
+ iter  =                   56
+ nfunc =                   62
+ f     =     -15.685845840566
+ gnorm =       0.012107214171
+ step  =         1.000000E+00
+
+ iter  =                   57
+ nfunc =                   63
+ f     =     -15.685883277057
+ gnorm =       0.016042553908
+ step  =         1.000000E+00
+
+ iter  =                   58
+ nfunc =                   64
+ f     =     -15.685939419395
+ gnorm =       0.012285295294
+ step  =         1.000000E+00
+
+ iter  =                   59
+ nfunc =                   65
+ f     =     -15.685988517562
+ gnorm =       0.009406824156
+ step  =         1.000000E+00
+
+ iter  =                   60
+ nfunc =                   66
+ f     =     -15.686028841192
+ gnorm =       0.007439189372
+ step  =         1.000000E+00
+
+ iter  =                   61
+ nfunc =                   67
+ f     =     -15.686054059836
+ gnorm =       0.010827393151
+ step  =         1.000000E+00
+
+ iter  =                   62
+ nfunc =                   68
+ f     =     -15.686073337700
+ gnorm =       0.005550198533
+ step  =         1.000000E+00
+
+ iter  =                   63
+ nfunc =                   69
+ f     =     -15.686081111274
+ gnorm =       0.004224391969
+ step  =         1.000000E+00
+
+ iter  =                   64
+ nfunc =                   70
+ f     =     -15.686092598996
+ gnorm =       0.004328579072
+ step  =         1.000000E+00
+
+ iter  =                   65
+ nfunc =                   71
+ f     =     -15.686099229003
+ gnorm =       0.008816722178
+ step  =         1.000000E+00
+
+ iter  =                   66
+ nfunc =                   72
+ f     =     -15.686108539695
+ gnorm =       0.004454162085
+ step  =         1.000000E+00
+
+ iter  =                   67
+ nfunc =                   73
+ f     =     -15.686117083659
+ gnorm =       0.003767465122
+ step  =         1.000000E+00
+
+ iter  =                   68
+ nfunc =                   74
+ f     =     -15.686123285608
+ gnorm =       0.003683186030
+ step  =         1.000000E+00
+
+ iter  =                   69
+ nfunc =                   75
+ f     =     -15.686127812096
+ gnorm =       0.007335219621
+ step  =         1.000000E+00
+
+ iter  =                   70
+ nfunc =                   76
+ f     =     -15.686135756358
+ gnorm =       0.002598183559
+ step  =         1.000000E+00
+
+ iter  =                   71
+ nfunc =                   77
+ f     =     -15.686138023304
+ gnorm =       0.002004569694
+ step  =         1.000000E+00
+
+ iter  =                   72
+ nfunc =                   78
+ f     =     -15.686141231102
+ gnorm =       0.002312351240
+ step  =         1.000000E+00
+
+ iter  =                   73
+ nfunc =                   79
+ f     =     -15.686143039829
+ gnorm =       0.004535153164
+ step  =         1.000000E+00
+
+ iter  =                   74
+ nfunc =                   80
+ f     =     -15.686145646483
+ gnorm =       0.001880711449
+ step  =         1.000000E+00
+
+ iter  =                   75
+ nfunc =                   81
+ f     =     -15.686147094564
+ gnorm =       0.001482973802
+ step  =         1.000000E+00
+
+ iter  =                   76
+ nfunc =                   82
+ f     =     -15.686148566973
+ gnorm =       0.001849469306
+ step  =         1.000000E+00
+
+ iter  =                   77
+ nfunc =                   83
+ f     =     -15.686150414509
+ gnorm =       0.002428270302
+ step  =         1.000000E+00
+
+ iter  =                   78
+ nfunc =                   84
+ f     =     -15.686151000287
+ gnorm =       0.002720614427
+ step  =         1.000000E+00
+
+ iter  =                   79
+ nfunc =                   85
+ f     =     -15.686151952311
+ gnorm =       0.000840289617
+ step  =         1.000000E+00
+
+ iter  =                   80
+ nfunc =                   86
+ f     =     -15.686152212900
+ gnorm =       0.000736068103
+ step  =         1.000000E+00
+
+ iter  =                   81
+ nfunc =                   87
+ f     =     -15.686152593535
+ gnorm =       0.000990208643
+ step  =         1.000000E+00
+
+ iter  =                   82
+ nfunc =                   88
+ f     =     -15.686152825518
+ gnorm =       0.001554715706
+ step  =         1.000000E+00
+
+ iter  =                   83
+ nfunc =                   89
+ f     =     -15.686153108008
+ gnorm =       0.000603014330
+ step  =         1.000000E+00
+
+ iter  =                   84
+ nfunc =                   90
+ f     =     -15.686153223598
+ gnorm =       0.000471953315
+ step  =         1.000000E+00
+
+ iter  =                   85
+ nfunc =                   91
+ f     =     -15.686153342252
+ gnorm =       0.000543619283
+ step  =         1.000000E+00
+
+ iter  =                   86
+ nfunc =                   92
+ f     =     -15.686153518060
+ gnorm =       0.000690785816
+ step  =         1.000000E+00
+
+ iter  =                   87
+ nfunc =                   93
+ f     =     -15.686153624661
+ gnorm =       0.000853225046
+ step  =         1.000000E+00
+
+ iter  =                   88
+ nfunc =                   94
+ f     =     -15.686153746517
+ gnorm =       0.000377246119
+ step  =         1.000000E+00
+
+ iter  =                   89
+ nfunc =                   95
+ f     =     -15.686153823747
+ gnorm =       0.000408151761
+ step  =         1.000000E+00
+
+ iter  =                   90
+ nfunc =                   96
+ f     =     -15.686153905754
+ gnorm =       0.000472784875
+ step  =         1.000000E+00
+
+ iter  =                   91
+ nfunc =                   98
+ f     =     -15.686153962614
+ gnorm =       0.000591282801
+ step  =         4.476840E-01
+
+ iter  =                   92
+ nfunc =                   99
+ f     =     -15.686154039178
+ gnorm =       0.000287871865
+ step  =         1.000000E+00
+
+ iter  =                   93
+ nfunc =                  100
+ f     =     -15.686154079701
+ gnorm =       0.000250414246
+ step  =         1.000000E+00
+
+ iter  =                   94
+ nfunc =                  101
+ f     =     -15.686154127048
+ gnorm =       0.000385513646
+ step  =         1.000000E+00
+
+ iter  =                   95
+ nfunc =                  102
+ f     =     -15.686154163946
+ gnorm =       0.000338940355
+ step  =         1.000000E+00
+
+ iter  =                   96
+ nfunc =                  103
+ f     =     -15.686154192902
+ gnorm =       0.000217918521
+ step  =         1.000000E+00
+
+ iter  =                   97
+ nfunc =                  104
+ f     =     -15.686154219751
+ gnorm =       0.000241390260
+ step  =         1.000000E+00
+
+ iter  =                   98
+ nfunc =                  105
+ f     =     -15.686154232697
+ gnorm =       0.000268412205
+ step  =         1.000000E+00
+
+ iter  =                   99
+ nfunc =                  106
+ f     =     -15.686154243583
+ gnorm =       0.000177421672
+ step  =         1.000000E+00
+
+ iter  =                  100
+ nfunc =                  107
+ f     =     -15.686154259495
+ gnorm =       0.000110819227
+ step  =         1.000000E+00
+
+ iter  =                  101
+ nfunc =                  108
+ f     =     -15.686154264448
+ gnorm =       0.000118806095
+ step  =         1.000000E+00
+
+ iter  =                  102
+ nfunc =                  109
+ f     =     -15.686154271262
+ gnorm =       0.000079829782
+ step  =         1.000000E+00
+
+ The minimization terminated without errors.
+
+  Final diagonalization of Hamiltonian matrix (hmstat) among states: 
+
+ hmstat matrix (real) :
+                        1
+        1   -1.568615E+01
+
+ hmstat matrix (imag) :
+                        1
+        1    0.000000E+00
+
+ ovstat matrix (real) :
+                        1
+        1    1.000000E+00
+
+ ovstat matrix (imag) :
+                        1
+        1    0.000000E+00
+
+ hmstat eigenvalues :
+                        1
+        1   -1.568615E+01
+
+ hmstat eigenvectors (real) :
+                        1
+        1    1.000000E+00
+
+ hmstat eigenvectors (imag) :
+                        1
+        1    0.000000E+00
+
+
+  SCF done. Successful completion.
+  Elapsed time:       312.22 sec.
+

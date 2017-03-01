@@ -1,0 +1,27 @@
+#!/bin/bash
+#this script:
+# runs a gaussian b3ylt optimization of benzene with the 6-31g(d) basis (input file = benzene_opt.com)
+# saves the checkpoint file as benzene_opt.chk, and copies that to nmr.chk
+# uses nmr.chk to run a guassian nmr calculation for benzene with rhf in the 6-311g(2d,p) basis (input file = nmr.com)
+# run a gaussian b3ylt optimization of tms with the 6-31g(d) basis (input file = tms_opt.com)
+# saves the checkpoint file as tms_opt.chk, and copies that to nmr.chk
+# uses nmr.chk to run a guassian nmr calculation for tms with rhf in the 6-311g(2d,p) basis (input file = nmr.com)
+
+echo 'optimizing benzene...'
+g09 <benzene_opt.com 2>&1 >benzene_opt.log
+echo 'calculating benzene nmr shift...'
+cp benzene_opt.chk nmr.chk
+g09 <nmr.com 2>&1 >benzene_nmr.log
+echo 'optimizing tms...'
+g09 <tms_opt.com 2>&1 >benzene_opt.log
+cp tms_opt.chk nmr.chk
+echo 'calculating tms nmr shift...'
+g09 <nmr.com 2>&1 >tms_nmr.log
+
+
+echo 'TMS:'
+grep 'C \s* Isotropic' tms_nmr.log
+echo 'benzene:'
+grep 'C .* Isotropic' benzene_nmr.log
+echo 'done.'
+

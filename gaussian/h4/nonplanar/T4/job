@@ -1,0 +1,8 @@
+#!/bin/bash
+
+declare -i number
+
+numberstring=$(grep -n 'Summary' T4model.log)
+number=$(echo $numberstring | grep -o -E '[0-9]+')
+number=$number+20
+head -$number T4model.log | tail -18 > fort.12

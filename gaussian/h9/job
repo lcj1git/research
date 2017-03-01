@@ -1,0 +1,127 @@
+#!/bin/bash
+#run casscf(9,9) E calculations for 9 H atoms in a rhombic configuration made up of 8 isosceles triangles, distorting height and width of the triangles
+declare -i numsteps=1
+declare -i numstates=3
+declare -i counter=1
+declare -i linenum
+declare -i n=2
+declare -x yi=0.25
+declare -x y=$yi
+declare -x stepsize=0.005
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+declare -a e # array of energies for each energy level at a given multiplicity and value of y
+declare -a mult=( 2 ) #( 2 4 ) #array of multiplicities
+declare -i try=1
+declare -i numtries=3
+comfile='h9.com'
+logfile='h9.log'
+declare -a chkfiles # array of checkpoint files for each energy level
+#declare -a intfiles # array of integral files for each nergy level
+for i in 1 2 3
+do
+	chkfiles[$i]='h9n'$i'.chk'
+#	intfiles[$i]='h9n'$i'.int'
+done
+
+for m in "${mult[@]}"
+do
+#for loop for desired multiplicities
+#comment heading for fort.12
+echo '# h9 energies for multiplicity = ' $m > fort.12
+echo '# atoms arranged in rhombic structure of 8 isosceles triangles, definied by single parameter y = the height of the triangles, 2/rt3y = width ' >> fort.12
+echo '# y', 'E(n=1)', 'E(n=2)', 'E(n=3)' >> fort.12
+#while loop for desired values of y
+	while [ $counter -le $numsteps ]; do
+#while loop for desired number of states
+		while [ $n -le $numstates ]; do
+#create g09 input file
+			chkfile=${chkfiles[$n]}
+			intfile=${intfiles[$n]}
+			x=$(bc <<< "scale=6; $rrt3 / $y")
+			x2=$(bc <<< "scale=6; 2 * $x")
+			y2=$(bc <<< "scale=6; 2 * $y")
+			echo '%chk='$chkfile > $comfile
+			echo ' ' >> $comfile
+			if [ $n -eq 1 ]
+			then
+				if [ $try -eq 1 ]
+				then
+					echo '#t casscf(9,9)/gen scf(tight,novaracc,noincfock) geom=nocrowd test' >> $comfile
+				else
+					echo '#t casscf(9,9)/gen scf(tight,novaracc,noincfock) scf=restart guess=read geom=check geom=nocrowd test' >> $comfile
+				fi
+			else
+				if [ $try -eq 1 ]
+				then
+					echo '#t casscf(9,9,nroot='$n')/gen scf(tight,novaracc,noincfock) geom=nocrowd test' >> $comfile
+				else
+					echo '#t casscf(9,9,nroot='$n')/gen scf(tight,novaracc,noincfock) scf=restart guess=read geom=check geom=nocrowd test' >> $comfile
+				fi
+			fi
+			echo ' ' >> $comfile
+			echo 'mbs cascf calculation for a rhombic configuration of 9 H atoms (made up of 8 iscosceles triangles), param y='$y' try #'$try >> $comfile
+			echo ' ' >> $comfile
+			echo '0 '$m >> $comfile
+			if [ $try -eq 1 ]
+			then
+				echo 'H 0.0 0.0 '$y2 >> $comfile
+				echo 'H '$x' 0.0 '$y >> $comfile
+				echo 'H -'$x' 0.0 '$y >> $comfile
+				echo 'H 0.0 0.0 0.0' >> $comfile
+				echo 'H '$x2' 0.0 0.0' >> $comfile
+				echo 'H -'$x2' 0.0 0.0' >> $comfile
+				echo 'H 0.0 0.0 -'$y2 >> $comfile
+				echo 'H '$x' 0.0 -'$y >> $comfile
+				echo 'H -'$x' 0.0 -'$y >> $comfile
+			fi
+			echo ' ' >> $comfile
+			echo '@H.gbs' >> $comfile
+			echo ' ' >> $comfile
+#run cas(6,6) job
+			g09 < $comfile >& $logfile
+#grab e from output
+			linenumstring=$(grep -n '... Do an extra-iteration for final printing.' $logfile)
+			linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+			if [ $linenum -gt 0 ]
+			then
+				linenum=$linenum-1
+				estring=$(head -$linenum $logfile | tail -1)
+				e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+				n+=1 #move on to next energy level if calculation converged
+				try=1
+			else
+				linenumstring=$(grep -n 'Convergence failure' $logfile)
+                                linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+                                linenum=$linenum-1
+                                estring=$(head -$linenum $logfile | tail -1)
+                                failede=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+				echo 'y='$y 'n='$n 'try#'$try 'last iteration E='$failede >> 'convinfo'
+				if [ $try -lt $numtries ] #if not reached $numtries
+				then
+					try+=1
+				else
+					e[$n]='FC'
+					try=1
+					n+=1 #move on to next energy level if $try has reached $numtries
+				fi
+			fi
+#end of energy level n loop
+		done
+		n=1
+#write e's to fort.12
+		echo $y "${e[@]}" >> fort.12
+ 		y=$(echo $y + $stepsize | bc)
+		counter+=1
+#end of y loop
+	done
+	if [ $m -eq 2 ] 
+	then
+		mv fort.12 h9doublet
+	elif [ $m -eq 4 ]
+	then
+		mv fort.12 h9quartet
+	fi
+	counter=1
+	y=$yi
+#end of multiplicity m loop
+done

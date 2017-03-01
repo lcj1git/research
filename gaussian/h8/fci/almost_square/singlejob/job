@@ -1,0 +1,60 @@
+#!/bin/bash
+#run casscf(8,8) E calculations for 6 H atoms in a planar pyramid of isosceles triangles, distorting length of third side relative to others
+
+declare -i linenum
+declare -i n=2
+declare -i mult=1
+declare -x y=0.2900
+declare -x m=1
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+comfile='h8.com'
+logfile='h8.log'
+chkfile='h8.chk'
+declare -a e
+
+echo '%chk='$chkfile > $comfile
+echo ' ' >> $comfile
+if [ $n -eq 1 ]
+then
+	echo '#t casscf(8,8)/gen scf(tight,novaracc,noincfock) geom=nocrowd davidsondiag test' >> $comfile
+else
+	echo '#t casscf(8,8,nroot='$n', fulldiag)/gen scf(tight,novaracc,noincfock) geom=nocrowd test' >> $comfile
+fi
+echo ' ' >> $comfile
+x=$(bc <<< "scale=6; $rrt3 / $y")
+x2=$(bc <<< "scale=6; $x * 2")
+y2=$(bc <<< "scale=6; $y * 2")
+echo 'mbs cascf calculation for a triangular lattice of 8 H atoms height=y='$y',base=2/rt3y='$x2 >> $comfile
+echo ' ' >> $comfile
+echo '0 '$m >> $comfile
+echo 'H 0.0 0.0 '$y >> $comfile
+echo 'H '$x' 0.0 0.0' >> $comfile
+echo 'H -'$x' 0.0 0.0' >> $comfile
+echo 'H 0.0 0.0 -'$y >> $comfile
+echo 'H '$x2' 0.0 -'$y >> $comfile
+echo 'H -'$x2' 0.0 -'$y >> $comfile
+echo 'H '$x' 0.0 -'$y2 >> $comfile
+echo 'H -'$x' 0.0 -'$y2 >> $comfile
+echo ' ' >> $comfile
+echo '@H.gbs' >> $comfile
+echo ' ' >> $comfile
+#run cas(8,8) job
+g09 < $comfile >& $logfile
+estring=$(grep 'EIGENVALUE' $logfile |tail -1)
+e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]{5}[0-9]*\s*')
+if [[ ${e[$n]} = "" ]]
+then
+	linenumstring=$(grep -n '... Do an extra-iteration for final printing.' $logfile)
+	linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+	linenum=$linenum-1
+	estring=$(head -$linenum $logfile | tail -1)
+	e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+	if [[ ${e[$n]} = "" ]]
+	then
+		e[$n]='FC'
+	fi
+fi
+echo $estring
+echo ${e[$n]}
+n+=1
+

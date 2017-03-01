@@ -1,0 +1,101 @@
+#!/bin/bash
+#run casscf(6,6) E calculations for 6 H atoms in a planar pyramid of isosceles triangles, distorting length of third side relative to others
+#uses program writecmatrix.f to write the input file 'H6.com' for a given side length
+# extracts the resulting E from the output file 'H6.log'  and writes to fort.12
+
+declare -i numsteps=140
+declare -i numstates=1
+declare -i counter=1
+declare -i linenum
+declare -i n=1
+declare -i mult=1
+declare -x y=0.5
+declare -x stepsize=0.025
+declare -a e
+declare -a stab
+declare -a mult=( 1 3 )
+
+for m in "${mult[@]}"
+do
+#for loop for desired multiplicities
+#comment heading for fort.12
+echo '# h6 energies for multiplicity = ' $m > fort.12
+echo '# atoms arranged in pyramid structure of four isosceles triangles, definied by single parameter y = the height of the triangles ' >> fort.12
+echo '# y', 'E(n=1)', 'E(n=2)', 'E(n=3)', 'E(n=4)', 'E(n=5)', 'rrhf1', 'rrhf2', 'rrhf3' >> fort.12
+#comment heading for fort.13
+echo '# h6 rrhf, crhf, and ruhf instability matrix eigen values' > fort.13
+echo '# atoms arranged in pyramid structure of four isosceles triangles, definied by single parameter y = the height of the triangles ' >> fort.13
+echo '# y', 'rrhf', 'crhf', 'ruhf' >> fort.13
+#while loop for desired values of y
+	while [ $counter -le $numsteps ]; do
+#while loop for desired number of states
+		while [ $n -le $numstates ]; do
+#write param to input file
+	       	 	echo $y > inp
+			echo $n >> inp
+			echo $m >> inp
+			echo h6.chk >> inp
+#create g09 input file
+			./writeinp_e < inp >& h6.com
+#run cas(6,6) job
+#			g09 < h6.com >& h6.log
+#grab e from output
+			linenumstring=$(grep -n '... Do an extra-iteration for final printing.' h6.log)
+			linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+			linenum=$linenum-1
+			estring=$(head -$linenum h6.log | tail -1)
+			e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+#if multiplicity is 1 and in ground state, look for rrhf, crhf, and ruhf instabilities
+			if [ $m -eq 1 ]
+			then
+			if [ $n -eq 1 ]
+			then
+#write param to input file
+				./writeinp_stab < inp >& h6.com
+#run stable(crhf) job
+				g09 < h6.com >& h6.log
+#grab eigenvals from ouput
+				linenumstring=$(grep -n 'Matrix         Lowest Root    Major Pairs' h6.log)
+				linenumstring=$(echo $linenumstring | grep -o -E '[0-9]+\:')
+				linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+				linenum=$linenum+2
+				stabstring=$(head -$linenum h6.log | tail -1)
+				rrhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]+')
+				linenum=$linenum+1
+				stabstring=$(head -$linenum h6.log | tail -1)
+				crhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]+')
+				linenum=$linenum+1
+				stabstring=$(head -$linenum h6.log | tail -1)
+				ruhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]+')
+				echo $y $rrhf $crhf $ruhf >>fort.13
+# write eigenvals to fort.13
+			fi
+			fi
+			n+=1
+#end of energy level n loop
+		done
+		n=1
+#write e's to fort.12
+		echo $y "${e[@]}" >> fort.12
+ 		y=$(echo $y + $stepsize | bc)
+		counter+=1
+#end of y loop
+	done
+	if [ $m -eq 1 ] 
+	then
+		mv fort.12 h6singlet
+		if [ $n -eq 1 ]
+		then
+			mv fort.13 h6singlet_stab
+		fi
+	elif [ $m -eq 3 ]
+	then
+		mv fort.12 h6triplet
+	fi
+	mult+=2
+	counter=1
+	y=0.5
+#end of multiplicity m loop
+done
+rm inp
+rm fort.13

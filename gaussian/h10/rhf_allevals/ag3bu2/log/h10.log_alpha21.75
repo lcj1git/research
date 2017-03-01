@@ -1,0 +1,799 @@
+ Entering Gaussian System, Link 0=g09
+ AtFile(1): H.gbs
+            H     0
+            S   10   1.00
+               1000.000000000000            0.000068713567
+                316.227766000000            0.000169141320
+                100.000000000000            0.000823394812
+                 31.622776600000            0.003425569236
+                 10.000000000000            0.013951996000
+                  3.162277660000            0.056909313560
+                  1.000000000000            0.198286399900
+                  0.316227766000            0.496922426700
+                  0.100000000000            0.369846276400
+                  0.031622776600            0.003752720039
+            ****
+ Initial command:
+ /projects/guscus/apps/gau/g09-e1/g09/l1.exe "/users/lcj1/gaussian/h10/2rows_uhf/ag3bu2/Gau-20652.inp" -scrdir="/users/lcj1/gaussian/h10/2rows_uhf/ag3bu2/"
+ Entering Link 1 = /projects/guscus/apps/gau/g09-e1/g09/l1.exe PID=     20653.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2015,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision E.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  ES64L-G09RevE.01 30-Nov-2015
+                22-Feb-2017 
+ ******************************************
+ %chk=h10.chk
+ ----------------------------------------------------------------------
+ #rhf/gen scf(symm,tight,novaracc,noincfock,fulldiag) stable=opt guess=
+ read geom=nocrowd test
+ ----------------------------------------------------------------------
+ 1/38=1/1;
+ 2/12=1,17=6,18=5,40=1/2;
+ 3/5=7,11=2,16=1,25=1,30=1,116=1/1,2,3;
+ 4/5=1,9=4/1;
+ 5/5=100002,15=2,16=1,32=2,38=6/2;
+ 6/7=2,8=2,9=2,10=2,28=1/1;
+ 8/6=1,10=90,11=11/1;
+ 9/8=-3,42=1,46=1/14;
+ 5/5=100002,8=3,16=1,17=40,32=2,38=6/8(-2);
+ 6/7=2,8=2,9=2,10=2,28=1/1;
+ 99/5=1,9=1/99;
+ ----------------------------------------------------------------------
+ hf stability analysis of h10 triangular lattice, y= 0.4799368795303601
+ 3
+ ----------------------------------------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ H
+ H                    1     1.29518 
+ H                    1     1.29518  2     136.5 
+ H                    2     1.29518  1     43.5     3     0.       0
+ H                    3     1.29518  1     180.     2     0.       0
+ H                    4     1.29518  2     180.     1     0.       0
+ H                    5     1.29518  3     180.     2     0.       0
+ H                    6     1.29518  4     180.     1     0.       0
+ H                    7     1.29518  5     180.     2     0.       0
+ H                    8     1.29518  6     180.     1     0.       0
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.000000    0.000000
+      2          1           0        0.000000    0.000000    1.295175
+      3          1           0        0.891540    0.000000   -0.939487
+      4          1           0        0.891540    0.000000    0.355688
+      5          1           0        1.783080    0.000000   -1.878974
+      6          1           0        1.783080    0.000000   -0.583799
+      7          1           0        2.674620    0.000000   -2.818461
+      8          1           0        2.674620    0.000000   -1.523286
+      9          1           0        3.566160    0.000000   -3.757948
+     10          1           0        3.566160    0.000000   -2.462773
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  H    0.000000
+     2  H    1.295175   0.000000
+     3  H    1.295175   2.405943   0.000000
+     4  H    0.959874   1.295175   1.295175   0.000000
+     5  H    2.590351   3.640686   1.295175   2.405943   0.000000
+     6  H    1.876218   2.590351   0.959874   1.295175   1.295175
+     7  H    3.885526   4.906689   2.590351   3.640686   1.295175
+     8  H    3.077985   3.885526   1.876218   2.590351   0.959874
+     9  H    5.180701   6.184784   3.885526   4.906689   2.590351
+    10  H    4.333906   5.180701   3.077985   3.885526   1.876218
+                    6          7          8          9         10
+     6  H    0.000000
+     7  H    2.405943   0.000000
+     8  H    1.295175   1.295175   0.000000
+     9  H    3.640686   1.295175   2.405943   0.000000
+    10  H    2.590351   0.959874   1.295175   1.295175   0.000000
+ Stoichiometry    H10
+ Framework group  C2H[SGH(H10)]
+ Deg. of freedom     9
+ Full point group                 C2H     NOp   4
+ Largest Abelian subgroup         C2H     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        1.783080   -1.231386   -0.000000
+      2          1           0        1.783080   -2.526562   -0.000000
+      3          1           0        0.891540   -0.291899   -0.000000
+      4          1           0        0.891540   -1.587075   -0.000000
+      5          1           0        0.000000    0.647588    0.000000
+      6          1           0       -0.000000   -0.647588    0.000000
+      7          1           0       -0.891540    1.587075   -0.000000
+      8          1           0       -0.891540    0.291899    0.000000
+      9          1           0       -1.783080    2.526562   -0.000000
+     10          1           0       -1.783080    1.231386   -0.000000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    269.9246955     13.9737434     13.2859428
+ General basis read from cards:  (5D, 7F)
+ There are     5 symmetry adapted cartesian basis functions of AG  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of BG  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of AU  symmetry.
+ There are     5 symmetry adapted cartesian basis functions of BU  symmetry.
+ There are     5 symmetry adapted basis functions of AG  symmetry.
+ There are     0 symmetry adapted basis functions of BG  symmetry.
+ There are     0 symmetry adapted basis functions of AU  symmetry.
+ There are     5 symmetry adapted basis functions of BU  symmetry.
+    10 basis functions,   100 primitive gaussians,    10 cartesian basis functions
+     5 alpha electrons        5 beta electrons
+       nuclear repulsion energy        12.4206379855 Hartrees.
+ NAtoms=   10 NActive=   10 NUniq=    5 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned on.
+ One-electron integrals computed using PRISM.
+ NBasis=    10 RedAO= T EigKep=  1.88D-01  NBF=     5     0     0     5
+ NBsUse=    10 1.00D-06 EigRej= -1.00D+00 NBFU=     5     0     0     5
+ Initial guess from the checkpoint file:  "h10.chk"
+ B after Tr=     0.000000   -0.000000   -0.000000
+         Rot=    0.703166   -0.000000    0.000000    0.711026 Ang=  90.64 deg.
+ Initial guess orbital symmetries:
+       Occupied  (AG) (BU) (AG) (BU) (AG)
+       Virtual   (BU) (BU) (AG) (BU) (AG)
+ Keep R1 ints in memory in symmetry-blocked form, NReq=877551.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -4.65944355974     A.U. after   15 cycles
+            NFock= 15  Conv=0.13D-08     -V/T= 1.8743
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (AG) (BU) (AG) (BU) (AG)
+       Virtual   (BU) (BU) (AG) (BU) (AG)
+ The electronic state is 1-AG.
+ Alpha  occ. eigenvalues --   -0.84725  -0.74404  -0.57877  -0.37024  -0.13042
+ Alpha virt. eigenvalues --   -0.02455   0.16032   0.16935   0.36370   0.53281
+          Condensed to atoms (all electrons):
+               1          2          3          4          5          6
+     1  H    0.998342  -0.189012   0.126484   0.231661  -0.060026  -0.160042
+     2  H   -0.189012   1.331517  -0.125267   0.192158   0.015649   0.007336
+     3  H    0.126484  -0.125267   1.112474  -0.036598  -0.247255   0.282984
+     4  H    0.231661   0.192158  -0.036598   0.511754  -0.011735  -0.046499
+     5  H   -0.060026   0.015649  -0.247255  -0.011735   0.984647   0.169372
+     6  H   -0.160042   0.007336   0.282984  -0.046499   0.169372   0.984647
+     7  H   -0.000018   0.000173  -0.006469   0.001406  -0.046499  -0.011735
+     8  H    0.019334  -0.000015  -0.098075  -0.006469   0.282984  -0.247255
+     9  H   -0.001231   0.000137  -0.000015   0.000173   0.007336   0.015649
+    10  H    0.005208  -0.001231   0.019334  -0.000018  -0.160042  -0.060026
+               7          8          9         10
+     1  H   -0.000018   0.019334  -0.001231   0.005208
+     2  H    0.000173  -0.000015   0.000137  -0.001231
+     3  H   -0.006469  -0.098075  -0.000015   0.019334
+     4  H    0.001406  -0.006469   0.000173  -0.000018
+     5  H   -0.046499   0.282984   0.007336  -0.160042
+     6  H   -0.011735  -0.247255   0.015649  -0.060026
+     7  H    0.511754  -0.036598   0.192158   0.231661
+     8  H   -0.036598   1.112474  -0.125267   0.126484
+     9  H    0.192158  -0.125267   1.331517  -0.189012
+    10  H    0.231661   0.126484  -0.189012   0.998342
+ Mulliken charges:
+               1
+     1  H    0.029303
+     2  H   -0.231444
+     3  H   -0.027596
+     4  H    0.164168
+     5  H    0.065570
+     6  H    0.065570
+     7  H    0.164168
+     8  H   -0.027596
+     9  H   -0.231444
+    10  H    0.029303
+ Sum of Mulliken charges =   0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+ Electronic spatial extent (au):  <R**2>=            177.7325
+ Charge=              0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.0000    Y=             -0.0000    Z=              0.0000  Tot=              0.0000
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=            -19.1561   YY=            -25.8093   ZZ=            -12.8021
+   XY=              9.7223   XZ=              0.0000   YZ=             -0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              0.0997   YY=             -6.5535   ZZ=              6.4538
+   XY=              9.7223   XZ=              0.0000   YZ=             -0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=             -0.0000  YYY=             -0.0000  ZZZ=              0.0000  XYY=             -0.0000
+  XXY=             -0.0000  XXZ=              0.0000  XZZ=             -0.0000  YZZ=              0.0000
+  YYZ=              0.0000  XYZ=             -0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=           -166.4969 YYYY=           -329.4629 ZZZZ=            -15.3718 XXXY=            103.1766
+ XXXZ=              0.0000 YYYX=            151.0860 YYYZ=             -0.0000 ZZZX=              0.0000
+ ZZZY=             -0.0000 XXYY=           -108.3657 XXZZ=            -27.4829 YYZZ=            -37.8440
+ XXYZ=             -0.0000 YYXZ=              0.0000 ZZXY=             24.7303
+ N-N= 1.242063798554D+01 E-N=-3.414785673743D+01  KE= 5.329146512608D+00
+ Symmetry AG   KE= 3.186678133820D+00
+ Symmetry BG   KE= 0.000000000000D+00
+ Symmetry AU   KE= 0.000000000000D+00
+ Symmetry BU   KE= 2.142468378788D+00
+ Range of M.O.s used for correlation:     1    10
+ NBasis=    10 NAE=     5 NBE=     5 NFC=     0 NFV=     0
+ NROrb=     10 NOA=     5 NOB=     5 NVA=     5 NVB=     5
+ Keep R1 and R2 ints in memory in symmetry-blocked form, NReq=802982.
+ Orbital symmetries:
+       Occupied  (AG) (BU) (AG) (BU) (AG)
+       Virtual   (BU) (BU) (AG) (BU) (AG)
+    24 initial guesses have been made.
+ Convergence on wavefunction:    0.001000000000000
+ Iteration     1 Dimension    24 NMult     0 NNew     24
+ CISAX will form    24 AO SS matrices at one time.
+ New state      1 was old state      2
+ Iteration     2 Dimension    44 NMult    24 NNew     20
+ Iteration     3 Dimension    47 NMult    44 NNew      3
+ Cease iterating as an instability has been found.
+ ***********************************************************************
+ Stability analysis using <AA,BB:AA,BB> singles matrix:
+ ***********************************************************************
+
+ Eigenvectors of the stability matrix:
+ 
+ Eigenvector   1:      Triplet-BU   Eigenvalue=-0.2757901  <S**2>=2.000
+       3 ->  6        -0.13842
+       5 ->  6         0.58414
+       5 ->  7        -0.34417
+ 
+ Eigenvector   2:      Triplet-BU   Eigenvalue=-0.1186627  <S**2>=2.000
+       4 ->  8         0.23269
+       5 ->  6         0.36755
+       5 ->  7         0.54309
+ 
+ Eigenvector   3:      Triplet-AG   Eigenvalue=-0.0806494  <S**2>=2.000
+       3 ->  8         0.10115
+       4 ->  6         0.11781
+       4 ->  7         0.35019
+       5 ->  8         0.58477
+ 
+ Eigenvector   4:      Singlet-BU   Eigenvalue=-0.0364569  <S**2>=0.000
+       5 ->  6         0.65544
+       5 ->  7         0.23722
+ 
+ Eigenvector   5:      Singlet-AG   Eigenvalue= 0.1003504  <S**2>=0.000
+       4 ->  6         0.53097
+       5 ->  8         0.45745
+ 
+ Eigenvector   6:      Singlet-AG   Eigenvalue= 0.1330098  <S**2>=0.000
+       3 ->  8        -0.10370
+       4 ->  6        -0.45612
+       4 ->  7        -0.13135
+       5 ->  8         0.50765
+ SavETr:  write IOETrn=   770 NScale= 10 NData=  16 NLR=1 NState=    6 LETran=     118.
+ The wavefunction has an RHF -> UHF instability.
+ Keep R1 and R2 ints in memory in symmetry-blocked form, NReq=858890.
+ The two search directions are symmetric.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  5 DX=  1.33D-01 DF= -8.37D-05 DXR=  7.24D-02 DFR=  5.23D-03 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX= -1.59D-01 DF= -1.11D-05 DXR=  9.12D-02 DFR=  8.39D-03 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX= -3.12D-02 DF= -2.02D-07 DXR=  1.76D-02 DFR=  3.11D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=2.25D-03 Max=8.56D-03 NDo=     1
+ AX will form     1 AO Fock derivatives at one time.
+ LinEq1:  Iter=  1 NonCon=     1 RMS=7.93D-04 Max=1.99D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.11D-04 Max=2.84D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=4.05D-05 Max=1.57D-04 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=6.78D-06 Max=1.93D-05 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=8.84D-07 Max=1.86D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.63D-07 Max=3.59D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=2.42D-08 Max=4.70D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=2.76D-09 Max=6.27D-09 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=4.62D-10 Max=1.24D-09 NDo=     1
+ Linear equations converged to 1.000D-09 1.000D-08 after     9 iterations.
+     Minimum is close to point  2 DX=  8.82D-03 DF= -6.96D-08 DXR=  8.75D-03 DFR=  7.65D-05 which will be used.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=4.12D-04 Max=1.45D-03 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=1.06D-04 Max=3.37D-04 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=2.63D-05 Max=7.05D-05 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=1.06D-05 Max=2.91D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=2.21D-06 Max=4.52D-06 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=5.37D-07 Max=1.59D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=9.06D-08 Max=1.65D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=1.26D-08 Max=4.10D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=1.68D-09 Max=3.90D-09 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=2.05D-10 Max=4.36D-10 NDo=     1
+ Linear equations converged to 1.000D-09 1.000D-08 after     9 iterations.
+     Minimum is close to point  2 DX=  3.69D-02 DF= -1.91D-08 DXR=  3.55D-02 DFR=  1.27D-03 which will be used.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=9.41D-06 Max=2.59D-05 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.74D-06 Max=9.10D-06 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=3.98D-07 Max=9.31D-07 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=1.61D-07 Max=6.13D-07 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=4.65D-08 Max=1.24D-07 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=8.36D-09 Max=2.26D-08 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.75D-09 Max=4.37D-09 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     0 RMS=1.96D-10 Max=5.25D-10 NDo=     1
+ Linear equations converged to 3.655D-10 3.655D-09 after     7 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=1.29D-07 Max=3.44D-07 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=2.49D-08 Max=4.94D-08 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=5.90D-09 Max=1.53D-08 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=1.24D-09 Max=2.92D-09 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=3.74D-10 Max=1.38D-09 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=1.17D-10 Max=2.75D-10 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=3.82D-11 Max=7.93D-11 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     0 RMS=7.41D-12 Max=1.90D-11 NDo=     1
+ Linear equations converged to 8.571D-12 8.571D-11 after     7 iterations.
+ Density matrix breaks symmetry, PCut= 1.00D-04
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix is not symmetric, so final MOs not symmetrized.
+ SCF Done:  E(UHF) =  -4.82808762150     a.u. after   10 cycles
+            Convg  =    0.1439D-07                    66 Fock formations.
+              S**2 =  1.0814                  -V/T =  1.9229
+ <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 0.0000 <S**2>= 1.0814 S= 0.6539
+ <L.S>= 0.000000000000E+00
+ Annihilation of the first spin contaminant:
+ S**2 before annihilation     1.0814,   after     0.8711
+ Range of M.O.s used for correlation:     1    10
+ NBasis=    10 NAE=     5 NBE=     5 NFC=     0 NFV=     0
+ NROrb=     10 NOA=     5 NOB=     5 NVA=     5 NVB=     5
+ Keep R1 and R2 ints in memory in symmetry-blocked form, NReq=802982.
+ Orbital symmetries:
+ Alpha Orbitals:
+       Occupied  (BG) (BG) (BG) (BG) (BG)
+       Virtual   (BG) (BG) (BG) (BG) (BG)
+ Beta  Orbitals:
+       Occupied  (BG) (BG) (BG) (BG) (BG)
+       Virtual   (BG) (BG) (BG) (BG) (BG)
+    12 initial guesses have been made.
+ Convergence on wavefunction:    0.001000000000000
+ Iteration     1 Dimension    12 NMult     0 NNew     12
+ CISAX will form    12 AO SS matrices at one time.
+ Iteration     2 Dimension    24 NMult    12 NNew     12
+ Iteration     3 Dimension    27 NMult    24 NNew      3
+ Iteration     4 Dimension    30 NMult    27 NNew      3
+ Iteration     5 Dimension    33 NMult    30 NNew      3
+ ***********************************************************************
+ Stability analysis using <AA,BB:AA,BB> singles matrix:
+ ***********************************************************************
+
+ Eigenvectors of the stability matrix:
+ 
+ Eigenvector   1:  2.556-AG   Eigenvalue=-0.0091581  <S**2>=1.383
+      3A ->  7A        0.14398
+      4A ->  6A       -0.25800
+      4A ->  7A        0.14592
+      4A ->  8A        0.24078
+      5A ->  6A        0.46583
+      5A ->  7A        0.29808
+      3B ->  7B       -0.14398
+      4B ->  6B        0.25800
+      4B ->  7B       -0.14592
+      4B ->  8B       -0.24078
+      5B ->  6B       -0.46583
+      5B ->  7B       -0.29808
+ SavETr:  write IOETrn=   770 NScale= 10 NData=  16 NLR=1 NState=    1 LETran=      28.
+ The wavefunction has an internal instability.
+ Keep R1 and R2 ints in memory in symmetry-blocked form, NReq=858890.
+ The two search directions are symmetric.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX=  6.05D-02 DF= -2.21D-07 DXR=  2.19D-02 DFR=  4.80D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX= -1.86D-01 DF= -3.22D-06 DXR=  7.72D-02 DFR=  6.00D-03 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX= -5.75D-02 DF= -4.73D-07 DXR=  2.68D-02 DFR=  7.21D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX=  1.38D-02 DF= -3.75D-08 DXR=  7.23D-03 DFR=  5.22D-05 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX=  1.45D-01 DF= -4.75D-06 DXR=  7.87D-02 DFR=  6.23D-03 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX=  1.02D-01 DF= -2.42D-06 DXR=  5.67D-02 DFR=  3.22D-03 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX= -4.93D-02 DF= -5.58D-07 DXR=  2.82D-02 DFR=  7.93D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  1 and  2.
+     Minimum is close to point  2 DX= -8.60D-02 DF= -3.59D-06 DXR=  5.02D-02 DFR=  5.76D-03 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  1 and  2.
+     Minimum is close to point  2 DX= -1.48D-01 DF= -9.49D-06 DXR=  9.51D-02 DFR=  1.72D-02 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  1 and  2.
+     Minimum is close to point  2 DX= -1.21D-01 DF= -6.04D-06 DXR=  8.17D-02 DFR=  1.23D-02 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Accept linear search using points  1 and  2.
+     Minimum is close to point  2 DX= -2.88D-02 DF= -2.98D-07 DXR=  1.96D-02 DFR=  7.24D-04 which will be used.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+ Gradient too large for Newton-Raphson -- use scaled steepest descent instead.
+     Minimum is close to point  2 DX=  5.23D-03 DF= -2.96D-09 DXR=  3.26D-03 DFR=  1.06D-05 which will be used.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=2.50D-03 Max=1.25D-02 NDo=     1
+ AX will form     1 AO Fock derivatives at one time.
+ LinEq1:  Iter=  1 NonCon=     1 RMS=1.27D-03 Max=5.18D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=6.48D-05 Max=3.04D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=2.08D-05 Max=7.41D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=3.27D-06 Max=7.08D-06 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=6.37D-07 Max=1.78D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.52D-07 Max=4.77D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=2.98D-08 Max=6.24D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=6.85D-09 Max=1.51D-08 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     1 RMS=1.37D-09 Max=3.16D-09 NDo=     1
+ LinEq1:  Iter= 10 NonCon=     0 RMS=2.22D-10 Max=6.04D-10 NDo=     1
+ Linear equations converged to 1.000D-09 1.000D-08 after    10 iterations.
+     Accept linear search using points  1 and  2.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=1.34D-03 Max=3.38D-03 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=4.21D-04 Max=2.08D-03 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.52D-04 Max=6.00D-04 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=3.11D-05 Max=1.01D-04 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=5.94D-06 Max=1.35D-05 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=1.05D-06 Max=3.44D-06 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=1.90D-07 Max=5.31D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=3.51D-08 Max=7.19D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=7.01D-09 Max=2.24D-08 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     1 RMS=1.61D-09 Max=4.35D-09 NDo=     1
+ LinEq1:  Iter= 10 NonCon=     0 RMS=3.73D-10 Max=1.07D-09 NDo=     1
+ Linear equations converged to 1.000D-09 1.000D-08 after    10 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=2.02D-04 Max=6.01D-04 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=6.13D-05 Max=2.61D-04 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.82D-05 Max=5.01D-05 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=4.48D-06 Max=1.40D-05 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=1.05D-06 Max=3.55D-06 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=2.14D-07 Max=5.02D-07 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=4.91D-08 Max=1.20D-07 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=8.35D-09 Max=3.01D-08 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     1 RMS=1.47D-09 Max=3.54D-09 NDo=     1
+ LinEq1:  Iter=  9 NonCon=     0 RMS=4.01D-10 Max=1.08D-09 NDo=     1
+ Linear equations converged to 1.000D-09 1.000D-08 after     9 iterations.
+     Accept linear search using points  1 and  2.
+     Minimum is close to point  2 DX= -8.32D-03 DF= -2.00D-10 DXR=  8.39D-03 DFR=  7.09D-05 which will be used.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=2.14D-06 Max=5.78D-06 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=4.81D-07 Max=1.49D-06 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=1.40D-07 Max=3.79D-07 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=4.17D-08 Max=1.64D-07 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=8.56D-09 Max=2.40D-08 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=2.18D-09 Max=7.07D-09 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=5.33D-10 Max=1.43D-09 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     1 RMS=1.18D-10 Max=3.63D-10 NDo=     1
+ LinEq1:  Iter=  8 NonCon=     0 RMS=1.84D-11 Max=4.26D-11 NDo=     1
+ Linear equations converged to 9.344D-11 9.344D-10 after     8 iterations.
+ LinEq1:  Iter=  0 NonCon=     1 RMS=1.98D-08 Max=4.49D-08 NDo=     1
+ LinEq1:  Iter=  1 NonCon=     1 RMS=5.34D-09 Max=1.19D-08 NDo=     1
+ LinEq1:  Iter=  2 NonCon=     1 RMS=9.55D-10 Max=2.77D-09 NDo=     1
+ LinEq1:  Iter=  3 NonCon=     1 RMS=2.14D-10 Max=6.09D-10 NDo=     1
+ LinEq1:  Iter=  4 NonCon=     1 RMS=6.46D-11 Max=2.53D-10 NDo=     1
+ LinEq1:  Iter=  5 NonCon=     1 RMS=2.22D-11 Max=8.31D-11 NDo=     1
+ LinEq1:  Iter=  6 NonCon=     1 RMS=4.35D-12 Max=1.42D-11 NDo=     1
+ LinEq1:  Iter=  7 NonCon=     0 RMS=1.06D-12 Max=3.04D-12 NDo=     1
+ Linear equations converged to 1.236D-12 1.236D-11 after     7 iterations.
+ Density matrix breaks symmetry, PCut= 1.00D-04
+ Density matrix has no symmetry -- integrals replicated.
+ Density matrix is not symmetric, so final MOs not symmetrized.
+ SCF Done:  E(UHF) =  -4.84062416176     a.u. after   24 cycles
+            Convg  =    0.3587D-08                   102 Fock formations.
+              S**2 =  1.4175                  -V/T =  1.9084
+ <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 0.0000 <S**2>= 1.4175 S= 0.7913
+ <L.S>= 0.000000000000E+00
+ Annihilation of the first spin contaminant:
+ S**2 before annihilation     1.4175,   after     2.7386
+ Range of M.O.s used for correlation:     1    10
+ NBasis=    10 NAE=     5 NBE=     5 NFC=     0 NFV=     0
+ NROrb=     10 NOA=     5 NOB=     5 NVA=     5 NVB=     5
+ Keep R1 and R2 ints in memory in symmetry-blocked form, NReq=802982.
+ Orbital symmetries:
+ Alpha Orbitals:
+       Occupied  (BG) (BG) (BG) (BG) (BG)
+       Virtual   (BG) (BG) (BG) (BG) (BG)
+ Beta  Orbitals:
+       Occupied  (BG) (BG) (BG) (BG) (BG)
+       Virtual   (BG) (BG) (BG) (BG) (BG)
+    12 initial guesses have been made.
+ Convergence on wavefunction:    0.001000000000000
+ Iteration     1 Dimension    12 NMult     0 NNew     12
+ CISAX will form    12 AO SS matrices at one time.
+ Iteration     2 Dimension    24 NMult    12 NNew     12
+ Iteration     3 Dimension    27 NMult    24 NNew      3
+ Iteration     4 Dimension    30 NMult    27 NNew      3
+ Iteration     5 Dimension    33 NMult    30 NNew      3
+ ***********************************************************************
+ Stability analysis using <AA,BB:AA,BB> singles matrix:
+ ***********************************************************************
+
+ Eigenvectors of the stability matrix:
+ 
+ Eigenvector   1:  2.527-AG   Eigenvalue= 0.0156233  <S**2>=1.346
+      5A ->  6A       -0.56069
+      5A ->  9A        0.15544
+      3B ->  6B       -0.11740
+      4B ->  6B       -0.16153
+      4B ->  8B       -0.10033
+      5B ->  6B        0.69942
+      5B ->  7B        0.18800
+      5B ->  8B       -0.11382
+ SavETr:  write IOETrn=   770 NScale= 10 NData=  16 NLR=1 NState=    1 LETran=      28.
+ The wavefunction is stable under the perturbations considered.
+ The wavefunction is already stable.
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+ Alpha Orbitals:
+       Occupied  (BG) (BG) (BG) (BG) (BG)
+       Virtual   (BG) (BG) (BG) (BG) (BG)
+ Beta  Orbitals:
+       Occupied  (BG) (BG) (BG) (BG) (BG)
+       Virtual   (BG) (BG) (BG) (BG) (BG)
+ Unable to determine electronic state:  partially filled degenerate orbitals.
+ Alpha  occ. eigenvalues --   -0.85949  -0.73977  -0.57324  -0.35107  -0.29526
+ Alpha virt. eigenvalues --    0.09775   0.20066   0.26114   0.34549   0.54713
+  Beta  occ. eigenvalues --   -0.78178  -0.71701  -0.57901  -0.40605  -0.27061
+  Beta virt. eigenvalues --    0.06334   0.17373   0.21231   0.41936   0.63760
+          Condensed to atoms (all electrons):
+               1          2          3          4          5          6
+     1  H    0.758108   0.046607   0.075466   0.166567   0.005286  -0.138110
+     2  H    0.046607   1.100067  -0.071165  -0.012067   0.007340  -0.028887
+     3  H    0.075466  -0.071165   1.222819  -0.111737   0.084737   0.021462
+     4  H    0.166567  -0.012067  -0.111737   0.791119  -0.077564   0.187711
+     5  H    0.005286   0.007340   0.084737  -0.077564   1.144322  -0.169992
+     6  H   -0.138110  -0.028887   0.021462   0.187711  -0.169992   1.133807
+     7  H    0.001027   0.000001   0.006724  -0.000559  -0.041808  -0.023716
+     8  H   -0.001565   0.004491  -0.161252   0.001727   0.300931  -0.008020
+     9  H   -0.000270   0.000010   0.002998  -0.000148  -0.000126   0.004344
+    10  H    0.000703  -0.000467  -0.003821   0.004882  -0.166227  -0.000783
+               7          8          9         10
+     1  H    0.001027  -0.001565  -0.000270   0.000703
+     2  H    0.000001   0.004491   0.000010  -0.000467
+     3  H    0.006724  -0.161252   0.002998  -0.003821
+     4  H   -0.000559   0.001727  -0.000148   0.004882
+     5  H   -0.041808   0.300931  -0.000126  -0.166227
+     6  H   -0.023716  -0.008020   0.004344  -0.000783
+     7  H    0.555322  -0.048039   0.076554   0.313331
+     8  H   -0.048039   0.977589  -0.065187  -0.020547
+     9  H    0.076554  -0.065187   1.270803  -0.171398
+    10  H    0.313331  -0.020547  -0.171398   1.067150
+          Atomic-Atomic Spin Densities.
+               1          2          3          4          5          6
+     1  H    0.449001   0.080770   0.005387  -0.106197   0.045361  -0.145587
+     2  H    0.080770  -0.903982   0.008455   0.131870  -0.006588   0.010817
+     3  H    0.005387   0.008455   0.809550  -0.256074   0.108468  -0.169990
+     4  H   -0.106197   0.131870  -0.256074   0.168084  -0.008709   0.130596
+     5  H    0.045361  -0.006588   0.108468  -0.008709  -0.067146  -0.253436
+     6  H   -0.145587   0.010817  -0.169990   0.130596  -0.253436   0.875325
+     7  H    0.000701  -0.000178   0.016923  -0.000598  -0.010848  -0.010932
+     8  H    0.003726   0.000862  -0.126077   0.019105   0.059787   0.008166
+     9  H    0.000021  -0.000038  -0.000073   0.000336  -0.033404   0.000364
+    10  H   -0.001814   0.000387   0.001367  -0.001751   0.061227   0.024234
+               7          8          9         10
+     1  H    0.000701   0.003726   0.000021  -0.001814
+     2  H   -0.000178   0.000862  -0.000038   0.000387
+     3  H    0.016923  -0.126077  -0.000073   0.001367
+     4  H   -0.000598   0.019105   0.000336  -0.001751
+     5  H   -0.010848   0.059787  -0.033404   0.061227
+     6  H   -0.010932   0.008166   0.000364   0.024234
+     7  H    0.299370  -0.106858   0.066719   0.016388
+     8  H   -0.106858   0.560647   0.011076  -0.123115
+     9  H    0.066719   0.011076  -1.058679   0.299969
+    10  H    0.016388  -0.123115   0.299969  -0.633795
+ Mulliken charges and spin densities:
+               1          2
+     1  H    0.086180   0.331368
+     2  H   -0.045930  -0.677625
+     3  H   -0.066231   0.397935
+     4  H    0.050070   0.076662
+     5  H   -0.086900  -0.105288
+     6  H    0.022183   0.469556
+     7  H    0.161161   0.270687
+     8  H    0.019871   0.307318
+     9  H   -0.117580  -0.713709
+    10  H   -0.022824  -0.356903
+ Sum of Mulliken charges =  -0.00000  -0.00000
+ Mulliken charges and spin densities with hydrogens summed into heavy atoms:
+               1          2
+ Electronic spatial extent (au):  <R**2>=            168.9585
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              0.7028    Y=             -0.8860    Z=             -0.0000  Tot=              1.1308
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=            -15.1240   YY=            -17.9954   ZZ=            -12.8469
+   XY=              3.1040   XZ=              0.0000   YZ=             -0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              0.1982   YY=             -2.6733   ZZ=              2.4752
+   XY=              3.1040   XZ=              0.0000   YZ=             -0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=              3.6277  YYY=             -7.1876  ZZZ=              0.0000  XYY=              5.2327
+  XXY=             -4.2875  XXZ=              0.0000  XZZ=              0.0532  YZZ=             -0.1543
+  YYZ=              0.0000  XYZ=             -0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=           -152.0525 YYYY=           -249.5838 ZZZZ=            -15.4834 XXXY=             83.0648
+ XXXZ=              0.0000 YYYX=            104.3196 YYYZ=             -0.0000 ZZZX=              0.0000
+ ZZZY=             -0.0000 XXYY=            -80.7026 XXZZ=            -26.7272 YYZZ=            -35.5943
+ XXYZ=             -0.0000 YYXZ=              0.0000 ZZXY=             22.9270
+ N-N= 1.242063798554D+01 E-N=-3.427781784712D+01  KE= 5.328579068260D+00
+ Symmetry AG   KE= 2.321701825310D+00
+ Symmetry BG   KE= 0.000000000000D+00
+ Symmetry AU   KE= 0.000000000000D+00
+ Symmetry BU   KE= 3.006877242950D+00
+                          Isotropic Fermi Contact Couplings
+        Atom                 a.u.       MegaHertz       Gauss      10(-4) cm-1
+     1  H(1)               0.12458     278.42490      99.34892      92.87255
+     2  H(1)              -0.25651    -573.27640    -204.55927    -191.22442
+     3  H(1)               0.20416     456.29552     162.81758     152.20380
+     4  H(1)               0.03819      85.34478      30.45314      28.46795
+     5  H(1)              -0.02321     -51.87242     -18.50937     -17.30278
+     6  H(1)               0.22610     505.31124     180.30761     168.55369
+     7  H(1)               0.08848     197.73972      70.55845      65.95887
+     8  H(1)               0.15106     337.61813     120.47054     112.61728
+     9  H(1)              -0.28993    -647.97424    -231.21331    -216.14094
+    10  H(1)              -0.16881    -377.28338    -134.62409    -125.84819
+ --------------------------------------------------------
+       Center         ----  Spin Dipole Couplings  ----
+                      3XX-RR        3YY-RR        3ZZ-RR
+ --------------------------------------------------------
+     1   Atom        0.026854     -0.029255      0.002402
+     2   Atom       -0.011239      0.051502     -0.040263
+     3   Atom        0.076215     -0.040538     -0.035677
+     4   Atom        0.058300     -0.018958     -0.039343
+     5   Atom        0.056546      0.018039     -0.074585
+     6   Atom        0.064623     -0.030178     -0.034445
+     7   Atom       -0.062615      0.012759      0.049857
+     8   Atom       -0.031766      0.025068      0.006698
+     9   Atom        0.010154      0.008204     -0.018359
+    10   Atom        0.057702     -0.037655     -0.020048
+ --------------------------------------------------------
+                        XY            XZ            YZ
+ --------------------------------------------------------
+     1   Atom       -0.014358      0.000000     -0.000000
+     2   Atom       -0.021849      0.000000      0.000000
+     3   Atom        0.047525     -0.000000     -0.000000
+     4   Atom        0.013125     -0.000000     -0.000000
+     5   Atom        0.000334     -0.000000      0.000000
+     6   Atom        0.023369     -0.000000      0.000000
+     7   Atom       -0.014832      0.000000      0.000000
+     8   Atom        0.013733     -0.000000      0.000000
+     9   Atom       -0.031684      0.000000      0.000000
+    10   Atom        0.008422     -0.000000     -0.000000
+ --------------------------------------------------------
+
+
+ ---------------------------------------------------------------------------------
+              Anisotropic Spin Dipole Couplings in Principal Axis System
+ ---------------------------------------------------------------------------------
+
+       Atom             a.u.   MegaHertz   Gauss  10(-4) cm-1        Axes
+
+              Baa    -0.0327   -17.456    -6.229    -5.823  0.2343  0.9722  0.0000
+     1 H(1)   Bbb     0.0024     1.281     0.457     0.427  0.0000  0.0000  1.0000
+              Bcc     0.0303    16.174     5.771     5.395  0.9722 -0.2343  0.0000
+ 
+              Baa    -0.0403   -21.482    -7.665    -7.166  0.0000  0.0000  1.0000
+     2 H(1)   Bbb    -0.0181    -9.656    -3.445    -3.221  0.9541  0.2995  0.0000
+              Bcc     0.0584    31.138    11.111    10.387 -0.2995  0.9541  0.0000
+ 
+              Baa    -0.0574   -30.646   -10.935   -10.222 -0.3350  0.9422  0.0000
+     3 H(1)   Bbb    -0.0357   -19.036    -6.792    -6.350  0.0000  0.0000  1.0000
+              Bcc     0.0931    49.681    17.728    16.572  0.9422  0.3350  0.0000
+ 
+              Baa    -0.0393   -20.991    -7.490    -7.002  0.0000  0.0000  1.0000
+     4 H(1)   Bbb    -0.0211   -11.272    -4.022    -3.760 -0.1630  0.9866 -0.0000
+              Bcc     0.0605    32.263    11.512    10.762  0.9866  0.1630  0.0000
+ 
+              Baa    -0.0746   -39.795   -14.200   -13.274  0.0000  0.0000  1.0000
+     5 H(1)   Bbb     0.0180     9.623     3.434     3.210 -0.0087  1.0000  0.0000
+              Bcc     0.0565    30.172    10.766    10.064  1.0000  0.0087  0.0000
+ 
+              Baa    -0.0356   -19.008    -6.783    -6.340 -0.2270  0.9739  0.0000
+     6 H(1)   Bbb    -0.0344   -18.378    -6.558    -6.130  0.0000  0.0000  1.0000
+              Bcc     0.0701    37.387    13.340    12.471  0.9739  0.2270  0.0000
+ 
+              Baa    -0.0654   -34.910   -12.457   -11.645  0.9825  0.1864  0.0000
+     7 H(1)   Bbb     0.0156     8.309     2.965     2.771 -0.1864  0.9825 -0.0000
+              Bcc     0.0499    26.601     9.492     8.873  0.0000  0.0000  1.0000
+ 
+              Baa    -0.0349   -18.627    -6.646    -6.213  0.9748 -0.2232  0.0000
+     8 H(1)   Bbb     0.0067     3.574     1.275     1.192  0.0000  0.0000  1.0000
+              Bcc     0.0282    15.053     5.371     5.021  0.2232  0.9748  0.0000
+ 
+              Baa    -0.0225   -12.016    -4.287    -4.008  0.6961  0.7179  0.0000
+     9 H(1)   Bbb    -0.0184    -9.795    -3.495    -3.267  0.0000  0.0000  1.0000
+              Bcc     0.0409    21.811     7.783     7.275  0.7179 -0.6961  0.0000
+ 
+              Baa    -0.0384   -20.485    -7.309    -6.833 -0.0873  0.9962 -0.0000
+    10 H(1)   Bbb    -0.0200   -10.697    -3.817    -3.568  0.0000  0.0000  1.0000
+              Bcc     0.0584    31.181    11.126    10.401  0.9962  0.0873  0.0000
+ 
+
+ ---------------------------------------------------------------------------------
+
+
+ Test job not archived.
+ 1\1\GINC-SULU\Stability\UHF\Gen\H10\LCJ1\22-Feb-2017\0\\#rhf/gen scf(s
+ ymm,tight,novaracc,noincfock,fulldiag) stable=opt guess=read geom=nocr
+ owd test\\hf stability analysis of h10 triangular lattice, y= 0.479936
+ 87953036013\\0,1\H\H,1,1.2951753716\H,1,1.2951753716,2,136.5\H,2,1.295
+ 1753716,1,43.5,3,0.,0\H,3,1.2951753716,1,180.,2,0.,0\H,4,1.2951753716,
+ 2,180.,1,0.,0\H,5,1.2951753716,3,180.,2,0.,0\H,6,1.2951753716,4,180.,1
+ ,0.,0\H,7,1.2951753716,5,180.,2,0.,0\H,8,1.2951753716,6,180.,1,0.,0\\V
+ ersion=ES64L-G09RevE.01\State=1-AG\HF=-4.8406242\S2=1.417457\S2-1=0.\S
+ 2A=2.738602\RMSD=1.289e-09\Dipole=-0.2764931,0.,0.3485626\Quadrupole=0
+ .1473219,1.8402295,-1.9875514,0.,2.3077686,0.\PG=C02H [SGH(H10)]\\@
+
+
+ IT TAKES GREATER CHARACTER TO CARRY OFF GOOD FORTUNE THAN BAD.
+                     FRENCH PROVERB.
+ Job cpu time:       0 days  0 hours  0 minutes  1.6 seconds.
+ File lengths (MBytes):  RWF=     77 Int=      0 D2E=      0 Chk=      2 Scr=      2
+ Normal termination of Gaussian 09 at Wed Feb 22 12:32:32 2017.

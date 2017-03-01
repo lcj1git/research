@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for f in *
+do
+	linenumstring=$(grep -n 'Orbital symmetries' $f)
+	linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+	linenum=$(echo $linenum + 1 | bc)
+	symm=$(head -$linenum $f | tail -1)
+	echo $f: $symm #>> symm
+done

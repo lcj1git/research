@@ -1,0 +1,101 @@
+#!/bin/bash
+#run rhf stability calculation using gaussian
+#writes rhf E, rhf HOMO-1 -> LUMO+1 E's, RRHF,CRHF,RUHF hessian eigenvalues
+
+declare -i linenum
+declare -a linenumarr
+declare -a evals
+declare -x step=0.25 #in alpha (degrees), not y
+declare -i keepgoing=1
+declare -i keeplooking=1
+#vars for distortion param 
+declare -x alpha=5
+declare -x alphaf=85
+declare -x y
+declare -a sigpts
+declare -x tinystep=0.01
+declare -x dist
+declare -i gt0
+declare -i usefinemesh
+#output files and gaussian files
+comfile='h10.com'
+logfile='h10.log'
+hessfile='h10hess'
+uhfamofile='h10UHFaMOE'
+uhfbmofile='h10UHFbMOE'
+uhfefile='h10UHFE'
+
+mkdir com log
+
+#loop for highsymm->yi
+while [ $keepgoing -eq 1 ]; do
+#create input file for gaussian
+	echo $alpha > tmp
+        ./writez < tmp > $comfile
+	y=$(grep -o -E '\-*[0-9]+\.[0-9]*' fort.8)
+	rm tmp fort.8
+#run gaussian
+        g09 < $comfile >& $logfile
+#get hessian eigenvalues
+#	string=$(grep -n 'Eigenvectors of the stability matrix:' $logfile)
+#	linenumarr=($(echo $string | grep -o -E '[0-9]+'))
+#	linenum=$(echo ${linenumarr[0]} + 25 | bc)
+#	string=$(head -$linenum $logfile | tail -25)
+#	string=$(echo $string | grep -o -E "Eigenvalue=\s*\-*[0-9]\.[0-9]+")
+#	string=$(echo $string | grep -o -E "\-*[0-9]\.[0-9]+")
+#	evals=($string)
+#	echo $alpha $y ${evals[@]} >> $hessfile
+	string=$(grep "Internal UHF" $logfile)
+	IUHF=$(echo $string | grep -o -E '\-*[0-9]+\.[0-9]*')
+	string=$(grep "RUHF --> CUHF (A)" $logfile)
+	CUHFA=$(echo $string | grep -o -E '\-*[0-9]+\.[0-9]*')
+	string=$(grep "RUHF --> CUHF (B)" $logfile)
+	CUHFB=$(echo $string | grep -o -E '\-*[0-9]+\.[0-9]*')
+	string=$(grep "RUHF --> GHF" $logfile)
+	GHF=$(echo $string | grep -o -E '\-*[0-9]+\.[0-9]*')
+	echo $alpha $y $IUHF $CUHFA $CUHFB $GHF >> $hessfile
+#get UHF E
+        estring=$(grep 'E(UHF)' $logfile)
+        estring=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        echo $alpha $y $estring >> $uhfefile
+#get UFF MO E
+	aocc=$(grep -E -n 'Alpha  occ. eigenvalues' $logfile)
+	aocc=$(echo $aocc | grep -o -E '\-*[0-9]+\.[0-9]*')
+        avirt=$(grep -E 'Alpha virt. eigenvalues' $logfile)
+        avirt=$(echo $avirt | grep -o -E '\-*[0-9]+\.[0-9]*')
+	bocc=$(grep -E -n 'Beta  occ. eigenvalues' $logfile)
+	bocc=$(echo $bocc | grep -o -E '\-*[0-9]+\.[0-9]*')
+        bvirt=$(grep -E 'Beta virt. eigenvalues' $logfile)
+        bvirt=$(echo $bvirt | grep -o -E '\-*[0-9]+\.[0-9]*')
+	echo $alpha $y $aocc $avirt >> $uhfamofile
+	echo $alpha $y $bocc $bvirt >> $uhfbmofile
+#save com and log files
+	cp $comfile 'com/'$comfile'_alpha'$alpha
+	cp $logfile 'log/'$logfile'_alpha'$alpha
+#check if near significant point, if so use finer mesh
+        usefinemesh=0
+        for p in "${sigpts[@]}"
+        do
+# take abs val of the distance between alpha and p
+                dist=$(echo $alpha - $p | bc)
+                gt0=$(echo "$dist > 0.0" | bc -l)
+                if [ $gt0 -eq 0 ] # if dist < 0, multiply by -1
+                then
+                        dist=$(bc <<< "scale=6; -1 *  $dist ")
+                fi
+                if [ $usefinemesh -eq 0 ] #only reset usefinemesh if it is 0/false. if true do not modify. 
+                then
+                        usefinemesh=$(echo "0.25 > $dist" | bc -l) #usefinemesh is 1/true if .1 > dist
+                fi
+        done
+        if [ $usefinemesh -eq 1 ]
+        then
+                alpha=$(echo $alpha + $tinystep | bc)
+        else
+                alpha=$(echo $alpha + $step | bc)
+        fi
+
+#check if y is less than yi, if so keepgoing = 0, if not keepgoing = 1.
+        keepgoing=$(echo "$alphaf > $alpha" | bc -l)
+#end loop
+done

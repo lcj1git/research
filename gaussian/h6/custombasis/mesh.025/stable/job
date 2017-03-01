@@ -1,0 +1,60 @@
+#!/bin/bash
+#run casscf(6,6) E calculations for 6 H atoms in a planar pyramid of isosceles triangles, distorting length of third side relative to others
+#uses program writecmatrix.f to write the input file 'H6.com' for a given side length
+# extracts the resulting E from the output file 'H6.log'  and writes to fort.12
+
+declare -i linenum
+declare -i n=1
+declare -i mult=1
+declare -x y=0.25
+declare -x stepsize=0.025
+declare -i nsteps=130
+declare -i step=1
+declare -i count
+declare -a linnums
+declare -a eigenvals
+declare -x rrt3=0.5773502692
+comfile='h6.com'
+logfile='h6.log'
+chkfile='h6.chk'
+
+echo '#HF isntabilities: hessian eigenvalues' > fort.12
+echo '#y','rrhf','crhf','ruhf' >> fort.12
+while [ $step -le $nsteps ]; do
+#create input file for gaussian
+	echo $chkfile > $comfile
+	echo ' ' >> $comfile
+	echo '#t rhf/gen scf(tight,novaracc,noincfock) stable(crhf) guess=mix geom=nocrowd test' >> $comfile
+	echo ' ' >> $comfile
+        x=$(bc <<< "scale=6; $rrt3 / $y")
+        x2=$(bc <<< "scale=6; 2 * $x")
+        echo 'scf stability calculation for a triangular configuration of 6 H atoms (made up of 4 iscosceles triangles)' >> $comfile
+        echo ' ' >> $comfile
+        echo '0 '$mult >> $comfile
+        echo 'H 0.0 0.0 '$y >> $comfile
+        echo 'H '$x' 0.0 0.0' >> $comfile
+        echo 'H -'$x' 0.0 0.0' >> $comfile
+        echo 'H 0.0 0.0 -'$y >> $comfile
+        echo 'H -'$x2' 0.0 -'$y >> $comfile
+        echo 'H '$x2' 0.0 -'$y >> $comfile
+        echo ' ' >> $comfile
+        echo '@H.gbs' >> $comfile
+        echo ' ' >> $comfile
+	g09 < h6.com >& h6.log
+#grab eigenvals from ouput
+#rrhf
+        stabstring=$(grep -E 'Internal RHF' h6.log)
+        rrhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        linenum=$linenum+1
+#crhf
+        stabstring=$(grep -E 'RRHF.*CRHF' h6.log)
+        crhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#ruhf
+        stabstring=$(grep -E 'RRHF.*RUHF' h6.log)
+        ruhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#write to file stable
+        echo $y $rrhf $crhf $ruhf >> fort.12
+	y=$(echo $y + $stepsize | bc)
+	step=$step+1
+done
+

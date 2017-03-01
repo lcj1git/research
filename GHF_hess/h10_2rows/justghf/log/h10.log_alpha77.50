@@ -1,0 +1,828 @@
+ Entering Gaussian System, Link 0=gdv
+ AtFile(1): H.gbs
+            H     0
+            S   10   1.00
+               1000.000000000000            0.000068713567
+                316.227766000000            0.000169141320
+                100.000000000000            0.000823394812
+                 31.622776600000            0.003425569236
+                 10.000000000000            0.013951996000
+                  3.162277660000            0.056909313560
+                  1.000000000000            0.198286399900
+                  0.316227766000            0.496922426700
+                  0.100000000000            0.369846276400
+                  0.031622776600            0.003752720039
+            ****
+ Initial command:
+ /users/lcj1/GHF_hess/exe-dir/l1.exe "/users/lcj1/GHF_hess/h10_2rows/Gau-16119.inp" -scrdir="/users/lcj1/GHF_hess/h10_2rows/"
+ Entering Link 1 = /users/lcj1/GHF_hess/exe-dir/l1.exe PID=     16120.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2012,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is the private, development version of
+ the Gaussian(R) DV system of programs. It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian Development Version, Revision H.21,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, W. Liang, 
+ M. Hada, M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, 
+ T. Nakajima, Y. Honda, O. Kitao, H. Nakai, T. Vreven, 
+ J. A. Montgomery, Jr., J. E. Peralta, F. Ogliaro, M. Bearpark, 
+ J. J. Heyd, E. Brothers, K. N. Kudin, V. N. Staroverov, T. Keith, 
+ R. Kobayashi, J. Normand, K. Raghavachari, A. Rendell, J. C. Burant, 
+ S. S. Iyengar, J. Tomasi, M. Cossi, N. Rega, J. M. Millam, M. Klene, 
+ J. E. Knox, J. B. Cross, V. Bakken, C. Adamo, J. Jaramillo, 
+ R. Gomperts, R. E. Stratmann, O. Yazyev, A. J. Austin, R. Cammi, 
+ C. Pomelli, J. W. Ochterski, R. L. Martin, K. Morokuma, 
+ V. G. Zakrzewski, G. A. Voth, P. Salvador, J. J. Dannenberg, 
+ S. Dapprich, P. V. Parandekar, N. J. Mayhall, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2010.
+ 
+ ******************************************
+ Gaussian DV:  EM64L-GDVRevH.21 13-May-2012
+                27-Feb-2017 
+ ******************************************
+ %chk=h10.chk
+ ----------------------------------------------------------------------
+ #ghf/gen scf(tight,novaracc,noincfock,fulldiag) stable guess=read geom
+ =nocrowd use=l802 use=l902 test
+ ----------------------------------------------------------------------
+ ********************************************
+   THE COMPLEX ERI TRANSFORMATION WITH L802  
+        COMPLEX STABILITY WITH L902          
+ ********************************************
+ 1/38=1/1;
+ 2/12=1,17=6,18=5,40=1/2;
+ 3/5=7,16=1,25=20,28=1,116=7/1,2,3,20;
+ 4/5=1/1;
+ 5/5=100001,16=1,32=2,38=6/2;
+ 8/6=1,10=90,11=11/1,2;
+ 9/8=4,13=1/1,2;
+ 6/7=2,8=2,9=2,10=2,28=1/1;
+ 99/5=1,9=1/99;
+ ----------------------------------------------------------------------
+ hf stability analysis of h10 triangular lattice, y= 1.6137717412076256
+  alpha= 77.500000000000000
+ ----------------------------------------------------------------------
+ Symbolic Z-Matrix:
+ Charge =  0 Multiplicity = 1
+ H
+ H                    1     1.65295 
+ H                    1     1.65295  2     25. 
+ H                    2     1.65295  1     155.     3     0.       0
+ H                    3     1.65295  1     180.     2     0.       0
+ H                    4     1.65295  2     180.     1     0.       0
+ H                    5     1.65295  3     180.     2     0.       0
+ H                    6     1.65295  4     180.     1     0.       0
+ H                    7     1.65295  5     180.     2     0.       0
+ H                    8     1.65295  6     180.     1     0.       0
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.000000    0.000000
+      2          1           0        0.000000    0.000000    1.652953
+      3          1           0        0.698568    0.000000    1.498084
+      4          1           0        0.698568    0.000000    3.151038
+      5          1           0        1.397137    0.000000    2.996169
+      6          1           0        1.397137    0.000000    4.649122
+      7          1           0        2.095705    0.000000    4.494253
+      8          1           0        2.095705    0.000000    6.147207
+      9          1           0        2.794273    0.000000    5.992338
+     10          1           0        2.794273    0.000000    7.645291
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  H    0.000000
+     2  H    1.652953   0.000000
+     3  H    1.652953   0.715529   0.000000
+     4  H    3.227543   1.652953   1.652953   0.000000
+     5  H    3.305907   1.938097   1.652953   0.715529   0.000000
+     6  H    4.854516   3.305907   3.227543   1.652953   1.652953
+     7  H    4.958860   3.530576   3.305907   1.938097   1.652953
+     8  H    6.494623   4.958860   4.854516   3.305907   3.227543
+     9  H    6.611813   5.161223   4.958860   3.530576   3.305907
+    10  H    8.139929   6.611813   6.494623   4.958860   4.854516
+                    6          7          8          9         10
+     6  H    0.000000
+     7  H    0.715529   0.000000
+     8  H    1.652953   1.652953   0.000000
+     9  H    1.938097   1.652953   0.715529   0.000000
+    10  H    3.305907   3.227543   1.652953   1.652953   0.000000
+ Stoichiometry    H10
+ Framework group  C2H[SGH(H10)]
+ Deg. of freedom     9
+ Full point group                 C2H     NOp   4
+ Largest Abelian subgroup         C2H     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        1.397137    3.822646    0.000000
+      2          1           0        1.397137    2.169692    0.000000
+      3          1           0        0.698568    2.324561    0.000000
+      4          1           0        0.698568    0.671608    0.000000
+      5          1           0        0.000000    0.826477    0.000000
+      6          1           0        0.000000   -0.826477    0.000000
+      7          1           0       -0.698568   -0.671608    0.000000
+      8          1           0       -0.698568   -2.324561    0.000000
+      9          1           0       -1.397137   -2.169692    0.000000
+     10          1           0       -1.397137   -3.822646    0.000000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    454.1034704      8.3061623      8.1569605
+ General basis read from cards:  (5D, 7F)
+ There are     5 symmetry adapted cartesian basis functions of AG  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of BG  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of AU  symmetry.
+ There are     5 symmetry adapted cartesian basis functions of BU  symmetry.
+ There are     5 symmetry adapted basis functions of AG  symmetry.
+ There are     0 symmetry adapted basis functions of BG  symmetry.
+ There are     0 symmetry adapted basis functions of AU  symmetry.
+ There are     5 symmetry adapted basis functions of BU  symmetry.
+    10 basis functions,   100 primitive gaussians,    10 cartesian basis functions
+     5 alpha electrons        5 beta electrons
+       nuclear repulsion energy        11.0996472479 Hartrees.
+ NAtoms=   10 NActive=   10 NUniq=    5 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Regular integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=    10 RedAO= T EigKep=  1.63D-01  NBF=     5     0     0     5
+ NBsUse=    10 1.00D-06 EigRej= -1.00D+00 NBFU=     5     0     0     5
+ IOp(28)                       1
+                        1                       0
+                        2                       1
+                        3                       1
+                        4                      20
+                        5                       0
+                        6                       0
+                        7                      10
+                        8                       1
+                        9                       4
+                       10                       0
+                       11              1073741824
+                       12                      20
+                       13                       2
+                       14                  131070
+                       15                       1
+                       16                       1
+                       17                  131073
+                       18                       0
+                       19                       0
+                       20                       0
+                       21                       2
+                       22                  131070
+                       23                       0
+                       24                       0
+                       25                       0
+                       26                       0
+                       27                   65535
+                       28                       2
+                       29                  131072
+                       30                       0
+ IHMeth                       1
+ ib3: ISMode =                        0                       4
+ Enter DskPsm, NBasis=  10 NBas6D=  10 NShell=  10 IDoSP=4.
+ Out2e will use a cutoff of  1.00D-10
+ FoFCou: FMM=F IPFlag=           0 FMFlag=           0 FMFlg1=           0
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=     600 IOpCl=  9 I1Cent=           0 NGrid=           0
+         NMat0=    0 NMatS0=      0 NMatT0=    0 NMatD0=    0 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  131070
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  131056
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  131042
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  131028
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  131014
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  131000
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130986
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130972
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130960
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130944
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130928
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130912
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130896
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130880
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130864
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130848
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130832
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130816
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130800
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130784
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130768
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130752
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130736
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130720
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130704
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       2                  130700
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                       8                  130682
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                      22                  130672
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                      34                  130660
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                      52                  130654
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                      70                  130648
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                      88                  130642
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     106                  130636
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     114                  130630
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     114                  130616
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     114                  130602
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     114                  130588
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     114                  130574
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     114                  130560
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     114                  130550
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     124                  130540
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     134                  130530
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     152                  130528
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     160                  130516
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     174                  130510
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     174                  130506
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     184                  130500
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130498
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130476
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130454
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130432
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130410
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130388
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130366
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130344
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130322
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130300
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130278
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     186                  130258
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     204                  130244
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     224                  130232
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     240                  130216
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     262                  130206
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     282                  130194
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     300                  130180
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     316                  130164
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     336                  130152
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     356                  130140
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     370                  130130
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     386                  130120
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     400                  130108
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     414                  130096
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     426                  130090
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     446                  130068
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     476                  130056
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     502                  130040
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     522                  130030
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     522                  130014
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     522                  129998
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     522                  129982
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     522                  129970
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     538                  129960
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     552                  129948
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     568                  129938
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     580                  129930
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     580                  129926
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     600                  129912
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     618                  129896
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     620                  129894
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     626                  129888
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     626                  129860
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     626                  129832
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     626                  129804
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     626                  129776
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     626                  129748
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     652                  129732
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     678                  129716
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     702                  129698
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     730                  129684
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     736                  129676
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     756                  129662
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     772                  129656
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     804                  129634
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     840                  129616
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     876                  129598
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     876                  129592
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     906                  129580
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     940                  129558
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     940                  129528
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     940                  129498
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     940                  129478
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                     972                  129464
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1000                  129446
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1008                  129442
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1032                  129434
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1072                  129414
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1096                  129402
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1116                  129398
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1144                  129370
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1152                  129358
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1152                  129338
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1170                  129330
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1174                  129326
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1190                  129318
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1192                  129314
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1202                  129310
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1206                  129306
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1206                  129304
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1206                  129284
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1224                  129276
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1232                  129276
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1248                  129268
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1254                  129268
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1260                  129260
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1260                  129252
+ Leave Stor2X
+ Entering PrmDigJobTyp =                      20
+ LenSav and NKeep                       0                       0
+ Entered Stor2E with KNTT1,2                    1262                  129252
+ Leave Stor2X
+ In PrSumR
+ Called IWRITE
+         1539 integrals produced for a total of         1539.
+ Initial guess from the checkpoint file:  "h10.chk"
+ B after Tr=     0.000000    0.000000    0.000000
+         Rot=    0.994363    0.000000    0.000000   -0.106025 Ang= -12.17 deg.
+ Initial guess <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 0.0000 <S**2>= 0.0000 S= 0.0000
+ Two-electron integrals will be kept in memory, NGetB=      152788.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ ************************************************
+ *READING THE YAODEN.PDM FILE TO GET NEW DENSITY*
+ ************************************************
+ Rare condition: small coef for last iteration:  0.000D+00
+ EnCoef did     1 forward-backward iterations
+ Rare condition: small coef for last iteration:  0.000D+00
+ EnCoef did     1 forward-backward iterations
+ EnCoef did     1 forward-backward iterations
+ Rare condition: small coef for last iteration:  0.000D+00
+ >>>>>>>>>> Convergence criterion not met.
+ SCF Done:  E(GHF) =  -5.18845538157     A.U. after  129 cycles
+            NFock=128  Conv=0.11D-04     -V/T= 2.0085
+ <Sx>= 0.9969 <Sy>= 0.0000 <Sz>= 0.0210 <S**2>= 1.9944 S= 0.9981
+ <L.S>= 0.000000000000E+00
+ Convergence failure -- run terminated.
+ Error termination via Lnk1e in /users/lcj1/GHF_hess/exe-dir/l502.exe at Mon Feb 27 13:32:42 2017.
+ Job cpu time:  0 days  0 hours  0 minutes  0.6 seconds.
+ File lengths (MBytes):  RWF=     62 Int=      1 D2E=      0 Chk=      2 Scr=      2
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000003ef8, rsp 00007ffeb9beb5e8, rbp 00007ffeb9bebbd0
+   rsi 000000000000000b, rdi 0000000000003ef8, r8  00007f5b7bd7c700
+   r9  0000000000000000, r10 00007ffeb9beb370, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007ffeb9bebc18
+   r15 00000000000003e6
+  --- traceback not available

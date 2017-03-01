@@ -1,0 +1,109 @@
+#!/bin/bash
+# run hf stability calculations for the h8singlet
+
+declare -i linenum
+declare -i mult=1
+declare -x yi=0.25
+declare -x yf=3.0
+declare -x y=$yi
+declare -x step=0.1
+declare -x tinystep=0.01
+declare -i keepgoing=1
+declare -x dist
+declare -i gt0
+declare -i usefinemesh
+declare -a sigpts=( 0.44 0.55 0.81 1.1 1.18 1.45 ) 
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+declare -a e
+declare -a mult=( 1 3 )
+declare -a virtmo
+declare -a occmo
+comfile='h8.com'
+logfile='h8.log'
+chkfile='h8.chk'
+hessfile='h8hess'
+mofile='h8MOE'
+efile='h8RHFE'
+
+echo '#HF isntabilities: hessian eigenvalues' > $hessfile
+echo '#y','rrhf','crhf','ruhf' >> $hessfile
+echo '#RHF MO Energies' > $mofile
+echo '#y','E of SHOMO', 'E of HOMO', 'E of LUMO', 'E of SLUMO' >> $mofile
+echo '#RHF Energy of H8' > $efile
+
+#while loop for desired values of y
+while [ $keepgoing -eq 1 ]; do
+#create input file for gaussian
+        echo '%chk='$chkfile > $comfile
+        echo ' ' >> $comfile
+        echo '#t rhf/gen scf(tight,novaracc,noincfock) stable(crhf) geom=nocrowd test' >> $comfile
+        echo ' ' >> $comfile
+        x=$(bc <<< "scale=6; $rrt3 / $y")
+        x2=$(bc <<< "scale=6; 2 * $x")
+        y2=$(bc <<< "scale=6; 2 * $y")
+        echo 'scf stability calculation for a triangular configuration of 8 H atoms' >> $comfile
+        echo ' ' >> $comfile
+        echo '0 '$mult >> $comfile
+        echo 'H '$x' 0.0 '$y2 >> $comfile
+        echo 'H 0.0 0.0 '$y >> $comfile
+        echo 'H '$x2' 0.0 '$y >> $comfile
+        echo 'H -'$x' 0.0 0.0' >> $comfile
+        echo 'H '$x' 0.0 0.0' >> $comfile
+        echo 'H -'$x2' 0.0 -'$y >> $comfile
+        echo 'H 0.0 0.0 -'$y >> $comfile
+        echo 'H -'$x' 0.0 -'$y2 >> $comfile
+        echo ' ' >> $comfile
+        echo '@H.gbs' >> $comfile
+        echo ' ' >> $comfile
+        g09 < $comfile >& $logfile
+#grab eigenvals from ouput
+#rrhf
+        stabstring=$(grep -E 'Internal RHF' $logfile)
+        rrhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        linenum=$linenum+1
+#crhf
+        stabstring=$(grep -E 'RRHF.*CRHF' $logfile)
+        crhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#ruhf
+        stabstring=$(grep -E 'RRHF.*RUHF' $logfile)
+        ruhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#write to file stable
+        echo $y $rrhf $crhf $ruhf >> $hessfile
+        estring=$(grep -E 'SCF Done:' $logfile)
+        estring=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        echo $alpha $y $estring >> $efile
+        occmostring=$(grep -E 'Alpha  occ. eigenvalues' $logfile)
+        occmostring=$(echo $occmostring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        occmo=($occmostring)
+        virtmostring=$(grep -E 'Alpha virt. eigenvalues' $logfile)
+        virtmostring=$(echo $virtmostring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        virtmo=($virtmostring)
+        echo $alpha $y ${occmo[2]} ${occmo[3]} ${virtmo[0]} ${virtmo[1]} >> $mofile
+
+#check if y is near a significant value, and if so use $tinystep
+#if not, use $step
+	usefinemesh=0
+	for p in "${sigpts[@]}"
+	do
+# take abs val of the distance between y and p
+		dist=$(echo $y - $p | bc)
+		gt0=$(echo "$dist > 0.0" | bc -l)
+		if [ $gt0 -eq 1 ] # if dist < 0, multiply by -1
+		then
+			dist=$(bc <<< "scale=6; -1 *  $dist ")
+		fi
+		if [ $usefinemesh -eq 0 ] #only reset usefinemesh if it is 0/false. if true do not modify. 
+		then
+			usefinemesh=$(echo "0.1 > $dist" | bc -l) #usefinemesh is 1/true if .1 > dist
+		fi
+	done
+	if [ $usefinemesh ]
+	then
+ 		y=$(echo $y + $tinystep | bc)
+	else
+ 		y=$(echo $y + $step | bc)
+	fi
+#check if y has surpassed the max. if so keepgoing = 0, is not keepgoing = 1.
+	keepgoing=$(echo "$yf > $y" | bc -l)
+#end of y loop
+done

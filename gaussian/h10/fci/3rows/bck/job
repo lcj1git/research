@@ -1,0 +1,129 @@
+#!/bin/bash
+#run casscf(10,10) E calculations for 10 H atoms in a triangualr lattice, stretching heigh while compressing width of triangles
+
+declare -i numstates=3
+declare -i linenum
+declare -i n=1
+declare -x yi=0.76
+declare -x yf=0.25
+declare -x y=$yi
+declare -x step=0.025
+declare -x tinystep=0.005
+declare -i keepgoing=1
+declare -x dist
+declare -i gt0
+declare -i usefinemesh
+declare -a sigpts=( 4.0 )
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+declare -a e
+declare -a mult=( 1 )
+comfile='h10.com'
+logfile='h10.log'
+declare -a chkfiles
+while [ $n -le $numstates ];do
+	chkfiles[$n]='h10n'$n'.chk'
+	n+=1
+done
+n=1
+
+for m in "${mult[@]}"
+do
+#for loop for desired multiplicities
+#comment heading for fort.12
+echo '# h10 energies for multiplicity = ' $m > fort.12
+echo '# y', 'E(n=1)', 'E(n=2)', 'E(n=3)' >> fort.12
+#while loop for desired values of y
+	while [ $keepgoing -eq 1 ]; do
+#while loop for desired number of states
+		while [ $n -le $numstates ]; do
+#create g09 input file
+			chkfile=${chkfiles[$n]}
+			echo '%chk='$chkfile > $comfile
+			echo ' ' >> $comfile
+			if [ $n -eq 1 ]
+			then
+				echo '#t casscf(10,10,davidsondiag)/gen scf(tight,novaracc,noincfock) guess=read geom=nocrowd test' >> $comfile
+			else
+				echo '#t casscf(10,10,nroot='$n',davidsondiag)/gen scf(tight,novaracc,noincfock) guess=read geom=nocrowd test' >> $comfile
+			fi
+			echo ' ' >> $comfile
+			x=$(bc <<< "scale=6; $rrt3 / $y")
+			x2=$(bc <<< "scale=6; $x * 2")
+			x3=$(bc <<< "scale=6; $x * 3")
+			echo 'mbs casscf calculation for a triangular lattice of 8 H atoms (made up of 10 iscosceles triangles h='$y'b='$x2')' >> $comfile
+			echo ' ' >> $comfile
+			echo '0 '$m >> $comfile
+			echo 'H -'$x2' 0.0 '$y >> $comfile
+			echo 'H 0.0 0.0 '$y >> $comfile
+			echo 'H '$x2' 0.0 '$y >> $comfile
+			echo 'H -'$x3' 0.0 0.0' >> $comfile
+			echo 'H -'$x 0.0 0.0 >> $comfile
+			echo 'H '$x 0.0 0.0 >> $comfile
+			echo 'H '$x3' 0.0 0.0' >> $comfile
+			echo 'H -'$x2' 0.0 -'$y >> $comfile
+			echo 'H 0.0 0.0 -'$y >> $comfile
+			echo 'H '$x2' 0.0 -'$y >> $comfile
+			echo ' ' >> $comfile
+			echo '@H.gbs' >> $comfile
+			echo ' ' >> $comfile
+#send calculation to gaussian
+			g09 < $comfile >& $logfile
+#grab e from output                       
+                        estring=$(grep 'EIGENVALUE' $logfile |tail -1)
+                        e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]{5}[0-9]*\s*')
+                        if [[ ${e[$n]} = "" ]]
+                        then
+                                linenumstring=$(grep -n '... Do an extra-iteration for final printing.' $logfile)
+                                linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+                                linenum=$linenum-1
+                                estring=$(head -$linenum $logfile | tail -1)
+                                e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+                                if [[ ${e[$n]} = "" ]]
+                                then
+                                        e[$n]='FC'
+                                fi
+                        fi
+                        n+=1
+#end of energy level n loop
+		done
+		n=1
+#write e's to fort.12
+		echo $y "${e[@]}" >> fort.12
+#check if y is near a significant value, and if so use $tinystep
+#if not, use $step
+		usefinemesh=0
+		for p in "${sigpts[@]}"
+		do
+# take abs val of the distance between y and p
+			dist=$(echo $y - $p | bc)
+			gt0=$(echo "$dist > 0.0" | bc -l)
+			if [ $gt0 -eq 0 ] # if dist < 0, multiply by -1
+			then
+				dist=$(bc <<< "scale=6; -1 *  $dist ")
+			fi
+			if [ $usefinemesh -eq 0 ] #only reset usefinemesh if it is 0/false. if true do not modify. 
+			then
+	 			usefinemesh=$(echo "0.1 > $dist" | bc -l) #usefinemesh is 1/true if .1 > dist
+			fi
+		done
+		if [ $usefinemesh -eq 1 ]
+		then
+ 			y=$(echo $y - $tinystep | bc)
+		else
+ 			y=$(echo $y - $step | bc)
+		fi
+#check if y has surpassed the max. if so keepgoing = 0, is not keepgoing = 1.
+ 		keepgoing=$(echo "$y > $yf" | bc -l)
+#end of y loop
+	done
+	if [ $m -eq 1 ] 
+	then
+		mv fort.12 h10singlet
+	elif [ $m -eq 3 ]
+	then
+		mv fort.12 h10triplet
+	fi
+	counter=1
+	y=$yi
+#end of multiplicity m loop
+done

@@ -1,0 +1,2084 @@
+ Entering Gaussian System, Link 0=g09
+ AtFile(1): H.gbs
+            H     0
+            S   10   1.00
+               1000.000000000000            0.000068713567
+                316.227766000000            0.000169141320
+                100.000000000000            0.000823394812
+                 31.622776600000            0.003425569236
+                 10.000000000000            0.013951996000
+                  3.162277660000            0.056909313560
+                  1.000000000000            0.198286399900
+                  0.316227766000            0.496922426700
+                  0.100000000000            0.369846276400
+                  0.031622776600            0.003752720039
+            ****
+ Initial command:
+ /projects/guscus/apps/gau/g09-e1/g09/l1.exe "/users/lcj1/gaussian/h10/2rows/singlejob/Gau-5694.inp" -scrdir="/users/lcj1/gaussian/h10/2rows/singlejob/"
+ Entering Link 1 = /projects/guscus/apps/gau/g09-e1/g09/l1.exe PID=      5695.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2015,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision E.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  ES64L-G09RevE.01 30-Nov-2015
+                31-Jan-2017 
+ ******************************************
+ %chk=h10.chk
+ ----------------------------------------------------------------------
+ #t casscf(10,10,nroot=3,davidsondiag)/gen scf(tight,novaracc,noincfock
+ ) geom=nocrowd test
+ ----------------------------------------------------------------------
+ ----------------------------------------------------------------------
+ mbs casscf calculation for a triangular lattice of 8 H atoms (made up 
+ of 10 iscosceles triangles h=0.76b=1.519342)
+ ----------------------------------------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ H                     0.75967   0.        1.52 
+ H                     2.27901   0.        1.52 
+ H                     0.        0.        0.76 
+ H                     1.51934   0.        0.76 
+ H                    -0.75967   0.        0. 
+ H                     0.75967   0.        0. 
+ H                    -1.51934   0.       -0.76 
+ H                     0.        0.       -0.76 
+ H                    -2.27901   0.       -1.52 
+ H                    -0.75967   0.       -1.52 
+ 
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  H    0.000000
+     2  H    1.519342   0.000000
+     3  H    1.074570   2.402395   0.000000
+     4  H    1.074570   1.074570   1.519342   0.000000
+     5  H    2.149139   3.397646   1.074570   2.402395   0.000000
+     6  H    1.520000   2.149139   1.074570   1.074570   1.519342
+     7  H    3.223709   4.430113   2.149139   3.397646   1.074570
+     8  H    2.403227   3.223709   1.520000   2.149139   1.074570
+     9  H    4.298279   5.478796   3.223709   4.430113   2.149139
+    10  H    3.398529   4.298279   2.403227   3.223709   1.520000
+                    6          7          8          9         10
+     6  H    0.000000
+     7  H    2.402395   0.000000
+     8  H    1.074570   1.519342   0.000000
+     9  H    3.397646   1.074570   2.402395   0.000000
+    10  H    2.149139   1.074570   1.074570   1.519342   0.000000
+ Framework group  C2H[SGH(H10)]
+ Deg. of freedom     9
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        1.520000   -0.759671    0.000000
+      2          1           0        1.520000   -2.279013    0.000000
+      3          1           0        0.760000   -0.000000    0.000000
+      4          1           0        0.760000   -1.519342    0.000000
+      5          1           0       -0.000000    0.759671    0.000000
+      6          1           0       -0.000000   -0.759671   -0.000000
+      7          1           0       -0.760000    1.519342   -0.000000
+      8          1           0       -0.760000    0.000000   -0.000000
+      9          1           0       -1.520000    2.279013   -0.000000
+     10          1           0       -1.520000    0.759671   -0.000000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    198.0751819     19.0425790     17.3724263
+    10 basis functions,   100 primitive gaussians,    10 cartesian basis functions
+     5 alpha electrons        5 beta electrons
+       nuclear repulsion energy        13.3554665774 Hartrees.
+ NAtoms=   10 NActive=   10 NUniq=    5 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ ExpMin= 3.16D-02 ExpMax= 1.00D+03 ExpMxC= 1.00D+01 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Initial guess orbital symmetries:
+       Occupied  (AG) (BU) (AG) (BU) (BU)
+       Virtual   (AG) (AG) (BU) (BU) (AG)
+ The electronic state of the initial guess is 1-AG.
+ In MySME. ITyp,IWrit    1    0
+ In MySME. ITyp,IWrit    1    0
+
+ Total number of active electrons   10
+ Total number of active orbitals    10
+ Number of Alpha electrons           5
+ Number of Beta electrons            5
+ IEnd,MeIgot for IE vector         5 134217723
+  Number of Alpha strings                 252
+  Number of Beta  strings                 252
+ Number of configurations               31878
+ SME calculated on fly
+ RWF file will be        16          Words long
+ Len28=          16 LenMCI=          30.
+ Enter MCSCF program.
+ NO. OF ORBITALS = 10     NO. OF CORE-ORBITALS =  0
+ NO. OF VALENCE-ORBITALS = 10      NO. OF VIRTUAL-ORBITALS =  0
+ USED ACCURACY IN CHECKING CONVERGENCE =  1.00D-08
+  Memory needed for Incore Integrals:                  263684
+  Integrals KEPT IN MEMORY
+ IBUJAK length=                    6160
+ Integral file not found: evaluate integrals 
+ FoFCou: FMM=F IPFlag=           0 FMFlag=           0 FMFlg1=           0
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=     600 IOpCl=  0 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ In Davids. NSec=     31878
+ IMaxHF,MaxMI,MSekIn,IFactt,WhenSc,nroot    5  200    6    2    2    3
+ DiagDN has N=   500 LTot=  1530 but NE2=   249 cannot use DSYEVD.
+ Store on disk first   6 roots
+          (  1)       Eigenvalue   -5.002690074    
+ (       1) 0.9005785 (       3)-0.1711852 (       5) 0.1481216 (       6)-0.1362477 (      28)-0.1277309 (      24) 0.1183059 (      67)-0.0728674
+ (    8002) 0.0669587 (     232) 0.0654035 (     236)-0.0649634 (     258) 0.0611521 (    1603)-0.0530489 (     302)-0.0518163 (      31)-0.0505968
+ (      17) 0.0502471 (     283) 0.0480378 (      45)-0.0474934 (      30) 0.0465647 (      23) 0.0460363 (    1653)-0.0447185 (    1620) 0.0434177
+ (    1599)-0.0412467 (      15)-0.0406799 (     276)-0.0403162 (    1712)-0.0401752 (      35)-0.0392665 (     497)-0.0381722 (      78) 0.0375715
+ (    1598)-0.0373451 (     704) 0.0370521 (      36)-0.0337632 (      37)-0.0334855 (     253)-0.0312911 (    1660) 0.0307115 (     257) 0.0294256
+ (     308) 0.0289393 (     235)-0.0278309 (    8137)-0.0270872 (     307) 0.0267951 (     262) 0.0264022 (    8023)-0.0261275 (    1655)-0.0259053
+ (      41)-0.0254937 (      27)-0.0254440 (     263) 0.0244486 (    1661) 0.0233715 (     303) 0.0231199 (    8264)-0.0229710 (    2557) 0.0229625
+ (     284) 0.0227366 (
+          (  2)       Eigenvalue   -4.991781915    
+ (       2) 0.9169186 (     234) 0.1369395 (     233)-0.1220874 (       4) 0.1191432 (     255) 0.1043464 (      25) 0.1007199 (     374)-0.0753512
+ (     238)-0.0737528 (    8003)-0.0720495 (    1600) 0.0714421 (      79)-0.0702393 (      16) 0.0676314 (      26)-0.0661526 (      87)-0.0610123
+ (     256) 0.0527861 (      22) 0.0478030 (       9)-0.0456160 (     373) 0.0420176 (     352)-0.0393803 (     385) 0.0389847 (     301)-0.0377025
+ (    1954)-0.0374867 (    1624) 0.0366686 (    1713) 0.0366612 (    8008) 0.0365002 (     277) 0.0359777 (      92) 0.0352581 (    1601) 0.0343551
+ (      12)-0.0328839 (      74)-0.0324383 (      47)-0.0309641 (    1962)-0.0288737 (      38) 0.0287339 (     408)-0.0278683 (      69)-0.0277628
+ (    4187) 0.0268733 (     356) 0.0263558 (     260) 0.0249957 (     498)-0.0246065 (    1893)-0.0244547 (    1619)-0.0237969 (     414) 0.0237415
+ (    1618) 0.0237188 (     705) 0.0221350 (     312) 0.0217921 (    1657)-0.0217618 (    8786)-0.0215297 (    2558) 0.0211790 (     386) 0.0211698
+ (    8141)-0.0197543 (
+          (  3)       Eigenvalue   -4.877961085    
+ (       3) 0.8316683 (      23)-0.2920825 (     232) 0.1519458 (       5) 0.1465299 (     253)-0.1437276 (      28)-0.1369959 (       1) 0.1207569
+ (    8002)-0.0952607 (      10)-0.0936656 (     243) 0.0908353 (       6)-0.0885744 (     353) 0.0828862 (     354) 0.0782588 (    1598) 0.0735637
+ (     358) 0.0666640 (       7)-0.0591846 (     407)-0.0548850 (     235) 0.0497765 (      85)-0.0489303 (    1623)-0.0487294 (    1603) 0.0475499
+ (      67) 0.0429550 (      11)-0.0422413 (      40) 0.0420179 (      91)-0.0419048 (     278) 0.0409196 (     302)-0.0391008 (     378)-0.0386609
+ (     382)-0.0377933 (      70)-0.0370943 (      24)-0.0358654 (    1895)-0.0355223 (      27) 0.0351312 (    1955) 0.0348477 (     693) 0.0340388
+ (      81)-0.0326772 (      17)-0.0323749 (    1620) 0.0323510 (    1892)-0.0306525 (      93)-0.0306105 (    8006)-0.0287399 (    8912) 0.0284798
+ (      71)-0.0271528 (    4188) 0.0261227 (    1653)-0.0257360 (    2630)-0.0253765 (      14) 0.0249889 (      15)-0.0246663 (     668)-0.0244885
+ (    1956)-0.0242652 (
+ Davidson Disk Diagonalization is being used:
+ MVecIn=      6 MSekIn=    6 NVConv=    3 NVConT=    0 MConv=    3 WhenSc=  2 IFact=    2 FinIt=F
+ NRoot=     6 Conv= 0.00D+00 ConvT= 0.00D+00 MaxItI=           0 Dim=       31878 Max sub=   200
+ Iteration     1 internal iteration     1 dimension is     6
+ Eigenvalues at current iteration:
+ Root      1 :    -5.002690073564542
+ Root      2 :    -4.991781915172111
+ Root      3 :    -4.877961085127028
+ Root      4 :    -4.851127298259986
+ Root      5 :    -4.830226150774529
+ Root      6 :    -4.802006136201970
+ DEMax= 0.00D+00
+ State    1 2nd order lowering    0.215624585905E-01 norm 8.17D-02
+ State    2 2nd order lowering    0.240838211584E-01 norm 8.61D-02
+ State    3 2nd order lowering    0.251181358005E-01 norm 8.64D-02
+ State    4 2nd order lowering    0.256009060169E-01 norm 8.73D-02
+ State    5 2nd order lowering    0.275417871488E-01 norm 9.00D-02
+ State    6 2nd order lowering    0.267794484671E-01 norm 8.87D-02
+ Iteration     2 internal iteration     2 dimension is    12
+ Root      1 not converged, maximum delta is    0.028469282230973
+ Root      2 not converged, maximum delta is    0.027669715693923
+ Root      3 not converged, maximum delta is    0.092997795660034
+ Eigenvalues at current iteration:
+ Root      1 :    -5.043454029092174   Change is   -0.040763955527631
+ Root      2 :    -5.037765816520597   Change is   -0.045983901348486
+ Root      3 :    -4.932167821956927   Change is   -0.054206736829899
+ DEMax= 5.42D-02
+ State    1 2nd order lowering    0.309813448535E-02 norm 3.29D-02
+ State    2 2nd order lowering    0.376298159540E-02 norm 3.61D-02
+ State    3 2nd order lowering    0.444858415086E-02 norm 3.88D-02
+ Iteration     3 internal iteration     3 dimension is    15
+ Root      1 not converged, maximum delta is    0.007202818471642
+ Root      2 not converged, maximum delta is    0.007573480840902
+ Root      3 not converged, maximum delta is    0.010273177312275
+ Eigenvalues at current iteration:
+ Root      1 :    -5.047150642750188   Change is   -0.003696613658015
+ Root      2 :    -5.042164369546035   Change is   -0.004398553025438
+ Root      3 :    -4.937833852102072   Change is   -0.005666030145145
+ DEMax= 5.67D-03
+ State    1 2nd order lowering    0.104048572723E-02 norm 2.03D-02
+ State    2 2nd order lowering    0.120444954807E-02 norm 2.15D-02
+ State    3 2nd order lowering    0.140210022559E-02 norm 2.29D-02
+ Iteration     4 internal iteration     4 dimension is    18
+ Root      1 not converged, maximum delta is    0.003625451076289
+ Root      2 not converged, maximum delta is    0.003538201347650
+ Root      3 not converged, maximum delta is    0.004783086417729
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048097407455124   Change is   -0.000946764704936
+ Root      2 :    -5.043300774661475   Change is   -0.001136405115440
+ Root      3 :    -4.939253389821969   Change is   -0.001419537719897
+ DEMax= 1.42D-03
+ State    1 2nd order lowering    0.475447509396E-03 norm 1.46D-02
+ State    2 2nd order lowering    0.557894658854E-03 norm 1.56D-02
+ State    3 2nd order lowering    0.703476700676E-03 norm 1.72D-02
+ Iteration     5 internal iteration     5 dimension is    21
+ Root      1 not converged, maximum delta is    0.001849138992394
+ Root      2 not converged, maximum delta is    0.002355094749078
+ Root      3 not converged, maximum delta is    0.002989340246835
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048433553341416   Change is   -0.000336145886292
+ Root      2 :    -5.043717478642091   Change is   -0.000416703980616
+ Root      3 :    -4.939820790098464   Change is   -0.000567400276495
+ DEMax= 5.67D-04
+ State    1 2nd order lowering    0.288675992084E-03 norm 1.24D-02
+ State    2 2nd order lowering    0.326873921651E-03 norm 1.29D-02
+ State    3 2nd order lowering    0.449920955527E-03 norm 1.50D-02
+ Iteration     6 internal iteration     6 dimension is    24
+ Root      1 not converged, maximum delta is    0.001521750914744
+ Root      2 not converged, maximum delta is    0.001716249363516
+ Root      3 not converged, maximum delta is    0.002068934616289
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048597665379057   Change is   -0.000164112037640
+ Root      2 :    -5.043912129365451   Change is   -0.000194650723359
+ Root      3 :    -4.940093700287682   Change is   -0.000272910189218
+ DEMax= 2.73D-04
+ State    1 2nd order lowering    0.178002378788E-03 norm 1.01D-02
+ State    2 2nd order lowering    0.190200678627E-03 norm 1.03D-02
+ State    3 2nd order lowering    0.292491242425E-03 norm 1.26D-02
+ Iteration     7 internal iteration     7 dimension is    27
+ Root      1 not converged, maximum delta is    0.001941414995089
+ Root      2 not converged, maximum delta is    0.001351469517949
+ Root      3 not converged, maximum delta is    0.002546859479975
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048698926719664   Change is   -0.000101261340608
+ Root      2 :    -5.044017809587722   Change is   -0.000105680222272
+ Root      3 :    -4.940268226112490   Change is   -0.000174525824808
+ DEMax= 1.75D-04
+ State    1 2nd order lowering    0.117544247916E-03 norm 8.33D-03
+ State    2 2nd order lowering    0.122266909478E-03 norm 8.57D-03
+ State    3 2nd order lowering    0.199875577034E-03 norm 1.05D-02
+ Iteration     8 internal iteration     8 dimension is    30
+ Root      1 not converged, maximum delta is    0.001759992243097
+ Root      2 not converged, maximum delta is    0.001382412393820
+ Root      3 not converged, maximum delta is    0.002341895774454
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048763366952775   Change is   -0.000064440233110
+ Root      2 :    -5.044080932943054   Change is   -0.000063123355332
+ Root      3 :    -4.940389912538283   Change is   -0.000121686425793
+ DEMax= 1.22D-04
+ State    1 2nd order lowering    0.758996939553E-04 norm 6.61D-03
+ State    2 2nd order lowering    0.730311390275E-04 norm 6.53D-03
+ State    3 2nd order lowering    0.133545012261E-03 norm 8.55D-03
+ Iteration     9 internal iteration     9 dimension is    33
+ Root      1 not converged, maximum delta is    0.001142380547650
+ Root      2 not converged, maximum delta is    0.001101847799744
+ Root      3 not converged, maximum delta is    0.001984894414742
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048808379348642   Change is   -0.000045012395868
+ Root      2 :    -5.044121639834955   Change is   -0.000040706891901
+ Root      3 :    -4.940473509232111   Change is   -0.000083596693828
+ DEMax= 8.36D-05
+ State    1 2nd order lowering    0.473447137065E-04 norm 5.07D-03
+ State    2 2nd order lowering    0.413754503341E-04 norm 4.78D-03
+ State    3 2nd order lowering    0.875530145781E-04 norm 6.84D-03
+ Iteration    10 internal iteration    10 dimension is    36
+ Root      1 not converged, maximum delta is    0.000932391534743
+ Root      2 not converged, maximum delta is    0.000966043552373
+ Root      3 not converged, maximum delta is    0.001805572620854
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048839080131656   Change is   -0.000030700783014
+ Root      2 :    -5.044146383914776   Change is   -0.000024744079821
+ Root      3 :    -4.940530012908353   Change is   -0.000056503676243
+ DEMax= 5.65D-05
+ State    1 2nd order lowering    0.311489545999E-04 norm 4.10D-03
+ State    2 2nd order lowering    0.234911606367E-04 norm 3.62D-03
+ State    3 2nd order lowering    0.519178325022E-04 norm 5.10D-03
+ Iteration    11 internal iteration    11 dimension is    39
+ Root      1 not converged, maximum delta is    0.000841720855227
+ Root      2 not converged, maximum delta is    0.000709655938559
+ Root      3 not converged, maximum delta is    0.001579232411831
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048858670460596   Change is   -0.000019590328940
+ Root      2 :    -5.044159510321622   Change is   -0.000013126406846
+ Root      3 :    -4.940567217246049   Change is   -0.000037204337696
+ DEMax= 3.72D-05
+ State    1 2nd order lowering    0.204783455795E-04 norm 3.34D-03
+ State    2 2nd order lowering    0.135881252677E-04 norm 2.82D-03
+ State    3 2nd order lowering    0.344811606033E-04 norm 4.19D-03
+ Iteration    12 internal iteration    12 dimension is    42
+ Root      1 not converged, maximum delta is    0.000753547703618
+ Root      2 not converged, maximum delta is    0.000510514033689
+ Root      3 not converged, maximum delta is    0.001268735537282
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048871286331544   Change is   -0.000012615870949
+ Root      2 :    -5.044166555956729   Change is   -0.000007045635107
+ Root      3 :    -4.940590692734881   Change is   -0.000023475488832
+ DEMax= 2.35D-05
+ State    1 2nd order lowering    0.145919040602E-04 norm 2.88D-03
+ State    2 2nd order lowering    0.808575736362E-05 norm 2.18D-03
+ State    3 2nd order lowering    0.234615103468E-04 norm 3.47D-03
+ Iteration    13 internal iteration    13 dimension is    45
+ Root      1 not converged, maximum delta is    0.000693195194500
+ Root      2 not converged, maximum delta is    0.000399966731678
+ Root      3 not converged, maximum delta is    0.001091657478491
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048879935878866   Change is   -0.000008649547322
+ Root      2 :    -5.044170789232859   Change is   -0.000004233276130
+ Root      3 :    -4.940607225227698   Change is   -0.000016532492817
+ DEMax= 1.65D-05
+ State    1 2nd order lowering    0.981412304095E-05 norm 2.33D-03
+ State    2 2nd order lowering    0.455833791762E-05 norm 1.60D-03
+ State    3 2nd order lowering    0.151906135438E-04 norm 2.72D-03
+ Iteration    14 internal iteration    14 dimension is    48
+ Root      1 not converged, maximum delta is    0.000658143370954
+ Root      2 not converged, maximum delta is    0.000314123403963
+ Root      3 not converged, maximum delta is    0.000991209944155
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048886131860201   Change is   -0.000006195981334
+ Root      2 :    -5.044173371759644   Change is   -0.000002582526785
+ Root      3 :    -4.940618690432637   Change is   -0.000011465204939
+ DEMax= 1.15D-05
+ State    1 2nd order lowering    0.671896245711E-05 norm 1.91D-03
+ State    2 2nd order lowering    0.277928398078E-05 norm 1.25D-03
+ State    3 2nd order lowering    0.108677675465E-04 norm 2.30D-03
+ Iteration    15 internal iteration    15 dimension is    51
+ Root      1 not converged, maximum delta is    0.000612468220449
+ Root      2 not converged, maximum delta is    0.000241812611369
+ Root      3 not converged, maximum delta is    0.001010151110253
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048890567231703   Change is   -0.000004435371502
+ Root      2 :    -5.044174957991146   Change is   -0.000001586231502
+ Root      3 :    -4.940627045240856   Change is   -0.000008354808219
+ DEMax= 8.35D-06
+ State    1 2nd order lowering    0.472350062621E-05 norm 1.59D-03
+ State    2 2nd order lowering    0.182555924406E-05 norm 1.01D-03
+ State    3 2nd order lowering    0.821117776522E-05 norm 2.01D-03
+ Iteration    16 internal iteration    16 dimension is    54
+ Root      1 not converged, maximum delta is    0.000547071373871
+ Root      2 not converged, maximum delta is    0.000229230978579
+ Root      3 not converged, maximum delta is    0.001011053342371
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048893717013872   Change is   -0.000003149782169
+ Root      2 :    -5.044176039171414   Change is   -0.000001081180268
+ Root      3 :    -4.940633346965401   Change is   -0.000006301724546
+ DEMax= 6.30D-06
+ State    1 2nd order lowering    0.324745469803E-05 norm 1.32D-03
+ State    2 2nd order lowering    0.119202169974E-05 norm 8.05D-04
+ State    3 2nd order lowering    0.667992658094E-05 norm 1.83D-03
+ Iteration    17 internal iteration    17 dimension is    57
+ Root      1 not converged, maximum delta is    0.000451104329782
+ Root      2 not converged, maximum delta is    0.000210184658016
+ Root      3 not converged, maximum delta is    0.001011605136196
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048895823250822   Change is   -0.000002106236950
+ Root      2 :    -5.044176783094131   Change is   -0.000000743922717
+ Root      3 :    -4.940638371646103   Change is   -0.000005024680702
+ DEMax= 5.02D-06
+ State    1 2nd order lowering    0.219690319843E-05 norm 1.09D-03
+ State    2 2nd order lowering    0.792196641267E-06 norm 6.56D-04
+ State    3 2nd order lowering    0.566582780110E-05 norm 1.71D-03
+ Iteration    18 internal iteration    18 dimension is    60
+ Root      1 not converged, maximum delta is    0.000352862803156
+ Root      2 not converged, maximum delta is    0.000175873671093
+ Root      3 not converged, maximum delta is    0.000999024659388
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048897171375116   Change is   -0.000001348124294
+ Root      2 :    -5.044177271520919   Change is   -0.000000488426788
+ Root      3 :    -4.940642540968669   Change is   -0.000004169322566
+ DEMax= 4.17D-06
+ State    1 2nd order lowering    0.141104260796E-05 norm 8.80D-04
+ State    2 2nd order lowering    0.541149131271E-06 norm 5.46D-04
+ State    3 2nd order lowering    0.425446041124E-05 norm 1.45D-03
+ Iteration    19 internal iteration    19 dimension is    63
+ Root      1 not converged, maximum delta is    0.000266523927722
+ Root      2 not converged, maximum delta is    0.000144846991389
+ Root      3 not converged, maximum delta is    0.000920937761594
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898015283866   Change is   -0.000000843908750
+ Root      2 :    -5.044177599770629   Change is   -0.000000328249710
+ Root      3 :    -4.940645842429147   Change is   -0.000003301460477
+ DEMax= 3.30D-06
+ State    1 2nd order lowering    0.853466226654E-06 norm 6.78D-04
+ State    2 2nd order lowering    0.351849618731E-06 norm 4.40D-04
+ State    3 2nd order lowering    0.330065004441E-05 norm 1.28D-03
+ Iteration    20 internal iteration    20 dimension is    66
+ Root      1 not converged, maximum delta is    0.000201829578177
+ Root      2 not converged, maximum delta is    0.000114325324262
+ Root      3 not converged, maximum delta is    0.000775930949556
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898547452232   Change is   -0.000000532168366
+ Root      2 :    -5.044177814771561   Change is   -0.000000215000932
+ Root      3 :    -4.940648287221078   Change is   -0.000002444791932
+ DEMax= 2.44D-06
+ State    1 2nd order lowering    0.508186211969E-06 norm 5.20D-04
+ State    2 2nd order lowering    0.219865972909E-06 norm 3.49D-04
+ State    3 2nd order lowering    0.233539849424E-05 norm 1.07D-03
+ Iteration    21 internal iteration    21 dimension is    69
+ Root      1 not converged, maximum delta is    0.000143408746466
+ Root      2 not converged, maximum delta is    0.000081647217576
+ Root      3 not converged, maximum delta is    0.000626419056393
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898862494061   Change is   -0.000000315041828
+ Root      2 :    -5.044177943316903   Change is   -0.000000128545342
+ Root      3 :    -4.940650047359007   Change is   -0.000001760137929
+ DEMax= 1.76D-06
+ State    1 2nd order lowering    0.300507164421E-06 norm 4.01D-04
+ State    2 2nd order lowering    0.140855579853E-06 norm 2.82D-04
+ State    3 2nd order lowering    0.162796751455E-05 norm 8.94D-04
+ Iteration    22 internal iteration    22 dimension is    72
+ Root      1 not converged, maximum delta is    0.000101010561311
+ Root      2 not converged, maximum delta is    0.000061095206696
+ Root      3 not converged, maximum delta is    0.000467636639801
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899046515587   Change is   -0.000000184021526
+ Root      2 :    -5.044178024706253   Change is   -0.000000081389349
+ Root      3 :    -4.940651234757338   Change is   -0.000001187398331
+ DEMax= 1.19D-06
+ State    1 2nd order lowering    0.170601785327E-06 norm 2.99D-04
+ State    2 2nd order lowering    0.878678021840E-07 norm 2.21D-04
+ State    3 2nd order lowering    0.106204964741E-05 norm 7.24D-04
+ Iteration    23 internal iteration    23 dimension is    75
+ Root      1 not converged, maximum delta is    0.000074159054845
+ Root      2 not converged, maximum delta is    0.000047158979947
+ Root      3 not converged, maximum delta is    0.000332713774927
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899156802332   Change is   -0.000000110286746
+ Root      2 :    -5.044178078251506   Change is   -0.000000053545254
+ Root      3 :    -4.940652003233232   Change is   -0.000000768475894
+ DEMax= 7.68D-07
+ State    1 2nd order lowering    0.101977768781E-06 norm 2.30D-04
+ State    2 2nd order lowering    0.579043765728E-07 norm 1.81D-04
+ State    3 2nd order lowering    0.667108099195E-06 norm 5.76D-04
+ Iteration    24 internal iteration    24 dimension is    78
+ Root      1 not converged, maximum delta is    0.000055443550651
+ Root      2 not converged, maximum delta is    0.000034735789766
+ Root      3 not converged, maximum delta is    0.000224792271998
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899224415646   Change is   -0.000000067613313
+ Root      2 :    -5.044178111862928   Change is   -0.000000033611422
+ Root      3 :    -4.940652477294638   Change is   -0.000000474061406
+ DEMax= 4.74D-07
+ State    1 2nd order lowering    0.639476409530E-07 norm 1.83D-04
+ State    2 2nd order lowering    0.383398872778E-07 norm 1.48D-04
+ State    3 2nd order lowering    0.437785491975E-06 norm 4.72D-04
+ Iteration    25 internal iteration    25 dimension is    81
+ Root      1 not converged, maximum delta is    0.000040735070156
+ Root      2 not converged, maximum delta is    0.000030154419668
+ Root      3 not converged, maximum delta is    0.000156235217393
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899265783636   Change is   -0.000000041367990
+ Root      2 :    -5.044178134894130   Change is   -0.000000023031202
+ Root      3 :    -4.940652780233752   Change is   -0.000000302939115
+ DEMax= 3.03D-07
+ State    1 2nd order lowering    0.406289411642E-07 norm 1.48D-04
+ State    2 2nd order lowering    0.248507590148E-07 norm 1.17D-04
+ State    3 2nd order lowering    0.283888988642E-06 norm 3.77D-04
+ Iteration    26 internal iteration    26 dimension is    84
+ Root      1 not converged, maximum delta is    0.000029510479214
+ Root      2 not converged, maximum delta is    0.000025506965236
+ Root      3 not converged, maximum delta is    0.000114100798926
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899290977031   Change is   -0.000000025193396
+ Root      2 :    -5.044178150821065   Change is   -0.000000015926935
+ Root      3 :    -4.940652985850053   Change is   -0.000000205616301
+ DEMax= 2.06D-07
+ State    1 2nd order lowering    0.244908557234E-07 norm 1.15D-04
+ State    2 2nd order lowering    0.166284611945E-07 norm 9.53D-05
+ State    3 2nd order lowering    0.183228943711E-06 norm 2.99D-04
+ Iteration    27 internal iteration    27 dimension is    87
+ Root      1 not converged, maximum delta is    0.000020278925003
+ Root      2 not converged, maximum delta is    0.000020867635965
+ Root      3 not converged, maximum delta is    0.000102272196645
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899306172223   Change is   -0.000000015195192
+ Root      2 :    -5.044178161249468   Change is   -0.000000010428403
+ Root      3 :    -4.940653127536740   Change is   -0.000000141686686
+ DEMax= 1.42D-07
+ State    1 2nd order lowering    0.140424772701E-07 norm 8.57D-05
+ State    2 2nd order lowering    0.109219721986E-07 norm 7.67D-05
+ State    3 2nd order lowering    0.130122264159E-06 norm 2.50D-04
+ Iteration    28 internal iteration    28 dimension is    90
+ Root      1 not converged, maximum delta is    0.000016211100893
+ Root      2 not converged, maximum delta is    0.000017471996843
+ Root      3 not converged, maximum delta is    0.000100088366365
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899315366598   Change is   -0.000000009194375
+ Root      2 :    -5.044178168297878   Change is   -0.000000007048410
+ Root      3 :    -4.940653232856683   Change is   -0.000000105319944
+ DEMax= 1.05D-07
+ State    1 2nd order lowering    0.818680481798E-08 norm 6.54D-05
+ State    2 2nd order lowering    0.685391929786E-08 norm 5.97D-05
+ State    3 2nd order lowering    0.949378018929E-07 norm 2.12D-04
+ Iteration    29 internal iteration    29 dimension is    93
+ Root      1 not converged, maximum delta is    0.000012169730012
+ Root      2 not converged, maximum delta is    0.000014197095785
+ Root      3 not converged, maximum delta is    0.000100060961167
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899320729175   Change is   -0.000000005362577
+ Root      2 :    -5.044178172959973   Change is   -0.000000004662095
+ Root      3 :    -4.940653314270124   Change is   -0.000000081413440
+ DEMax= 8.14D-08
+ State    1 2nd order lowering    0.474000956437E-08 norm 4.99D-05
+ State    2 2nd order lowering    0.451513376574E-08 norm 4.87D-05
+ State    3 2nd order lowering    0.706584316302E-07 norm 1.82D-04
+ Iteration    30 internal iteration    30 dimension is    96
+ Root      1 not converged, maximum delta is    0.000008643500572
+ Root      2 not converged, maximum delta is    0.000010846317910
+ Root      3 not converged, maximum delta is    0.000093632170133
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899323778914   Change is   -0.000000003049739
+ Root      2 :    -5.044178175911728   Change is   -0.000000002951755
+ Root      3 :    -4.940653374674859   Change is   -0.000000060404735
+ DEMax= 6.04D-08
+ State    1 2nd order lowering    0.265383107348E-08 norm 3.72D-05
+ State    2 2nd order lowering    0.284233664776E-08 norm 3.87D-05
+ State    3 2nd order lowering    0.538828182471E-07 norm 1.61D-04
+ Iteration    31 internal iteration    31 dimension is    99
+ Root      1 not converged, maximum delta is    0.000006296826650
+ Root      2 not converged, maximum delta is    0.000008672202010
+ Root      3 not converged, maximum delta is    0.000082110564113
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899325507879   Change is   -0.000000001728965
+ Root      2 :    -5.044178177774429   Change is   -0.000000001862700
+ Root      3 :    -4.940653417401036   Change is   -0.000000042726176
+ DEMax= 4.27D-08
+ State    1 2nd order lowering    0.153938418275E-08 norm 2.83D-05
+ State    2 2nd order lowering    0.173232277391E-08 norm 3.02D-05
+ State    3 2nd order lowering    0.382822641849E-07 norm 1.36D-04
+ Iteration    32 internal iteration    32 dimension is   102
+ Root      1 not converged, maximum delta is    0.000005462023430
+ Root      2 not converged, maximum delta is    0.000006635584380
+ Root      3 not converged, maximum delta is    0.000069995433077
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899326532079   Change is   -0.000000001024200
+ Root      2 :    -5.044178178875698   Change is   -0.000000001101269
+ Root      3 :    -4.940653447088811   Change is   -0.000000029687775
+ DEMax= 2.97D-08
+ State    1 2nd order lowering    0.910146147590E-09 norm 2.17D-05
+ State    2 2nd order lowering    0.104812969491E-08 norm 2.35D-05
+ State    3 2nd order lowering    0.272095976114E-07 norm 1.15D-04
+ Iteration    33 internal iteration    33 dimension is   105
+ Root      1 not converged, maximum delta is    0.000004544993847
+ Root      2 not converged, maximum delta is    0.000005363901564
+ Root      3 not converged, maximum delta is    0.000061672977200
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327139647   Change is   -0.000000000607568
+ Root      2 :    -5.044178179552402   Change is   -0.000000000676704
+ Root      3 :    -4.940653468569389   Change is   -0.000000021480578
+ DEMax= 2.15D-08
+ State    1 2nd order lowering    0.514842966929E-09 norm 1.62D-05
+ State    2 2nd order lowering    0.657353663349E-09 norm 1.85D-05
+ State    3 2nd order lowering    0.203750619713E-07 norm 9.88D-05
+ Iteration    34 internal iteration    34 dimension is   108
+ Root      1 not converged, maximum delta is    0.000003624777724
+ Root      2 not converged, maximum delta is    0.000004684164296
+ Root      3 not converged, maximum delta is    0.000059823712620
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327479522   Change is   -0.000000000339875
+ Root      2 :    -5.044178179999384   Change is   -0.000000000446982
+ Root      3 :    -4.940653485744283   Change is   -0.000000017174894
+ DEMax= 1.72D-08
+ State    1 2nd order lowering    0.300639264811E-09 norm 1.25D-05
+ State    2 2nd order lowering    0.439155482199E-09 norm 1.52D-05
+ State    3 2nd order lowering    0.155310660142E-07 norm 8.54D-05
+ Iteration    35 internal iteration    35 dimension is   111
+ Root      1 not converged, maximum delta is    0.000003178200051
+ Root      2 not converged, maximum delta is    0.000004039962847
+ Root      3 not converged, maximum delta is    0.000056466766275
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327678339   Change is   -0.000000000198817
+ Root      2 :    -5.044178180295573   Change is   -0.000000000296189
+ Root      3 :    -4.940653499177597   Change is   -0.000000013433314
+ DEMax= 1.34D-08
+ State    1 2nd order lowering    0.180521977566E-09 norm 9.68D-06
+ State    2 2nd order lowering    0.309316078670E-09 norm 1.30D-05
+ State    3 2nd order lowering    0.124122453170E-07 norm 7.67D-05
+ Iteration    36 internal iteration    36 dimension is   114
+ Root      1 not converged, maximum delta is    0.000002561301196
+ Root      2 not converged, maximum delta is    0.000003420664647
+ Root      3 not converged, maximum delta is    0.000050101828718
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327796606   Change is   -0.000000000118267
+ Root      2 :    -5.044178180493788   Change is   -0.000000000198215
+ Root      3 :    -4.940653509602533   Change is   -0.000000010424936
+ DEMax= 1.04D-08
+ State    1 2nd order lowering    0.110643791174E-09 norm 7.57D-06
+ State    2 2nd order lowering    0.208287983941E-09 norm 1.06D-05
+ State    3 2nd order lowering    0.101443855079E-07 norm 7.01D-05
+ Iteration    37 internal iteration    37 dimension is   117
+ Root      1 not converged, maximum delta is    0.000002089071923
+ Root      2 not converged, maximum delta is    0.000002912690068
+ Root      3 not converged, maximum delta is    0.000043948145830
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327869348   Change is   -0.000000000072742
+ Root      2 :    -5.044178180629488   Change is   -0.000000000135700
+ Root      3 :    -4.940653517817212   Change is   -0.000000008214679
+ DEMax= 8.21D-09
+ State    1 2nd order lowering    0.650531773836E-10 norm 5.76D-06
+ State    2 2nd order lowering    0.136456768430E-09 norm 8.50D-06
+ State    3 2nd order lowering    0.794418459456E-08 norm 6.17D-05
+ Iteration    38 internal iteration    38 dimension is   120
+ Root      1 not converged, maximum delta is    0.000001633518735
+ Root      2 not converged, maximum delta is    0.000002397685426
+ Root      3 not converged, maximum delta is    0.000038287091936
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327913844   Change is   -0.000000000044496
+ Root      2 :    -5.044178180720706   Change is   -0.000000000091218
+ Root      3 :    -4.940653524476289   Change is   -0.000000006659078
+ DEMax= 6.66D-09
+ State    1 2nd order lowering    0.397764000652E-10 norm 4.52D-06
+ State    2 2nd order lowering    0.905407231979E-10 norm 6.93D-06
+ State    3 2nd order lowering    0.624619765027E-08 norm 5.48D-05
+ Iteration    39 internal iteration    39 dimension is   123
+ Root      1 not converged, maximum delta is    0.000001213142007
+ Root      2 not converged, maximum delta is    0.000001855637309
+ Root      3 not converged, maximum delta is    0.000030581351453
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327940054   Change is   -0.000000000026210
+ Root      2 :    -5.044178180779636   Change is   -0.000000000058931
+ Root      3 :    -4.940653529534621   Change is   -0.000000005058332
+ DEMax= 5.06D-09
+ State    1 2nd order lowering    0.241512996409E-10 norm 3.57D-06
+ State    2 2nd order lowering    0.595836287710E-10 norm 5.62D-06
+ State    3 2nd order lowering    0.478241869733E-08 norm 4.82D-05
+ Iteration    40 internal iteration    40 dimension is   126
+ Root      1 has converged.
+ Root      2 not converged, maximum delta is    0.000001447662386
+ Root      3 not converged, maximum delta is    0.000025862787209
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327955054   Change is   -0.000000000015000
+ Root      2 :    -5.044178180818864   Change is   -0.000000000039228
+ Root      3 :    -4.940653533308951   Change is   -0.000000003774330
+ DEMax= 3.77D-09
+ State    2 2nd order lowering    0.384230869919E-10 norm 4.51D-06
+ State    3 2nd order lowering    0.355050448332E-08 norm 4.14D-05
+ Iteration    41 internal iteration    41 dimension is   127
+ Root      1 has converged.
+ Root      2 not converged, maximum delta is    0.000001079020976
+ Root      3 has converged.
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327955051   Change is    0.000000000000003
+ Root      2 :    -5.044178180843591   Change is   -0.000000000024727
+ Root      3 :    -4.940653533308952   Change is   -0.000000000000001
+ DEMax= 2.47D-11
+ State    2 2nd order lowering    0.246381873833E-10 norm 3.63D-06
+ Convergence achieved on expansion vectors.
+ ibunc,ibunc2,ibuvec       641       640        23
+ Energy state  1 =       -5.0488993280
+ Full Convergence on CI vector
+ Energy state  2 =       -5.0441781808
+ Full Convergence on CI vector
+ Energy state  3 =       -4.9406535333
+ Full Convergence on CI vector
+ Defining IBUGAM
+ 2ND ORD PT ENERGY     CV    0.000000   CU    0.000000   UV    0.000000
+ TOTAL                      -4.940654
+ WARNING! : large rotation  I  J  =                        6
+                        3
+ Step scaled by    0.8221622557988121     
+ ITN=  1 MaxIt= 64 E=     -4.9406535333 DE=-4.94D+00 Acc= 1.00D-08 Lan=127
+ In Davids. NSec=     31878
+ IMaxHF,MaxMI,MSekIn,IFactt,WhenSc,nroot    5  200    6    2    2    3
+          (  1)       Eigenvalue   -5.048899328    
+ (       1)-0.8633633 (       3) 0.1946927 (       5)-0.1647873 (       6) 0.1376798 (      24)-0.1283939 (      28) 0.1217578 (      67) 0.0824080
+ (    8002)-0.0756737 (     236) 0.0743008 (     232)-0.0728602 (     258)-0.0643396 (      31) 0.0585137 (      23)-0.0568027 (      17)-0.0568023
+ (     283)-0.0561373 (     302) 0.0557616 (    1603) 0.0523383 (      45) 0.0481672 (    1620)-0.0476781 (    1653) 0.0461694 (      30)-0.0459841
+ (    1599) 0.0442276 (      35) 0.0424040 (     497) 0.0418088 (      78)-0.0412337 (    1598) 0.0405991 (     276) 0.0402411 (    1712) 0.0398440
+ (      15) 0.0394050 (     704)-0.0373090 (    1678) 0.0371227 (      36) 0.0348597 (    1720) 0.0348564 (    1660)-0.0344707 (     308)-0.0342242
+ (     325) 0.0334306 (      37) 0.0329251 (    8023) 0.0327828 (     254) 0.0326583 (    8137) 0.0305977 (     263)-0.0304787 (     235) 0.0301029
+ (     257)-0.0300844 (     300) 0.0299466 (     307)-0.0293484 (     262)-0.0275914 (      27) 0.0274162 (    8267)-0.0267777 (    8027) 0.0260291
+ (    8060)-0.0258148 (
+          (  2)       Eigenvalue   -5.044178181    
+ (       2) 0.8828322 (     234) 0.1490536 (       4) 0.1317671 (     233)-0.1238555 (     255) 0.1089697 (      25) 0.1031904 (     374)-0.0827165
+ (    1600) 0.0807102 (     238)-0.0791160 (      79)-0.0755215 (    8003)-0.0739899 (      26)-0.0696522 (      16) 0.0679093 (      87)-0.0648231
+ (      22) 0.0629241 (     256) 0.0579569 (     373) 0.0495545 (     385) 0.0446230 (    1713) 0.0429870 (       9)-0.0424453 (    8008) 0.0408230
+ (    1624) 0.0407560 (     301)-0.0404435 (     352)-0.0400914 (    1724)-0.0391037 (    1601) 0.0390322 (      92) 0.0380942 (    1682)-0.0378460
+ (    1954)-0.0377221 (     277) 0.0370512 (      12)-0.0369372 (      69)-0.0332822 (      47)-0.0315598 (    1962)-0.0314526 (      74)-0.0312676
+ (     408)-0.0295925 (     498)-0.0293433 (     431)-0.0280903 (     414) 0.0280654 (      20) 0.0279525 (      38) 0.0276650 (    4187) 0.0275630
+ (    1916)-0.0275310 (    2012)-0.0269998 (     312) 0.0265908 (    1657)-0.0265697 (    1618) 0.0261303 (    1949)-0.0260277 (    1893)-0.0244238
+ (     356) 0.0244147 (
+          (  3)       Eigenvalue   -4.940653533    
+ (       3)-0.7499058 (      23) 0.2728314 (     232)-0.2486953 (       5)-0.2374353 (     253) 0.1723718 (       1)-0.1090022 (     353)-0.1046745
+ (      28) 0.1042238 (    8002) 0.1035154 (     243)-0.0929327 (      10) 0.0912694 (     354)-0.0903448 (    1598)-0.0875870 (       6) 0.0773904
+ (      11) 0.0700124 (     358)-0.0658356 (     407) 0.0586505 (    1603)-0.0567135 (      70) 0.0535143 (       7) 0.0534579 (    1623) 0.0518965
+ (     302) 0.0497933 (    8030) 0.0471671 (      81) 0.0458998 (      84)-0.0458074 (      40)-0.0443505 (      91) 0.0443456 (      17) 0.0433557
+ (    1895) 0.0426315 (    1620)-0.0418769 (     437) 0.0405159 (     693)-0.0404803 (      27)-0.0400984 (    8006) 0.0400300 (      85) 0.0400112
+ (    1955)-0.0395595 (     235)-0.0379824 (    8912)-0.0365336 (     704)-0.0359133 (     283)-0.0352907 (     275) 0.0338520 (    1920) 0.0333669
+ (     378) 0.0333520 (     278)-0.0330430 (    8782) 0.0322106 (    1966) 0.0305966 (    1896)-0.0298876 (      14)-0.0293741 (    8023)-0.0289419
+ (    1913) 0.0283078 (
+ Davidson Disk Diagonalization is being used:
+ MVecIn=      3 MSekIn=    3 NVConv=    3 NVConT=    0 MConv=    3 WhenSc=  0 IFact=    1 FinIt=F
+ NRoot=     3 Conv= 0.00D+00 ConvT= 0.00D+00 MaxItI=           0 Dim=       31878 Max sub=   200
+ Iteration     1 internal iteration     1 dimension is     3
+ Eigenvalues at current iteration:
+ Root      1 :    -4.856856015006408
+ Root      2 :    -4.790522732403539
+ Root      3 :    -4.767514732715749
+ DEMax= 0.00D+00
+ State    1 2nd order lowering    0.282027865525E-01 norm 8.71D-02
+ State    2 2nd order lowering    0.344919209263E-01 norm 9.49D-02
+ State    3 2nd order lowering    0.302667328680E-01 norm 8.92D-02
+ Iteration     2 internal iteration     2 dimension is     6
+ Root      1 not converged, maximum delta is    0.136281185175058
+ Root      2 not converged, maximum delta is    0.152041616850994
+ Root      3 not converged, maximum delta is    0.081481435818759
+ Eigenvalues at current iteration:
+ Root      1 :    -4.946479463681937   Change is   -0.089623448675529
+ Root      2 :    -4.916073766807009   Change is   -0.125551034403470
+ Root      3 :    -4.867665184033373   Change is   -0.100150451317624
+ DEMax= 1.26D-01
+ State    1 2nd order lowering    0.154630642435E-01 norm 6.85D-02
+ State    2 2nd order lowering    0.256312075474E-01 norm 8.73D-02
+ State    3 2nd order lowering    0.166673718712E-01 norm 7.05D-02
+ Iteration     3 internal iteration     3 dimension is     9
+ Root      1 not converged, maximum delta is    0.130104777634113
+ Root      2 not converged, maximum delta is    0.133049944252459
+ Root      3 not converged, maximum delta is    0.122284081689345
+ Eigenvalues at current iteration:
+ Root      1 :    -4.980545969617760   Change is   -0.034066505935822
+ Root      2 :    -4.973825137660095   Change is   -0.057751370853087
+ Root      3 :    -4.901682353492161   Change is   -0.034017169458788
+ DEMax= 5.78D-02
+ State    1 2nd order lowering    0.146004695131E-01 norm 7.20D-02
+ State    2 2nd order lowering    0.240199029202E-01 norm 9.20D-02
+ State    3 2nd order lowering    0.126375259115E-01 norm 6.63D-02
+ Iteration     4 internal iteration     4 dimension is    12
+ New state      1 was old state      2
+ Root      1 not converged, maximum delta is    0.087858145617974
+ New state      2 was old state      1
+ Root      2 not converged, maximum delta is    0.094190779026158
+ Root      3 not converged, maximum delta is    0.090863583085500
+ Eigenvalues at current iteration:
+ Root      1 :    -5.004084937039844   Change is   -0.030259799379748
+ Root      2 :    -5.000106117080085   Change is   -0.019560147462325
+ Root      3 :    -4.917649047885296   Change is   -0.015966694393135
+ DEMax= 3.03D-02
+ State    1 2nd order lowering    0.219865579662E-01 norm 9.80D-02
+ State    2 2nd order lowering    0.146347897388E-01 norm 7.89D-02
+ State    3 2nd order lowering    0.102483721547E-01 norm 6.54D-02
+ Iteration     5 internal iteration     5 dimension is    15
+ Root      1 not converged, maximum delta is    0.052648105696441
+ Root      2 not converged, maximum delta is    0.063873177860746
+ Root      3 not converged, maximum delta is    0.059090089532478
+ Eigenvalues at current iteration:
+ Root      1 :    -5.020196814166151   Change is   -0.016111877126307
+ Root      2 :    -5.012798828808052   Change is   -0.012692711727967
+ Root      3 :    -4.926103288777121   Change is   -0.008454240891825
+ DEMax= 1.61D-02
+ State    1 2nd order lowering    0.160881373063E-01 norm 8.94D-02
+ State    2 2nd order lowering    0.128649504212E-01 norm 7.86D-02
+ State    3 2nd order lowering    0.708701770177E-02 norm 5.74D-02
+ Iteration     6 internal iteration     6 dimension is    18
+ Root      1 not converged, maximum delta is    0.035338539485453
+ Root      2 not converged, maximum delta is    0.048517462553459
+ Root      3 not converged, maximum delta is    0.044553113696816
+ Eigenvalues at current iteration:
+ Root      1 :    -5.029856001412691   Change is   -0.009659187246540
+ Root      2 :    -5.022244278159681   Change is   -0.009445449351629
+ Root      3 :    -4.931146277235527   Change is   -0.005042988458406
+ DEMax= 9.66D-03
+ State    1 2nd order lowering    0.994348519389E-02 norm 7.15D-02
+ State    2 2nd order lowering    0.105485846484E-01 norm 7.33D-02
+ State    3 2nd order lowering    0.471033220097E-02 norm 4.81D-02
+ Iteration     7 internal iteration     7 dimension is    21
+ Root      1 not converged, maximum delta is    0.024450807190113
+ Root      2 not converged, maximum delta is    0.037534229573432
+ Root      3 not converged, maximum delta is    0.034541117615167
+ Eigenvalues at current iteration:
+ Root      1 :    -5.035691111053458   Change is   -0.005835109640767
+ Root      2 :    -5.029548291411088   Change is   -0.007304013251408
+ Root      3 :    -4.934381414445365   Change is   -0.003235137209838
+ DEMax= 7.30D-03
+ State    1 2nd order lowering    0.608100861697E-02 norm 5.60D-02
+ State    2 2nd order lowering    0.808676794945E-02 norm 6.55D-02
+ State    3 2nd order lowering    0.304206723672E-02 norm 3.90D-02
+ Iteration     8 internal iteration     8 dimension is    24
+ Root      1 not converged, maximum delta is    0.017020863118668
+ Root      2 not converged, maximum delta is    0.026388724431084
+ Root      3 not converged, maximum delta is    0.022435910466681
+ Eigenvalues at current iteration:
+ Root      1 :    -5.039177552748086   Change is   -0.003486441694628
+ Root      2 :    -5.034674100039931   Change is   -0.005125808628843
+ Root      3 :    -4.936387958207877   Change is   -0.002006543762512
+ DEMax= 5.13D-03
+ State    1 2nd order lowering    0.334831912894E-02 norm 4.16D-02
+ State    2 2nd order lowering    0.599222739617E-02 norm 5.68D-02
+ State    3 2nd order lowering    0.197388078408E-02 norm 3.16D-02
+ Iteration     9 internal iteration     9 dimension is    27
+ Root      1 not converged, maximum delta is    0.011771793068254
+ Root      2 not converged, maximum delta is    0.019849542561583
+ Root      3 not converged, maximum delta is    0.017104591107528
+ Eigenvalues at current iteration:
+ Root      1 :    -5.041183539832987   Change is   -0.002005987084901
+ Root      2 :    -5.038487040202043   Change is   -0.003812940162112
+ Root      3 :    -4.937678254658203   Change is   -0.001290296450326
+ DEMax= 3.81D-03
+ State    1 2nd order lowering    0.206060573770E-02 norm 3.37D-02
+ State    2 2nd order lowering    0.422510255236E-02 norm 4.74D-02
+ State    3 2nd order lowering    0.121644948273E-02 norm 2.46D-02
+ Iteration    10 internal iteration    10 dimension is    30
+ Root      1 not converged, maximum delta is    0.008081897766760
+ Root      2 not converged, maximum delta is    0.015914957101334
+ Root      3 not converged, maximum delta is    0.012331363430676
+ Eigenvalues at current iteration:
+ Root      1 :    -5.042326051612307   Change is   -0.001142511779320
+ Root      2 :    -5.041249973895989   Change is   -0.002762933693947
+ Root      3 :    -4.938504507841658   Change is   -0.000826253183455
+ DEMax= 2.76D-03
+ State    1 2nd order lowering    0.123172410192E-02 norm 2.58D-02
+ State    2 2nd order lowering    0.314957439307E-02 norm 4.09D-02
+ State    3 2nd order lowering    0.781159426340E-03 norm 1.95D-02
+ Iteration    11 internal iteration    11 dimension is    33
+ New state      1 was old state      2
+ Root      1 not converged, maximum delta is    0.013780114869408
+ New state      2 was old state      1
+ Root      2 not converged, maximum delta is    0.006289126591450
+ Root      3 not converged, maximum delta is    0.010086619785662
+ Eigenvalues at current iteration:
+ Root      1 :    -5.043332525010438   Change is   -0.002082551114449
+ Root      2 :    -5.043058146610073   Change is   -0.000732094997766
+ Root      3 :    -4.939063679143746   Change is   -0.000559171302088
+ DEMax= 2.08D-03
+ State    1 2nd order lowering    0.222143629998E-02 norm 3.43D-02
+ State    2 2nd order lowering    0.701236152340E-03 norm 1.92D-02
+ State    3 2nd order lowering    0.522426757293E-03 norm 1.60D-02
+ Iteration    12 internal iteration    12 dimension is    36
+ Root      1 not converged, maximum delta is    0.011264735282770
+ Root      2 not converged, maximum delta is    0.004534833088729
+ Root      3 not converged, maximum delta is    0.008283975486222
+ Eigenvalues at current iteration:
+ Root      1 :    -5.044813607085841   Change is   -0.001481082075403
+ Root      2 :    -5.043489152989406   Change is   -0.000431006379333
+ Root      3 :    -4.939444430878132   Change is   -0.000380751734387
+ DEMax= 1.48D-03
+ State    1 2nd order lowering    0.173071205962E-02 norm 3.09D-02
+ State    2 2nd order lowering    0.421929504263E-03 norm 1.49D-02
+ State    3 2nd order lowering    0.374475460406E-03 norm 1.36D-02
+ Iteration    13 internal iteration    13 dimension is    39
+ Root      1 not converged, maximum delta is    0.009462426858234
+ Root      2 not converged, maximum delta is    0.003378312238411
+ Root      3 not converged, maximum delta is    0.007070287922865
+ Eigenvalues at current iteration:
+ Root      1 :    -5.045915192347018   Change is   -0.001101585261178
+ Root      2 :    -5.043753145557622   Change is   -0.000263992568216
+ Root      3 :    -4.939726914116791   Change is   -0.000282483238659
+ DEMax= 1.10D-03
+ State    1 2nd order lowering    0.120880672814E-02 norm 2.53D-02
+ State    2 2nd order lowering    0.259129816766E-03 norm 1.18D-02
+ State    3 2nd order lowering    0.274307462791E-03 norm 1.17D-02
+ Iteration    14 internal iteration    14 dimension is    42
+ Root      1 not converged, maximum delta is    0.008154862905414
+ Root      2 not converged, maximum delta is    0.002424144304211
+ Root      3 not converged, maximum delta is    0.005890456918477
+ Eigenvalues at current iteration:
+ Root      1 :    -5.046748612133495   Change is   -0.000833419786477
+ Root      2 :    -5.043911516040116   Change is   -0.000158370482494
+ Root      3 :    -4.939928486555885   Change is   -0.000201572439094
+ DEMax= 8.33D-04
+ State    1 2nd order lowering    0.896156981240E-03 norm 2.19D-02
+ State    2 2nd order lowering    0.169545859655E-03 norm 9.72D-03
+ State    3 2nd order lowering    0.212392329427E-03 norm 1.05D-02
+ Iteration    15 internal iteration    15 dimension is    45
+ Root      1 not converged, maximum delta is    0.007622156547379
+ Root      2 not converged, maximum delta is    0.001777308664808
+ Root      3 not converged, maximum delta is    0.004758510418805
+ Eigenvalues at current iteration:
+ Root      1 :    -5.047338433258738   Change is   -0.000589821125243
+ Root      2 :    -5.044011626884576   Change is   -0.000100110844460
+ Root      3 :    -4.940077632027485   Change is   -0.000149145471600
+ DEMax= 5.90D-04
+ State    1 2nd order lowering    0.668606590078E-03 norm 1.90D-02
+ State    2 2nd order lowering    0.101108853658E-03 norm 7.42D-03
+ State    3 2nd order lowering    0.171350487150E-03 norm 9.48D-03
+ Iteration    16 internal iteration    16 dimension is    48
+ Root      1 not converged, maximum delta is    0.007252197563361
+ Root      2 not converged, maximum delta is    0.001498191930025
+ Root      3 not converged, maximum delta is    0.004407301793008
+ Eigenvalues at current iteration:
+ Root      1 :    -5.047775915958959   Change is   -0.000437482700221
+ Root      2 :    -5.044073359424205   Change is   -0.000061732539629
+ Root      3 :    -4.940199776379774   Change is   -0.000122144352289
+ DEMax= 4.37D-04
+ State    1 2nd order lowering    0.486988745007E-03 norm 1.61D-02
+ State    2 2nd order lowering    0.605441443018E-04 norm 5.68D-03
+ State    3 2nd order lowering    0.134973072814E-03 norm 8.31D-03
+ Iteration    17 internal iteration    17 dimension is    51
+ Root      1 not converged, maximum delta is    0.006830225556481
+ Root      2 not converged, maximum delta is    0.001284760600291
+ Root      3 not converged, maximum delta is    0.004242353136055
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048104642057337   Change is   -0.000328726098378
+ Root      2 :    -5.044111033334511   Change is   -0.000037673910306
+ Root      3 :    -4.940302110697377   Change is   -0.000102334317604
+ DEMax= 3.29D-04
+ State    1 2nd order lowering    0.343695222606E-03 norm 1.34D-02
+ State    2 2nd order lowering    0.381373883177E-04 norm 4.52D-03
+ State    3 2nd order lowering    0.102277878516E-03 norm 7.08D-03
+ Iteration    18 internal iteration    18 dimension is    54
+ Root      1 not converged, maximum delta is    0.005966824956119
+ Root      2 not converged, maximum delta is    0.001125813218663
+ Root      3 not converged, maximum delta is    0.003805282568070
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048337234072013   Change is   -0.000232592014676
+ Root      2 :    -5.044135042838696   Change is   -0.000024009504185
+ Root      3 :    -4.940383844105910   Change is   -0.000081733408533
+ DEMax= 2.33D-04
+ State    1 2nd order lowering    0.241417887469E-03 norm 1.12D-02
+ State    2 2nd order lowering    0.244672580104E-04 norm 3.65D-03
+ State    3 2nd order lowering    0.809833260499E-04 norm 6.26D-03
+ Iteration    19 internal iteration    19 dimension is    57
+ Root      1 not converged, maximum delta is    0.005459891075613
+ Root      2 not converged, maximum delta is    0.000946474217405
+ Root      3 not converged, maximum delta is    0.003741920313720
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048512191682422   Change is   -0.000174957610409
+ Root      2 :    -5.044150084052041   Change is   -0.000015041213345
+ Root      3 :    -4.940451998526291   Change is   -0.000068154420381
+ DEMax= 1.75D-04
+ State    1 2nd order lowering    0.172431078596E-03 norm 9.39D-03
+ State    2 2nd order lowering    0.152738206227E-04 norm 2.88D-03
+ State    3 2nd order lowering    0.668021662256E-04 norm 5.68D-03
+ Iteration    20 internal iteration    20 dimension is    60
+ Root      1 not converged, maximum delta is    0.004622339836982
+ Root      2 not converged, maximum delta is    0.000788633095701
+ Root      3 not converged, maximum delta is    0.003619000751216
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048636474182908   Change is   -0.000124282500487
+ Root      2 :    -5.044159531491346   Change is   -0.000009447439305
+ Root      3 :    -4.940508058123767   Change is   -0.000056059597476
+ DEMax= 1.24D-04
+ State    1 2nd order lowering    0.121756534794E-03 norm 7.95D-03
+ State    2 2nd order lowering    0.992918356815E-05 norm 2.34D-03
+ State    3 2nd order lowering    0.565152102684E-04 norm 5.31D-03
+ Iteration    21 internal iteration    21 dimension is    63
+ Root      1 not converged, maximum delta is    0.003689625029834
+ Root      2 not converged, maximum delta is    0.000651056599791
+ Root      3 not converged, maximum delta is    0.003219301951840
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048721442931436   Change is   -0.000084968748528
+ Root      2 :    -5.044165514460722   Change is   -0.000005982969376
+ Root      3 :    -4.940551658577270   Change is   -0.000043600453503
+ DEMax= 8.50D-05
+ State    1 2nd order lowering    0.848801846385E-04 norm 6.73D-03
+ State    2 2nd order lowering    0.623663322036E-05 norm 1.84D-03
+ State    3 2nd order lowering    0.429398773945E-04 norm 4.63D-03
+ Iteration    22 internal iteration    22 dimension is    66
+ Root      1 not converged, maximum delta is    0.002802765506237
+ Root      2 not converged, maximum delta is    0.000556727631156
+ Root      3 not converged, maximum delta is    0.002705025486994
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048777331715498   Change is   -0.000055888784062
+ Root      2 :    -5.044169449730188   Change is   -0.000003935269467
+ Root      3 :    -4.940584122290353   Change is   -0.000032463713083
+ DEMax= 5.59D-05
+ State    1 2nd order lowering    0.571619640651E-04 norm 5.54D-03
+ State    2 2nd order lowering    0.386693833526E-05 norm 1.42D-03
+ State    3 2nd order lowering    0.302078157319E-04 norm 3.86D-03
+ Iteration    23 internal iteration    23 dimension is    69
+ Root      1 not converged, maximum delta is    0.002142404199788
+ Root      2 not converged, maximum delta is    0.000474239789506
+ Root      3 not converged, maximum delta is    0.002170415281408
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048814473287134   Change is   -0.000037141571636
+ Root      2 :    -5.044172022944513   Change is   -0.000002573214324
+ Root      3 :    -4.940606728808952   Change is   -0.000022606518598
+ DEMax= 3.71D-05
+ State    1 2nd order lowering    0.382836069523E-04 norm 4.50D-03
+ State    2 2nd order lowering    0.266985273089E-05 norm 1.20D-03
+ State    3 2nd order lowering    0.204020857359E-04 norm 3.17D-03
+ Iteration    24 internal iteration    24 dimension is    72
+ Root      1 not converged, maximum delta is    0.001700770051218
+ Root      2 not converged, maximum delta is    0.000395110107018
+ Root      3 not converged, maximum delta is    0.001707737318558
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048840150369374   Change is   -0.000025677082240
+ Root      2 :    -5.044173704370878   Change is   -0.000001681426365
+ Root      3 :    -4.940621811233467   Change is   -0.000015082424516
+ DEMax= 2.57D-05
+ State    1 2nd order lowering    0.251045759798E-04 norm 3.59D-03
+ State    2 2nd order lowering    0.201671544282E-05 norm 1.08D-03
+ State    3 2nd order lowering    0.130850391113E-04 norm 2.52D-03
+ Iteration    25 internal iteration    25 dimension is    75
+ Root      1 not converged, maximum delta is    0.001345437903792
+ Root      2 not converged, maximum delta is    0.000336656159001
+ Root      3 not converged, maximum delta is    0.001341440463292
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048857822640638   Change is   -0.000017672271264
+ Root      2 :    -5.044174864867192   Change is   -0.000001160496314
+ Root      3 :    -4.940631532458626   Change is   -0.000009721225159
+ DEMax= 1.77D-05
+ State    1 2nd order lowering    0.176179959306E-04 norm 3.01D-03
+ State    2 2nd order lowering    0.132697095383E-05 norm 8.62D-04
+ State    3 2nd order lowering    0.821316681769E-05 norm 1.98D-03
+ Iteration    26 internal iteration    26 dimension is    78
+ Root      1 not converged, maximum delta is    0.001124619112354
+ Root      2 not converged, maximum delta is    0.000298645342751
+ Root      3 not converged, maximum delta is    0.001106814452368
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048870415157673   Change is   -0.000012592517034
+ Root      2 :    -5.044175697501733   Change is   -0.000000832634541
+ Root      3 :    -4.940637920243867   Change is   -0.000006387785240
+ DEMax= 1.26D-05
+ State    1 2nd order lowering    0.132751274918E-04 norm 2.65D-03
+ State    2 2nd order lowering    0.861575847397E-06 norm 6.73D-04
+ State    3 2nd order lowering    0.559758128082E-05 norm 1.64D-03
+ Iteration    27 internal iteration    27 dimension is    81
+ Root      1 not converged, maximum delta is    0.001052360287673
+ Root      2 not converged, maximum delta is    0.000268946517849
+ Root      3 not converged, maximum delta is    0.000949945946960
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048879590643984   Change is   -0.000009175486311
+ Root      2 :    -5.044176303341859   Change is   -0.000000605840127
+ Root      3 :    -4.940642341772392   Change is   -0.000004421528526
+ DEMax= 9.18D-06
+ State    1 2nd order lowering    0.961239464286E-05 norm 2.25D-03
+ State    2 2nd order lowering    0.603765008372E-06 norm 5.59D-04
+ State    3 2nd order lowering    0.381895852108E-05 norm 1.34D-03
+ Iteration    28 internal iteration    28 dimension is    84
+ Root      1 not converged, maximum delta is    0.000940699851856
+ Root      2 not converged, maximum delta is    0.000233082910055
+ Root      3 not converged, maximum delta is    0.000816705473331
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048886319613076   Change is   -0.000006728969092
+ Root      2 :    -5.044176734718877   Change is   -0.000000431377018
+ Root      3 :    -4.940645415633270   Change is   -0.000003073860878
+ DEMax= 6.73D-06
+ State    1 2nd order lowering    0.670649925282E-05 norm 1.86D-03
+ State    2 2nd order lowering    0.452927552044E-06 norm 4.89D-04
+ State    3 2nd order lowering    0.269511541906E-05 norm 1.13D-03
+ Iteration    29 internal iteration    29 dimension is    87
+ Root      1 not converged, maximum delta is    0.000757319397727
+ Root      2 not converged, maximum delta is    0.000201211738274
+ Root      3 not converged, maximum delta is    0.000668109004382
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048890973382199   Change is   -0.000004653769123
+ Root      2 :    -5.044177048220177   Change is   -0.000000313501300
+ Root      3 :    -4.940647597502349   Change is   -0.000002181869079
+ DEMax= 4.65D-06
+ State    1 2nd order lowering    0.443024928614E-05 norm 1.51D-03
+ State    2 2nd order lowering    0.367060061657E-06 norm 4.47D-04
+ State    3 2nd order lowering    0.189783641711E-05 norm 9.47D-04
+ Iteration    30 internal iteration    30 dimension is    90
+ Root      1 not converged, maximum delta is    0.000548386888785
+ Root      2 not converged, maximum delta is    0.000186871389508
+ Root      3 not converged, maximum delta is    0.000505878180086
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048893960757068   Change is   -0.000002987374869
+ Root      2 :    -5.044177300166871   Change is   -0.000000251946695
+ Root      3 :    -4.940649125894113   Change is   -0.000001528391763
+ DEMax= 2.99D-06
+ State    1 2nd order lowering    0.284542421523E-05 norm 1.21D-03
+ State    2 2nd order lowering    0.296363842677E-06 norm 4.01D-04
+ State    3 2nd order lowering    0.138906452865E-05 norm 8.17D-04
+ Iteration    31 internal iteration    31 dimension is    93
+ Root      1 not converged, maximum delta is    0.000399154177503
+ Root      2 not converged, maximum delta is    0.000172546083543
+ Root      3 not converged, maximum delta is    0.000372630116326
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048895926248662   Change is   -0.000001965491593
+ Root      2 :    -5.044177505398174   Change is   -0.000000205231303
+ Root      3 :    -4.940650218012306   Change is   -0.000001092118193
+ DEMax= 1.97D-06
+ State    1 2nd order lowering    0.183115365860E-05 norm 9.65D-04
+ State    2 2nd order lowering    0.237169795165E-06 norm 3.55D-04
+ State    3 2nd order lowering    0.100335650904E-05 norm 6.92D-04
+ Iteration    32 internal iteration    32 dimension is    96
+ Root      1 not converged, maximum delta is    0.000278605256298
+ Root      2 not converged, maximum delta is    0.000158266829155
+ Root      3 not converged, maximum delta is    0.000362901866988
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048897212198183   Change is   -0.000001285949521
+ Root      2 :    -5.044177673536425   Change is   -0.000000168138251
+ Root      3 :    -4.940651043292241   Change is   -0.000000825279935
+ DEMax= 1.29D-06
+ State    1 2nd order lowering    0.115489651476E-05 norm 7.63D-04
+ State    2 2nd order lowering    0.177582988430E-06 norm 3.02D-04
+ State    3 2nd order lowering    0.748972521520E-06 norm 5.96D-04
+ Iteration    33 internal iteration    33 dimension is    99
+ Root      1 not converged, maximum delta is    0.000229621894722
+ Root      2 not converged, maximum delta is    0.000138444511300
+ Root      3 not converged, maximum delta is    0.000444989156072
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898026496776   Change is   -0.000000814298593
+ Root      2 :    -5.044177804999357   Change is   -0.000000131462932
+ Root      3 :    -4.940651670868293   Change is   -0.000000627576052
+ DEMax= 8.14D-07
+ State    1 2nd order lowering    0.722340271485E-06 norm 6.05D-04
+ State    2 2nd order lowering    0.136799055017E-06 norm 2.66D-04
+ State    3 2nd order lowering    0.601002700228E-06 norm 5.41D-04
+ Iteration    34 internal iteration    34 dimension is   102
+ Root      1 not converged, maximum delta is    0.000181990389389
+ Root      2 not converged, maximum delta is    0.000115179119416
+ Root      3 not converged, maximum delta is    0.000485828209997
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898523107349   Change is   -0.000000496610573
+ Root      2 :    -5.044177902744735   Change is   -0.000000097745378
+ Root      3 :    -4.940652156817635   Change is   -0.000000485949342
+ DEMax= 4.97D-07
+ State    1 2nd order lowering    0.436531494587E-06 norm 4.70D-04
+ State    2 2nd order lowering    0.106125804902E-06 norm 2.36D-04
+ State    3 2nd order lowering    0.452500900832E-06 norm 4.66D-04
+ Iteration    35 internal iteration    35 dimension is   105
+ Root      1 not converged, maximum delta is    0.000141615058837
+ Root      2 not converged, maximum delta is    0.000099339725844
+ Root      3 not converged, maximum delta is    0.000499823527798
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898820553246   Change is   -0.000000297445897
+ Root      2 :    -5.044177977880736   Change is   -0.000000075136001
+ Root      3 :    -4.940652537686428   Change is   -0.000000380868793
+ DEMax= 3.81D-07
+ State    1 2nd order lowering    0.271251941585E-06 norm 3.71D-04
+ State    2 2nd order lowering    0.817955748859E-07 norm 2.06D-04
+ State    3 2nd order lowering    0.345091154997E-06 norm 4.02D-04
+ Iteration    36 internal iteration    36 dimension is   108
+ Root      1 not converged, maximum delta is    0.000113575250735
+ Root      2 not converged, maximum delta is    0.000089620870134
+ Root      3 not converged, maximum delta is    0.000488557671714
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899010696942   Change is   -0.000000190143695
+ Root      2 :    -5.044178038031119   Change is   -0.000000060150383
+ Root      3 :    -4.940652842361215   Change is   -0.000000304674788
+ DEMax= 3.05D-07
+ State    1 2nd order lowering    0.166855343986E-06 norm 2.89D-04
+ State    2 2nd order lowering    0.603872141094E-07 norm 1.75D-04
+ State    3 2nd order lowering    0.269943182610E-06 norm 3.54D-04
+ Iteration    37 internal iteration    37 dimension is   111
+ Root      1 not converged, maximum delta is    0.000083100795339
+ Root      2 not converged, maximum delta is    0.000075989015555
+ Root      3 not converged, maximum delta is    0.000428831708709
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899129530341   Change is   -0.000000118833399
+ Root      2 :    -5.044178082933107   Change is   -0.000000044901988
+ Root      3 :    -4.940653076583719   Change is   -0.000000234222504
+ DEMax= 2.34D-07
+ State    1 2nd order lowering    0.102468853001E-06 norm 2.25D-04
+ State    2 2nd order lowering    0.437873339284E-07 norm 1.49D-04
+ State    3 2nd order lowering    0.209196149410E-06 norm 3.17D-04
+ Iteration    38 internal iteration    38 dimension is   114
+ Root      1 not converged, maximum delta is    0.000057931279641
+ Root      2 not converged, maximum delta is    0.000062851897986
+ Root      3 not converged, maximum delta is    0.000334336977973
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899204079604   Change is   -0.000000074549264
+ Root      2 :    -5.044178115383403   Change is   -0.000000032450296
+ Root      3 :    -4.940653242717704   Change is   -0.000000166133985
+ DEMax= 1.66D-07
+ State    1 2nd order lowering    0.666468661099E-07 norm 1.82D-04
+ State    2 2nd order lowering    0.319193501017E-07 norm 1.28D-04
+ State    3 2nd order lowering    0.147481472976E-06 norm 2.67D-04
+ Iteration    39 internal iteration    39 dimension is   117
+ Root      1 not converged, maximum delta is    0.000041755938481
+ Root      2 not converged, maximum delta is    0.000051330314766
+ Root      3 not converged, maximum delta is    0.000244041776661
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899252112630   Change is   -0.000000048033026
+ Root      2 :    -5.044178138455792   Change is   -0.000000023072389
+ Root      3 :    -4.940653357659889   Change is   -0.000000114942185
+ DEMax= 1.15D-07
+ State    1 2nd order lowering    0.430191902889E-07 norm 1.47D-04
+ State    2 2nd order lowering    0.223290926110E-07 norm 1.07D-04
+ State    3 2nd order lowering    0.964980017416E-07 norm 2.15D-04
+ Iteration    40 internal iteration    40 dimension is   120
+ Root      1 not converged, maximum delta is    0.000035255261701
+ Root      2 not converged, maximum delta is    0.000040314721103
+ Root      3 not converged, maximum delta is    0.000157464678533
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899282764912   Change is   -0.000000030652282
+ Root      2 :    -5.044178154142701   Change is   -0.000000015686909
+ Root      3 :    -4.940653431342953   Change is   -0.000000073683064
+ DEMax= 7.37D-08
+ State    1 2nd order lowering    0.266002890111E-07 norm 1.16D-04
+ State    2 2nd order lowering    0.147278992180E-07 norm 8.66D-05
+ State    3 2nd order lowering    0.577689623094E-07 norm 1.65D-04
+ Iteration    41 internal iteration    41 dimension is   123
+ Root      1 not converged, maximum delta is    0.000028201667382
+ Root      2 not converged, maximum delta is    0.000030320712162
+ Root      3 not converged, maximum delta is    0.000093650153206
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899301449296   Change is   -0.000000018684385
+ Root      2 :    -5.044178164245653   Change is   -0.000000010102952
+ Root      3 :    -4.940653475964236   Change is   -0.000000044621284
+ DEMax= 4.46D-08
+ State    1 2nd order lowering    0.155433228763E-07 norm 8.81D-05
+ State    2 2nd order lowering    0.962951691209E-08 norm 7.07D-05
+ State    3 2nd order lowering    0.333131741770E-07 norm 1.25D-04
+ Iteration    42 internal iteration    42 dimension is   126
+ Root      1 not converged, maximum delta is    0.000021467854098
+ Root      2 not converged, maximum delta is    0.000022694868918
+ Root      3 not converged, maximum delta is    0.000051506935045
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899312320777   Change is   -0.000000010871481
+ Root      2 :    -5.044178170658308   Change is   -0.000000006412654
+ Root      3 :    -4.940653501605127   Change is   -0.000000025640890
+ DEMax= 2.56D-08
+ State    1 2nd order lowering    0.945983367207E-08 norm 6.92D-05
+ State    2 2nd order lowering    0.600633843930E-08 norm 5.58D-05
+ State    3 2nd order lowering    0.202657704585E-07 norm 9.79D-05
+ Iteration    43 internal iteration    43 dimension is   129
+ Root      1 not converged, maximum delta is    0.000016561612234
+ Root      2 not converged, maximum delta is    0.000017091845361
+ Root      3 not converged, maximum delta is    0.000029693251153
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899318817712   Change is   -0.000000006496935
+ Root      2 :    -5.044178174693373   Change is   -0.000000004035066
+ Root      3 :    -4.940653517178667   Change is   -0.000000015573541
+ DEMax= 1.56D-08
+ State    1 2nd order lowering    0.564720815736E-08 norm 5.35D-05
+ State    2 2nd order lowering    0.375405222314E-08 norm 4.41D-05
+ State    3 2nd order lowering    0.122389560279E-07 norm 7.57D-05
+ Iteration    44 internal iteration    44 dimension is   132
+ Root      1 not converged, maximum delta is    0.000012447880525
+ Root      2 not converged, maximum delta is    0.000012904264862
+ Root      3 not converged, maximum delta is    0.000019563803834
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899322675806   Change is   -0.000000003858093
+ Root      2 :    -5.044178177212233   Change is   -0.000000002518860
+ Root      3 :    -4.940653526845988   Change is   -0.000000009667321
+ DEMax= 9.67D-09
+ State    1 2nd order lowering    0.331350835766E-08 norm 4.08D-05
+ State    2 2nd order lowering    0.227980866959E-08 norm 3.42D-05
+ State    3 2nd order lowering    0.761836117015E-08 norm 5.95D-05
+ Iteration    45 internal iteration    45 dimension is   135
+ Root      1 not converged, maximum delta is    0.000009311964938
+ Root      2 not converged, maximum delta is    0.000009545242277
+ Root      3 not converged, maximum delta is    0.000018195730088
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899324979435   Change is   -0.000000002303629
+ Root      2 :    -5.044178178737448   Change is   -0.000000001525215
+ Root      3 :    -4.940653533023585   Change is   -0.000000006177596
+ DEMax= 6.18D-09
+ State    1 2nd order lowering    0.182846605422E-08 norm 2.99D-05
+ State    2 2nd order lowering    0.141336763448E-08 norm 2.71D-05
+ State    3 2nd order lowering    0.494052922624E-08 norm 4.81D-05
+ Iteration    46 internal iteration    46 dimension is   138
+ Root      1 not converged, maximum delta is    0.000006370572430
+ Root      2 not converged, maximum delta is    0.000006906155685
+ Root      3 not converged, maximum delta is    0.000015291625399
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899326285805   Change is   -0.000000001306370
+ Root      2 :    -5.044178179641384   Change is   -0.000000000903936
+ Root      3 :    -4.940653536966062   Change is   -0.000000003942477
+ DEMax= 3.94D-09
+ State    1 2nd order lowering    0.102674992224E-08 norm 2.25D-05
+ State    2 2nd order lowering    0.859352159276E-09 norm 2.11D-05
+ State    3 2nd order lowering    0.330339611258E-08 norm 3.96D-05
+ Iteration    47 internal iteration    47 dimension is   141
+ Root      1 not converged, maximum delta is    0.000004216908546
+ Root      2 not converged, maximum delta is    0.000005187356392
+ Root      3 not converged, maximum delta is    0.000012174635717
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327006700   Change is   -0.000000000720895
+ Root      2 :    -5.044178180198844   Change is   -0.000000000557460
+ Root      3 :    -4.940653539549387   Change is   -0.000000002583325
+ DEMax= 2.58D-09
+ State    1 2nd order lowering    0.596964875853E-09 norm 1.73D-05
+ State    2 2nd order lowering    0.470056341544E-09 norm 1.53D-05
+ State    3 2nd order lowering    0.220363352849E-08 norm 3.26D-05
+ Iteration    48 internal iteration    48 dimension is   144
+ Root      1 not converged, maximum delta is    0.000003481475924
+ Root      2 not converged, maximum delta is    0.000003842869368
+ Root      3 not converged, maximum delta is    0.000009809074789
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327418898   Change is   -0.000000000412197
+ Root      2 :    -5.044178180515016   Change is   -0.000000000316172
+ Root      3 :    -4.940653541196281   Change is   -0.000000001646894
+ DEMax= 1.65D-09
+ State    1 2nd order lowering    0.343207070841E-09 norm 1.31D-05
+ State    2 2nd order lowering    0.258438111385E-09 norm 1.14D-05
+ State    3 2nd order lowering    0.132084827508E-08 norm 2.49D-05
+ Iteration    49 internal iteration    49 dimension is   147
+ Root      1 not converged, maximum delta is    0.000002751294132
+ Root      2 not converged, maximum delta is    0.000002640402088
+ Root      3 not converged, maximum delta is    0.000007792278609
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327654966   Change is   -0.000000000236068
+ Root      2 :    -5.044178180685245   Change is   -0.000000000170229
+ Root      3 :    -4.940653542212181   Change is   -0.000000001015900
+ DEMax= 1.02D-09
+ State    1 2nd order lowering    0.195964358043E-09 norm 9.90D-06
+ State    2 2nd order lowering    0.140849108177E-09 norm 8.48D-06
+ State    3 2nd order lowering    0.765142954291E-09 norm 1.89D-05
+ Iteration    50 internal iteration    50 dimension is   150
+ Root      1 not converged, maximum delta is    0.000002124596880
+ Root      2 not converged, maximum delta is    0.000001708505466
+ Root      3 not converged, maximum delta is    0.000005623769984
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327791412   Change is   -0.000000000136446
+ Root      2 :    -5.044178180775656   Change is   -0.000000000090411
+ Root      3 :    -4.940653542794105   Change is   -0.000000000581924
+ DEMax= 5.82D-10
+ State    1 2nd order lowering    0.113141927398E-09 norm 7.53D-06
+ State    2 2nd order lowering    0.773876744726E-10 norm 6.35D-06
+ State    3 2nd order lowering    0.434028254761E-09 norm 1.43D-05
+ Iteration    51 internal iteration    51 dimension is   153
+ Root      1 not converged, maximum delta is    0.000001575989132
+ Root      2 not converged, maximum delta is    0.000001057754202
+ Root      3 not converged, maximum delta is    0.000003917245025
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327870228   Change is   -0.000000000078816
+ Root      2 :    -5.044178180824040   Change is   -0.000000000048384
+ Root      3 :    -4.940653543123399   Change is   -0.000000000329294
+ DEMax= 3.29D-10
+ State    1 2nd order lowering    0.637342195728E-10 norm 5.65D-06
+ State    2 2nd order lowering    0.418782705566E-10 norm 4.67D-06
+ State    3 2nd order lowering    0.233100735559E-09 norm 1.03D-05
+ Iteration    52 internal iteration    52 dimension is   156
+ Root      1 not converged, maximum delta is    0.000001173473896
+ Root      2 has converged.
+ Root      3 not converged, maximum delta is    0.000002632791428
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327914011   Change is   -0.000000000043783
+ Root      2 :    -5.044178180850327   Change is   -0.000000000026287
+ Root      3 :    -4.940653543307181   Change is   -0.000000000183782
+ DEMax= 1.84D-10
+ State    1 2nd order lowering    0.364276794892E-10 norm 4.29D-06
+ State    3 2nd order lowering    0.136316631189E-09 norm 7.94D-06
+ Iteration    53 internal iteration    53 dimension is   157
+ Root      1 has converged.
+ Root      2 has converged.
+ Root      3 has converged.
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327938715   Change is   -0.000000000024704
+ Root      2 :    -5.044178180850328   Change is   -0.000000000000001
+ Root      3 :    -4.940653543307367   Change is   -0.000000000000187
+ DEMax= 2.47D-11
+ Convergence achieved on expansion vectors.
+ ibunc,ibunc2,ibuvec       641       640        23
+ Energy state  1 =       -5.0488993279
+ Full Convergence on CI vector
+ Energy state  2 =       -5.0441781809
+ Full Convergence on CI vector
+ Energy state  3 =       -4.9406535433
+ Full Convergence on CI vector
+ ITN=  2 MaxIt= 64 E=     -4.9406535433 DE=-1.00D-08 Acc= 1.00D-08 Lan=157
+ ... Do an extra-iteration for final printing.
+ In Davids. NSec=     31878
+ IMaxHF,MaxMI,MSekIn,IFactt,WhenSc,nroot    5  200    6    2    2    3
+          (  1)       Eigenvalue   -5.048899328    
+ (     232)-0.5780217 (       1)-0.5485817 (     253)-0.2731864 (       3) 0.1863049 (    8002)-0.1395311 (       5)-0.1315685 (      24)-0.1243995
+ (     254) 0.1207275 (       6) 0.1026655 (     354)-0.0929504 (     275) 0.0885799 (      28) 0.0861498 (     358) 0.0849040 (      31) 0.0726628
+ (    1603) 0.0710169 (      67) 0.0705548 (    1653) 0.0693574 (    4279) 0.0672056 (      23)-0.0650190 (      17)-0.0632827 (     302) 0.0600882
+ (    1620)-0.0579067 (      30)-0.0538444 (      11)-0.0528608 (    8023)-0.0523166 (     669)-0.0497236 (     243) 0.0480545 (     258)-0.0473713
+ (    1712) 0.0460257 (     359)-0.0439682 (     283)-0.0430640 (     674)-0.0427940 (      78)-0.0424441 (     353) 0.0421673 (     236) 0.0407037
+ (       7)-0.0376939 (     411)-0.0376561 (     668) 0.0368491 (     429) 0.0359338 (     518) 0.0355283 (     326)-0.0336700 (     437) 0.0333899
+ (     300) 0.0324792 (      36) 0.0322045 (     325) 0.0317343 (     693) 0.0299918 (    1660)-0.0299274 (     308)-0.0294664 (    8129) 0.0292187
+ (      94) 0.0289160 (
+          (  2)       Eigenvalue   -5.044178181    
+ (       2) 0.7659977 (     233) 0.4188969 (      22) 0.2205902 (       4)-0.1250783 (    1600) 0.1125814 (     373)-0.1042037 (     234) 0.1039186
+ (      25) 0.0832963 (     374)-0.0750203 (     352)-0.0746344 (    1954)-0.0740529 (      16) 0.0712775 (      26)-0.0702778 (     237) 0.0572413
+ (     413) 0.0544245 (    8004) 0.0512059 (      79)-0.0464144 (    2012)-0.0423939 (    8003)-0.0412647 (     277) 0.0398534 (      87)-0.0392782
+ (    1713) 0.0385285 (    1724)-0.0382606 (      92) 0.0381754 (      38) 0.0368818 (      74)-0.0361580 (     260) 0.0355249 (     245) 0.0354605
+ (    1962)-0.0335370 (     312) 0.0322259 (    1893)-0.0321876 (      47)-0.0321025 (    8008) 0.0320971 (      12)-0.0314653 (      20) 0.0308988
+ (     689)-0.0307972 (     436)-0.0306885 (    2629)-0.0306220 (     322)-0.0303770 (     301)-0.0299198 (     414) 0.0297679 (     255) 0.0292845
+ (     498)-0.0292518 (     238) 0.0287371 (    1605) 0.0278688 (     239) 0.0277862 (    1682)-0.0267897 (     327) 0.0265529 (    1681) 0.0264862
+ (     386) 0.0262559 (
+          (  3)       Eigenvalue   -4.940653543    
+ (       3) 0.8262709 (     232) 0.2894939 (      28)-0.1621511 (       1)-0.1402953 (     378)-0.1025444 (      10)-0.0933989 (     243) 0.0906998
+ (       5) 0.0819628 (      24) 0.0789591 (      11)-0.0775016 (     253) 0.0694369 (     358) 0.0676637 (      23)-0.0658976 (    8006)-0.0648491
+ (     354) 0.0640507 (       7)-0.0639720 (     353)-0.0598888 (     275)-0.0565013 (     302)-0.0525155 (    8002)-0.0515261 (      27) 0.0513331
+ (      30) 0.0498544 (    1620) 0.0482668 (    1895)-0.0468719 (     236)-0.0428656 (     382) 0.0424539 (    8912) 0.0411568 (    1966)-0.0402719
+ (     418) 0.0396329 (       6)-0.0395009 (     364) 0.0380273 (     390) 0.0379479 (      85)-0.0359731 (    1956)-0.0356318 (    1920)-0.0355552
+ (     365) 0.0351307 (     254)-0.0335370 (    8013) 0.0330339 (      78)-0.0329174 (     435)-0.0327576 (    1919) 0.0325279 (    1959) 0.0322928
+ (      91)-0.0319211 (     669) 0.0315006 (    1980) 0.0314504 (    2016)-0.0313221 (    4279)-0.0298819 (      45) 0.0296781 (      67)-0.0291042
+ (     283) 0.0284721 (
+ Davidson Disk Diagonalization is being used:
+ MVecIn=      3 MSekIn=    3 NVConv=    3 NVConT=    0 MConv=    3 WhenSc=  0 IFact=    1 FinIt=F
+ NRoot=     3 Conv= 0.00D+00 ConvT= 0.00D+00 MaxItI=           0 Dim=       31878 Max sub=   200
+ Iteration     1 internal iteration     1 dimension is     3
+ Eigenvalues at current iteration:
+ Root      1 :    -5.043750300561324
+ Root      2 :    -5.039228088330290
+ Root      3 :    -4.935856117870713
+ DEMax= 0.00D+00
+ State    1 2nd order lowering    0.132484201626E-02 norm 1.96D-02
+ State    2 2nd order lowering    0.133546982237E-02 norm 1.97D-02
+ State    3 2nd order lowering    0.110730255089E-02 norm 1.77D-02
+ Iteration     2 internal iteration     2 dimension is     6
+ Root      1 not converged, maximum delta is    0.010798094101322
+ Root      2 not converged, maximum delta is    0.012561747844730
+ Root      3 not converged, maximum delta is    0.019479607161418
+ Eigenvalues at current iteration:
+ Root      1 :    -5.047357917916825   Change is   -0.003607617355501
+ Root      2 :    -5.042845412120423   Change is   -0.003617323790133
+ Root      3 :    -4.938935835765959   Change is   -0.003079717895246
+ DEMax= 3.62D-03
+ State    1 2nd order lowering    0.374055171338E-03 norm 1.09D-02
+ State    2 2nd order lowering    0.370344716463E-03 norm 1.09D-02
+ State    3 2nd order lowering    0.329562775876E-03 norm 1.01D-02
+ Iteration     3 internal iteration     3 dimension is     9
+ Root      1 not converged, maximum delta is    0.006511834893789
+ Root      2 not converged, maximum delta is    0.006936373096406
+ Root      3 not converged, maximum delta is    0.012980050050455
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048167684624222   Change is   -0.000809766707397
+ Root      2 :    -5.043620438806724   Change is   -0.000775026686301
+ Root      3 :    -4.939702757390386   Change is   -0.000766921624428
+ DEMax= 8.10D-04
+ State    1 2nd order lowering    0.219038477545E-03 norm 9.08D-03
+ State    2 2nd order lowering    0.218371311632E-03 norm 9.20D-03
+ State    3 2nd order lowering    0.229057148333E-03 norm 9.20D-03
+ Iteration     4 internal iteration     4 dimension is    12
+ Root      1 not converged, maximum delta is    0.004195941151641
+ Root      2 not converged, maximum delta is    0.003404261269811
+ Root      3 not converged, maximum delta is    0.007607320407043
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048439657612714   Change is   -0.000271972988492
+ Root      2 :    -5.043870962968003   Change is   -0.000250524161279
+ Root      3 :    -4.940012091844658   Change is   -0.000309334454271
+ DEMax= 3.09D-04
+ State    1 2nd order lowering    0.164929372213E-03 norm 8.82D-03
+ State    2 2nd order lowering    0.156486010572E-03 norm 8.77D-03
+ State    3 2nd order lowering    0.205959108483E-03 norm 9.82D-03
+ Iteration     5 internal iteration     5 dimension is    15
+ Root      1 not converged, maximum delta is    0.003009177479227
+ Root      2 not converged, maximum delta is    0.001959135412820
+ Root      3 not converged, maximum delta is    0.004879086635945
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048569121995976   Change is   -0.000129464383262
+ Root      2 :    -5.043982294947132   Change is   -0.000111331979129
+ Root      3 :    -4.940179848388436   Change is   -0.000167756543779
+ DEMax= 1.68D-04
+ State    1 2nd order lowering    0.138036451947E-03 norm 8.84D-03
+ State    2 2nd order lowering    0.118851438444E-03 norm 8.28D-03
+ State    3 2nd order lowering    0.165069097863E-03 norm 9.26D-03
+ Iteration     6 internal iteration     6 dimension is    18
+ Root      1 not converged, maximum delta is    0.002555472402281
+ Root      2 not converged, maximum delta is    0.001671858245158
+ Root      3 not converged, maximum delta is    0.003713560146976
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048653035796807   Change is   -0.000083913800832
+ Root      2 :    -5.044050800867473   Change is   -0.000068505920341
+ Root      3 :    -4.940296056884358   Change is   -0.000116208495921
+ DEMax= 1.16D-04
+ State    1 2nd order lowering    0.993916670296E-04 norm 7.56D-03
+ State    2 2nd order lowering    0.749536519337E-04 norm 6.50D-03
+ State    3 2nd order lowering    0.110458902833E-03 norm 7.41D-03
+ Iteration     7 internal iteration     7 dimension is    21
+ Root      1 not converged, maximum delta is    0.002353055962068
+ Root      2 not converged, maximum delta is    0.001129512509438
+ Root      3 not converged, maximum delta is    0.002759101737806
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048712945855255   Change is   -0.000059910058448
+ Root      2 :    -5.044095558413765   Change is   -0.000044757546292
+ Root      3 :    -4.940378064268735   Change is   -0.000082007384377
+ DEMax= 8.20D-05
+ State    1 2nd order lowering    0.712313993021E-04 norm 6.32D-03
+ State    2 2nd order lowering    0.439889537630E-04 norm 4.89D-03
+ State    3 2nd order lowering    0.763694224147E-04 norm 6.08D-03
+ Iteration     8 internal iteration     8 dimension is    24
+ Root      1 not converged, maximum delta is    0.002281685989942
+ Root      2 not converged, maximum delta is    0.000920091118633
+ Root      3 not converged, maximum delta is    0.002609317041822
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048758462825059   Change is   -0.000045516969805
+ Root      2 :    -5.044121756205914   Change is   -0.000026197792148
+ Root      3 :    -4.940437628661490   Change is   -0.000059564392755
+ DEMax= 5.96D-05
+ State    1 2nd order lowering    0.557406507992E-04 norm 5.55D-03
+ State    2 2nd order lowering    0.282763854114E-04 norm 3.91D-03
+ State    3 2nd order lowering    0.585793657940E-04 norm 5.39D-03
+ Iteration     9 internal iteration     9 dimension is    27
+ Root      1 not converged, maximum delta is    0.002275536681881
+ Root      2 not converged, maximum delta is    0.000860511183498
+ Root      3 not converged, maximum delta is    0.002471736771698
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048795690691152   Change is   -0.000037227866092
+ Root      2 :    -5.044139424497997   Change is   -0.000017668292084
+ Root      3 :    -4.940482151300788   Change is   -0.000044522639298
+ DEMax= 4.45D-05
+ State    1 2nd order lowering    0.435607538258E-04 norm 4.86D-03
+ State    2 2nd order lowering    0.185375656242E-04 norm 3.17D-03
+ State    3 2nd order lowering    0.428404780974E-04 norm 4.60D-03
+ Iteration    10 internal iteration    10 dimension is    30
+ Root      1 not converged, maximum delta is    0.002181610150591
+ Root      2 not converged, maximum delta is    0.000763680705253
+ Root      3 not converged, maximum delta is    0.002220391461962
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048825626179271   Change is   -0.000029935488119
+ Root      2 :    -5.044150835984484   Change is   -0.000011411486486
+ Root      3 :    -4.940514403869456   Change is   -0.000032252568667
+ DEMax= 3.23D-05
+ State    1 2nd order lowering    0.333478679454E-04 norm 4.24D-03
+ State    2 2nd order lowering    0.124901064865E-04 norm 2.61D-03
+ State    3 2nd order lowering    0.327175530776E-04 norm 4.08D-03
+ Iteration    11 internal iteration    11 dimension is    33
+ Root      1 not converged, maximum delta is    0.001900674803533
+ Root      2 not converged, maximum delta is    0.000693211798272
+ Root      3 not converged, maximum delta is    0.001924580255253
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048847947246546   Change is   -0.000022321067275
+ Root      2 :    -5.044158476062471   Change is   -0.000007640077987
+ Root      3 :    -4.940537502691072   Change is   -0.000023098821616
+ DEMax= 2.31D-05
+ State    1 2nd order lowering    0.258089939356E-04 norm 3.80D-03
+ State    2 2nd order lowering    0.830137069217E-05 norm 2.12D-03
+ State    3 2nd order lowering    0.252456427206E-04 norm 3.60D-03
+ Iteration    12 internal iteration    12 dimension is    36
+ Root      1 not converged, maximum delta is    0.001554874178430
+ Root      2 not converged, maximum delta is    0.000643954072295
+ Root      3 not converged, maximum delta is    0.001809927756650
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048863874137144   Change is   -0.000015926890598
+ Root      2 :    -5.044163743924645   Change is   -0.000005267862174
+ Root      3 :    -4.940555759943646   Change is   -0.000018257252574
+ DEMax= 1.83D-05
+ State    1 2nd order lowering    0.189755816043E-04 norm 3.27D-03
+ State    2 2nd order lowering    0.582832125779E-05 norm 1.78D-03
+ State    3 2nd order lowering    0.191210429053E-04 norm 3.09D-03
+ Iteration    13 internal iteration    13 dimension is    39
+ Root      1 not converged, maximum delta is    0.001301638563280
+ Root      2 not converged, maximum delta is    0.000592433995912
+ Root      3 not converged, maximum delta is    0.001726704335156
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048875586840762   Change is   -0.000011712703618
+ Root      2 :    -5.044167412631557   Change is   -0.000003668706912
+ Root      3 :    -4.940570573580826   Change is   -0.000014813637180
+ DEMax= 1.48D-05
+ State    1 2nd order lowering    0.124177385225E-04 norm 2.58D-03
+ State    2 2nd order lowering    0.413284101835E-05 norm 1.49D-03
+ State    3 2nd order lowering    0.150830209139E-04 norm 2.74D-03
+ Iteration    14 internal iteration    14 dimension is    42
+ Root      1 not converged, maximum delta is    0.001035390531134
+ Root      2 not converged, maximum delta is    0.000564811515091
+ Root      3 not converged, maximum delta is    0.001549042362275
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048883733393938   Change is   -0.000008146553177
+ Root      2 :    -5.044170109059208   Change is   -0.000002696427651
+ Root      3 :    -4.940582059037360   Change is   -0.000011485456534
+ DEMax= 1.15D-05
+ State    1 2nd order lowering    0.778496159302E-05 norm 2.01D-03
+ State    2 2nd order lowering    0.286294879732E-05 norm 1.22D-03
+ State    3 2nd order lowering    0.114508561042E-04 norm 2.38D-03
+ Iteration    15 internal iteration    15 dimension is    45
+ Root      1 not converged, maximum delta is    0.000760037360248
+ Root      2 not converged, maximum delta is    0.000516669073914
+ Root      3 not converged, maximum delta is    0.001341470018629
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048888927628228   Change is   -0.000005194234290
+ Root      2 :    -5.044172034616063   Change is   -0.000001925556854
+ Root      3 :    -4.940590724920561   Change is   -0.000008665883201
+ DEMax= 8.67D-06
+ State    1 2nd order lowering    0.502807084449E-05 norm 1.63D-03
+ State    2 2nd order lowering    0.204034107175E-05 norm 1.03D-03
+ State    3 2nd order lowering    0.854991459537E-05 norm 2.06D-03
+ Iteration    16 internal iteration    16 dimension is    48
+ Root      1 not converged, maximum delta is    0.000547237005560
+ Root      2 not converged, maximum delta is    0.000462419996903
+ Root      3 not converged, maximum delta is    0.001148625114002
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048892156253355   Change is   -0.000003228625126
+ Root      2 :    -5.044173406673665   Change is   -0.000001372057603
+ Root      3 :    -4.940597232784228   Change is   -0.000006507863667
+ DEMax= 6.51D-06
+ State    1 2nd order lowering    0.325530458320E-05 norm 1.32D-03
+ State    2 2nd order lowering    0.153118009713E-05 norm 9.07D-04
+ State    3 2nd order lowering    0.681408790732E-05 norm 1.86D-03
+ Iteration    17 internal iteration    17 dimension is    51
+ Root      1 not converged, maximum delta is    0.000405513522392
+ Root      2 not converged, maximum delta is    0.000419132957821
+ Root      3 not converged, maximum delta is    0.001017853584844
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048894207671947   Change is   -0.000002051418592
+ Root      2 :    -5.044174424853146   Change is   -0.000001018179481
+ Root      3 :    -4.940602364561363   Change is   -0.000005131777135
+ DEMax= 5.13D-06
+ State    1 2nd order lowering    0.222494552853E-05 norm 1.10D-03
+ State    2 2nd order lowering    0.118377777583E-05 norm 8.00D-04
+ State    3 2nd order lowering    0.573432928808E-05 norm 1.70D-03
+ Iteration    18 internal iteration    18 dimension is    54
+ Root      1 not converged, maximum delta is    0.000325854082173
+ Root      2 not converged, maximum delta is    0.000390545239428
+ Root      3 not converged, maximum delta is    0.000998210160492
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048895602709893   Change is   -0.000001395037946
+ Root      2 :    -5.044175224217768   Change is   -0.000000799364622
+ Root      3 :    -4.940606924282033   Change is   -0.000004559720670
+ DEMax= 4.56D-06
+ State    1 2nd order lowering    0.152721376023E-05 norm 9.12D-04
+ State    2 2nd order lowering    0.953320543712E-06 norm 7.23D-04
+ State    3 2nd order lowering    0.509522697226E-05 norm 1.59D-03
+ Iteration    19 internal iteration    19 dimension is    57
+ Root      1 not converged, maximum delta is    0.000281899146960
+ Root      2 not converged, maximum delta is    0.000355680425516
+ Root      3 not converged, maximum delta is    0.001003273333724
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048896578844000   Change is   -0.000000976134107
+ Root      2 :    -5.044175856397490   Change is   -0.000000632179722
+ Root      3 :    -4.940611169650077   Change is   -0.000004245368044
+ DEMax= 4.25D-06
+ State    1 2nd order lowering    0.110215768248E-05 norm 7.77D-04
+ State    2 2nd order lowering    0.742767647474E-06 norm 6.31D-04
+ State    3 2nd order lowering    0.483240226073E-05 norm 1.56D-03
+ Iteration    20 internal iteration    20 dimension is    60
+ Root      1 not converged, maximum delta is    0.000255253711802
+ Root      2 not converged, maximum delta is    0.000331839673613
+ Root      3 not converged, maximum delta is    0.000981971375944
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048897291580731   Change is   -0.000000712736731
+ Root      2 :    -5.044176378989777   Change is   -0.000000522592287
+ Root      3 :    -4.940615092542506   Change is   -0.000003922892430
+ DEMax= 3.92D-06
+ State    1 2nd order lowering    0.793646367319E-06 norm 6.54D-04
+ State    2 2nd order lowering    0.639816792710E-06 norm 5.95D-04
+ State    3 2nd order lowering    0.437845936855E-05 norm 1.48D-03
+ Iteration    21 internal iteration    21 dimension is    63
+ Root      1 not converged, maximum delta is    0.000225819621488
+ Root      2 not converged, maximum delta is    0.000292085859090
+ Root      3 not converged, maximum delta is    0.000945513184757
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048897820274941   Change is   -0.000000528694210
+ Root      2 :    -5.044176797581999   Change is   -0.000000418592222
+ Root      3 :    -4.940618691085468   Change is   -0.000003598542961
+ DEMax= 3.60D-06
+ State    1 2nd order lowering    0.603131657065E-06 norm 5.63D-04
+ State    2 2nd order lowering    0.513096978431E-06 norm 5.30D-04
+ State    3 2nd order lowering    0.412682249444E-05 norm 1.43D-03
+ Iteration    22 internal iteration    22 dimension is    66
+ Root      1 not converged, maximum delta is    0.000214016766958
+ Root      2 not converged, maximum delta is    0.000266182716493
+ Root      3 not converged, maximum delta is    0.000966617473324
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898255063416   Change is   -0.000000434788475
+ Root      2 :    -5.044177149456743   Change is   -0.000000351874744
+ Root      3 :    -4.940622146190525   Change is   -0.000003455105057
+ DEMax= 3.46D-06
+ State    1 2nd order lowering    0.443425642880E-06 norm 4.71D-04
+ State    2 2nd order lowering    0.418823883336E-06 norm 4.76D-04
+ State    3 2nd order lowering    0.371941519139E-05 norm 1.34D-03
+ Iteration    23 internal iteration    23 dimension is    69
+ Root      1 not converged, maximum delta is    0.000189187859413
+ Root      2 not converged, maximum delta is    0.000238452842340
+ Root      3 not converged, maximum delta is    0.000966943402922
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898596069761   Change is   -0.000000341006345
+ Root      2 :    -5.044177443767753   Change is   -0.000000294311009
+ Root      3 :    -4.940625420719157   Change is   -0.000003274528632
+ DEMax= 3.27D-06
+ State    1 2nd order lowering    0.332642666951E-06 norm 4.06D-04
+ State    2 2nd order lowering    0.345168682942E-06 norm 4.34D-04
+ State    3 2nd order lowering    0.343384284760E-05 norm 1.27D-03
+ Iteration    24 internal iteration    24 dimension is    72
+ Root      1 not converged, maximum delta is    0.000152407938337
+ Root      2 not converged, maximum delta is    0.000198119769186
+ Root      3 not converged, maximum delta is    0.000947201097698
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048898849882020   Change is   -0.000000253812259
+ Root      2 :    -5.044177674434760   Change is   -0.000000230667007
+ Root      3 :    -4.940628570693380   Change is   -0.000003149974223
+ DEMax= 3.15D-06
+ State    1 2nd order lowering    0.239712211564E-06 norm 3.48D-04
+ State    2 2nd order lowering    0.278183406507E-06 norm 3.92D-04
+ State    3 2nd order lowering    0.322897690311E-05 norm 1.24D-03
+ Iteration    25 internal iteration    25 dimension is    75
+ Root      1 not converged, maximum delta is    0.000106999762463
+ Root      2 not converged, maximum delta is    0.000162794478109
+ Root      3 not converged, maximum delta is    0.000857825698989
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899022376013   Change is   -0.000000172493992
+ Root      2 :    -5.044177854412833   Change is   -0.000000179978073
+ Root      3 :    -4.940631497809943   Change is   -0.000002927116563
+ DEMax= 2.93D-06
+ State    1 2nd order lowering    0.162710203127E-06 norm 2.88D-04
+ State    2 2nd order lowering    0.202693263394E-06 norm 3.32D-04
+ State    3 2nd order lowering    0.293224122957E-05 norm 1.18D-03
+ Iteration    26 internal iteration    26 dimension is    78
+ Root      1 not converged, maximum delta is    0.000075558137621
+ Root      2 not converged, maximum delta is    0.000134379054401
+ Root      3 not converged, maximum delta is    0.000746583495192
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899135420854   Change is   -0.000000113044841
+ Root      2 :    -5.044177983441707   Change is   -0.000000129028874
+ Root      3 :    -4.940634062294567   Change is   -0.000002564484624
+ DEMax= 2.56D-06
+ State    1 2nd order lowering    0.109421360749E-06 norm 2.39D-04
+ State    2 2nd order lowering    0.127627851094E-06 norm 2.60D-04
+ State    3 2nd order lowering    0.268092093229E-05 norm 1.14D-03
+ Iteration    27 internal iteration    27 dimension is    81
+ Root      1 not converged, maximum delta is    0.000057302202007
+ Root      2 not converged, maximum delta is    0.000096152537081
+ Root      3 not converged, maximum delta is    0.000725412586031
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899207549276   Change is   -0.000000072128422
+ Root      2 :    -5.044178063157976   Change is   -0.000000079716269
+ Root      3 :    -4.940636314703602   Change is   -0.000002252409035
+ DEMax= 2.25D-06
+ State    1 2nd order lowering    0.693410356685E-07 norm 1.90D-04
+ State    2 2nd order lowering    0.765942351767E-07 norm 2.01D-04
+ State    3 2nd order lowering    0.236551814166E-05 norm 1.07D-03
+ Iteration    28 internal iteration    28 dimension is    84
+ Root      1 not converged, maximum delta is    0.000048022409673
+ Root      2 not converged, maximum delta is    0.000067086664881
+ Root      3 not converged, maximum delta is    0.000765816545344
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899253424844   Change is   -0.000000045875568
+ Root      2 :    -5.044178111433323   Change is   -0.000000048275346
+ Root      3 :    -4.940638360515729   Change is   -0.000002045812127
+ DEMax= 2.05D-06
+ State    1 2nd order lowering    0.433103075227E-07 norm 1.51D-04
+ State    2 2nd order lowering    0.440909601736E-07 norm 1.52D-04
+ State    3 2nd order lowering    0.209124751333E-05 norm 1.00D-03
+ Iteration    29 internal iteration    29 dimension is    87
+ Root      1 not converged, maximum delta is    0.000035884777764
+ Root      2 not converged, maximum delta is    0.000044423769624
+ Root      3 not converged, maximum delta is    0.000769562995210
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899281193756   Change is   -0.000000027768912
+ Root      2 :    -5.044178139201033   Change is   -0.000000027767710
+ Root      3 :    -4.940640174662031   Change is   -0.000001814146302
+ DEMax= 1.81D-06
+ State    1 2nd order lowering    0.272869706168E-07 norm 1.20D-04
+ State    2 2nd order lowering    0.261473039418E-07 norm 1.18D-04
+ State    3 2nd order lowering    0.191397046447E-05 norm 9.58D-04
+ Iteration    30 internal iteration    30 dimension is    90
+ Root      1 not converged, maximum delta is    0.000032608637133
+ Root      2 not converged, maximum delta is    0.000030112527252
+ Root      3 not converged, maximum delta is    0.000919040347737
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899298922797   Change is   -0.000000017729041
+ Root      2 :    -5.044178155626294   Change is   -0.000000016425261
+ Root      3 :    -4.940641879255989   Change is   -0.000001704593958
+ DEMax= 1.70D-06
+ State    1 2nd order lowering    0.161757716433E-07 norm 9.05D-05
+ State    2 2nd order lowering    0.154583710542E-07 norm 9.04D-05
+ State    3 2nd order lowering    0.177927787834E-05 norm 9.18D-04
+ Iteration    31 internal iteration    31 dimension is    93
+ Root      1 not converged, maximum delta is    0.000031693594671
+ Root      2 not converged, maximum delta is    0.000020727791304
+ Root      3 not converged, maximum delta is    0.001089286161035
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899310019835   Change is   -0.000000011097038
+ Root      2 :    -5.044178165555141   Change is   -0.000000009928847
+ Root      3 :    -4.940643518836292   Change is   -0.000001639580303
+ DEMax= 1.64D-06
+ State    1 2nd order lowering    0.981271170362E-08 norm 7.03D-05
+ State    2 2nd order lowering    0.947915143290E-08 norm 7.14D-05
+ State    3 2nd order lowering    0.175270938021E-05 norm 9.16D-04
+ Iteration    32 internal iteration    32 dimension is    96
+ Root      1 not converged, maximum delta is    0.000028569246651
+ Root      2 not converged, maximum delta is    0.000013642742551
+ Root      3 not converged, maximum delta is    0.001252432822011
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899316817277   Change is   -0.000000006797442
+ Root      2 :    -5.044178171383317   Change is   -0.000000005828176
+ Root      3 :    -4.940645112739595   Change is   -0.000001593903304
+ DEMax= 1.59D-06
+ State    1 2nd order lowering    0.605691719770E-08 norm 5.53D-05
+ State    2 2nd order lowering    0.564701649160E-08 norm 5.51D-05
+ State    3 2nd order lowering    0.166494491245E-05 norm 8.88D-04
+ Iteration    33 internal iteration    33 dimension is    99
+ Root      1 not converged, maximum delta is    0.000025402490937
+ Root      2 not converged, maximum delta is    0.000009811307410
+ Root      3 not converged, maximum delta is    0.001373152535620
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899321067635   Change is   -0.000000004250358
+ Root      2 :    -5.044178174872817   Change is   -0.000000003489500
+ Root      3 :    -4.940646664083596   Change is   -0.000001551344001
+ DEMax= 1.55D-06
+ State    1 2nd order lowering    0.383442388826E-08 norm 4.44D-05
+ State    2 2nd order lowering    0.339978164396E-08 norm 4.26D-05
+ State    3 2nd order lowering    0.155488582103E-05 norm 8.57D-04
+ Iteration    34 internal iteration    34 dimension is   102
+ Root      1 not converged, maximum delta is    0.000020467552560
+ Root      2 not converged, maximum delta is    0.000007731668930
+ Root      3 not converged, maximum delta is    0.001386981715879
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899323664334   Change is   -0.000000002596699
+ Root      2 :    -5.044178176994935   Change is   -0.000000002122118
+ Root      3 :    -4.940648093782244   Change is   -0.000001429698647
+ DEMax= 1.43D-06
+ State    1 2nd order lowering    0.242304395342E-08 norm 3.53D-05
+ State    2 2nd order lowering    0.215164079841E-08 norm 3.39D-05
+ State    3 2nd order lowering    0.143897719562E-05 norm 8.29D-04
+ Iteration    35 internal iteration    35 dimension is   105
+ Root      1 not converged, maximum delta is    0.000016464115279
+ Root      2 not converged, maximum delta is    0.000006035928126
+ Root      3 not converged, maximum delta is    0.001340749446939
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899325344804   Change is   -0.000000001680470
+ Root      2 :    -5.044178178354203   Change is   -0.000000001359268
+ Root      3 :    -4.940649393975688   Change is   -0.000001300193444
+ DEMax= 1.30D-06
+ State    1 2nd order lowering    0.149296719692E-08 norm 2.75D-05
+ State    2 2nd order lowering    0.131152908450E-08 norm 2.59D-05
+ State    3 2nd order lowering    0.126506967890E-05 norm 7.75D-04
+ Iteration    36 internal iteration    36 dimension is   108
+ Root      1 not converged, maximum delta is    0.000012338416014
+ Root      2 not converged, maximum delta is    0.000005770022785
+ Root      3 not converged, maximum delta is    0.001226443381684
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899326405165   Change is   -0.000000001060361
+ Root      2 :    -5.044178179256818   Change is   -0.000000000902615
+ Root      3 :    -4.940650527763750   Change is   -0.000001133788062
+ DEMax= 1.13D-06
+ State    1 2nd order lowering    0.908659895349E-09 norm 2.12D-05
+ State    2 2nd order lowering    0.847450994365E-09 norm 2.07D-05
+ State    3 2nd order lowering    0.104616632368E-05 norm 7.02D-04
+ Iteration    37 internal iteration    37 dimension is   111
+ Root      1 not converged, maximum delta is    0.000008586634511
+ Root      2 not converged, maximum delta is    0.000005284800368
+ Root      3 not converged, maximum delta is    0.001010673162748
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327062370   Change is   -0.000000000657205
+ Root      2 :    -5.044178179862271   Change is   -0.000000000605453
+ Root      3 :    -4.940651434095002   Change is   -0.000000906331252
+ DEMax= 9.06D-07
+ State    1 2nd order lowering    0.560450073048E-09 norm 1.68D-05
+ State    2 2nd order lowering    0.561395360003E-09 norm 1.69D-05
+ State    3 2nd order lowering    0.815835451186E-06 norm 6.23D-04
+ Iteration    38 internal iteration    38 dimension is   114
+ Root      1 not converged, maximum delta is    0.000005467232868
+ Root      2 not converged, maximum delta is    0.000004379527704
+ Root      3 not converged, maximum delta is    0.000757883894636
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327451231   Change is   -0.000000000388861
+ Root      2 :    -5.044178180249919   Change is   -0.000000000387647
+ Root      3 :    -4.940652101870591   Change is   -0.000000667775589
+ DEMax= 6.68D-07
+ State    1 2nd order lowering    0.330297859154E-09 norm 1.29D-05
+ State    2 2nd order lowering    0.363159861408E-09 norm 1.36D-05
+ State    3 2nd order lowering    0.568078388108E-06 norm 5.16D-04
+ Iteration    39 internal iteration    39 dimension is   117
+ Root      1 not converged, maximum delta is    0.000003906967934
+ Root      2 not converged, maximum delta is    0.000003487282649
+ Root      3 not converged, maximum delta is    0.000537451460618
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327677416   Change is   -0.000000000226185
+ Root      2 :    -5.044178180497275   Change is   -0.000000000247357
+ Root      3 :    -4.940652573937623   Change is   -0.000000472067032
+ DEMax= 4.72D-07
+ State    1 2nd order lowering    0.191502918014E-09 norm 9.86D-06
+ State    2 2nd order lowering    0.229137061239E-09 norm 1.08D-05
+ State    3 2nd order lowering    0.387640840297E-06 norm 4.25D-04
+ Iteration    40 internal iteration    40 dimension is   120
+ Root      1 not converged, maximum delta is    0.000003028926327
+ Root      2 not converged, maximum delta is    0.000002708318551
+ Root      3 not converged, maximum delta is    0.000356819403311
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327804984   Change is   -0.000000000127567
+ Root      2 :    -5.044178180653083   Change is   -0.000000000155808
+ Root      3 :    -4.940652891727606   Change is   -0.000000317789983
+ DEMax= 3.18D-07
+ State    1 2nd order lowering    0.109132216561E-09 norm 7.44D-06
+ State    2 2nd order lowering    0.143685708366E-09 norm 8.61D-06
+ State    3 2nd order lowering    0.262478252878E-06 norm 3.52D-04
+ Iteration    41 internal iteration    41 dimension is   123
+ Root      1 not converged, maximum delta is    0.000002327718260
+ Root      2 not converged, maximum delta is    0.000002085431876
+ Root      3 not converged, maximum delta is    0.000223036025409
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327877506   Change is   -0.000000000072522
+ Root      2 :    -5.044178180747324   Change is   -0.000000000094241
+ Root      3 :    -4.940653098318379   Change is   -0.000000206590774
+ DEMax= 2.07D-07
+ State    1 2nd order lowering    0.604156788242E-10 norm 5.52D-06
+ State    2 2nd order lowering    0.871501931195E-10 norm 6.73D-06
+ State    3 2nd order lowering    0.171881979557E-06 norm 2.84D-04
+ Iteration    42 internal iteration    42 dimension is   126
+ Root      1 not converged, maximum delta is    0.000001760283984
+ Root      2 not converged, maximum delta is    0.000001557244822
+ Root      3 not converged, maximum delta is    0.000140773875379
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327917776   Change is   -0.000000000040270
+ Root      2 :    -5.044178180804258   Change is   -0.000000000056934
+ Root      3 :    -4.940653233927858   Change is   -0.000000135609478
+ DEMax= 1.36D-07
+ State    1 2nd order lowering    0.335328588793E-10 norm 4.09D-06
+ State    2 2nd order lowering    0.516150513526E-10 norm 5.19D-06
+ State    3 2nd order lowering    0.117597934954E-06 norm 2.35D-04
+ Iteration    43 internal iteration    43 dimension is   129
+ Root      1 not converged, maximum delta is    0.000001374933248
+ Root      2 not converged, maximum delta is    0.000001085856965
+ Root      3 not converged, maximum delta is    0.000119408206453
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327940755   Change is   -0.000000000022979
+ Root      2 :    -5.044178180837448   Change is   -0.000000000033189
+ Root      3 :    -4.940653329931905   Change is   -0.000000096004047
+ DEMax= 9.60D-08
+ State    1 2nd order lowering    0.186983478107E-10 norm 3.04D-06
+ State    2 2nd order lowering    0.307169378709E-10 norm 4.00D-06
+ State    3 2nd order lowering    0.821600033501E-07 norm 1.96D-04
+ Iteration    44 internal iteration    44 dimension is   132
+ Root      1 not converged, maximum delta is    0.000001058850606
+ Root      2 has converged.
+ Root      3 not converged, maximum delta is    0.000100204184966
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327953853   Change is   -0.000000000013098
+ Root      2 :    -5.044178180857101   Change is   -0.000000000019654
+ Root      3 :    -4.940653398285601   Change is   -0.000000068353696
+ DEMax= 6.84D-08
+ State    1 2nd order lowering    0.105775310583E-10 norm 2.27D-06
+ State    3 2nd order lowering    0.560736624120E-07 norm 1.61D-04
+ Iteration    45 internal iteration    45 dimension is   133
+ Root      1 has converged.
+ Root      2 has converged.
+ Root      3 not converged, maximum delta is    0.000075792279373
+ Eigenvalues at current iteration:
+ Root      1 :    -5.048899327961460   Change is   -0.000000000007607
+ Root      2 :    -5.044178180857101   Change is    0.000000000000000
+ Root      3 :    -4.940653436498991   Change is   -0.000000038213390
+ DEMax= 3.82D-08
+ State    3 2nd order lowering    0.416100985219E-07 norm 1.39D-04
+ Convergence achieved on expansion vectors.
+ ibunc,ibunc2,ibuvec       641       640        23
+ Energy state  1 =       -5.0488993280
+ Full Convergence on CI vector
+ Energy state  2 =       -5.0441781809
+ Full Convergence on CI vector
+ Energy state  3 =       -4.9406534365
+ Full Convergence on CI vector
+          (  1) Final Eigenvalue   -5.048899328    
+ (       1)-0.5934429 (     232)-0.5595324 (     253)-0.2390594 (       3) 0.1805404 (       5)-0.1307294 (      24)-0.1232683 (    8002)-0.1168799
+ (       6) 0.1113450 (     254) 0.1010716 (     354)-0.0936595 (      31) 0.0865995 (      28) 0.0849561 (     358) 0.0753044 (      23)-0.0731277
+ (      67) 0.0720562 (    1653) 0.0695076 (     275) 0.0694383 (    1603) 0.0685875 (    4279) 0.0667799 (     302) 0.0599783 (     669)-0.0569555
+ (    1620)-0.0565288 (      17)-0.0550766 (     258)-0.0532357 (      30)-0.0512137 (     359)-0.0494696 (    1712) 0.0493799 (     236) 0.0467051
+ (     243) 0.0451474 (      11)-0.0450538 (     283)-0.0442448 (     674)-0.0441841 (     353) 0.0432441 (      78)-0.0422968 (    8129) 0.0398497
+ (      36) 0.0384273 (     326)-0.0380049 (     411)-0.0366245 (    1660)-0.0350501 (     429) 0.0348227 (     300) 0.0333922 (     518) 0.0325072
+ (     693) 0.0323302 (     325) 0.0312102 (    8023)-0.0303402 (     308)-0.0302426 (     497) 0.0301960 (     668) 0.0301579 (     263)-0.0298326
+ (     257)-0.0284544 (
+          (  2) Final Eigenvalue   -5.044178181        0.1285 eV
+ (       2) 0.7654883 (     233) 0.4022186 (      22) 0.2463435 (       4)-0.1350314 (    1600) 0.1104952 (     234) 0.0971129 (      16) 0.0863750
+ (     373)-0.0815398 (      25) 0.0785099 (      26)-0.0746576 (    1954)-0.0744832 (     374)-0.0718214 (    8003)-0.0635427 (    8004) 0.0628657
+ (     413) 0.0520923 (     237) 0.0510354 (     255) 0.0509766 (     260) 0.0467994 (     352)-0.0461371 (    2012)-0.0417912 (      92) 0.0397718
+ (      87)-0.0394891 (      79)-0.0394416 (      38) 0.0390681 (     277) 0.0386927 (    1724)-0.0385676 (    1713) 0.0360119 (     238) 0.0359770
+ (      74)-0.0359473 (     245) 0.0354289 (      47)-0.0348860 (    8647)-0.0346526 (     301)-0.0338735 (      12)-0.0332380 (    1962)-0.0332118
+ (    1893)-0.0330582 (    2629)-0.0324489 (      20) 0.0322892 (    1605) 0.0320806 (     312) 0.0312801 (     689)-0.0307769 (     239) 0.0305742
+ (     256)-0.0299343 (     436)-0.0297489 (    8130) 0.0282132 (     322)-0.0281552 (     414) 0.0279998 (     408)-0.0277035 (    1682)-0.0269722
+ (    8669)-0.0269136 (
+          (  3) Final Eigenvalue   -4.940653436        2.9455 eV
+ (       3) 0.8331628 (     232) 0.2995332 (      28)-0.1627759 (       1)-0.1284215 (     378)-0.1007517 (      10)-0.0926401 (     243) 0.0900194
+ (      11)-0.0817218 (      24) 0.0792840 (     354) 0.0689366 (     358) 0.0670694 (       7)-0.0655388 (    8006)-0.0613017 (     253) 0.0545069
+ (      30) 0.0535130 (     254)-0.0534647 (     302)-0.0531416 (    1620) 0.0484371 (    1895)-0.0455079 (      27) 0.0451090 (       6)-0.0437754
+ (     275)-0.0422572 (    1966)-0.0412943 (     418) 0.0394605 (      85)-0.0390214 (     236)-0.0390136 (     382) 0.0385783 (     390) 0.0383271
+ (     364) 0.0379523 (    8013) 0.0375096 (     669) 0.0374932 (    8912) 0.0364081 (    1920)-0.0361484 (    8002)-0.0360836 (     365) 0.0344232
+ (    1959) 0.0343230 (    1956)-0.0336754 (      91)-0.0332910 (      78)-0.0325030 (       5) 0.0321753 (    2016)-0.0316065 (     435)-0.0312976
+ (    4279)-0.0307161 (     283) 0.0300411 (      45) 0.0300366 (    1919) 0.0299192 (      14) 0.0297974 (    1623)-0.0297238 (    8782)-0.0294281
+ (    1980) 0.0291015 (
+ Final one electron symbolic density matrix:
+                1             2             3             4             5 
+      1  0.196979D+01
+      2  0.128830D-11  0.196197D+01
+      3  0.187817D-03 -0.126537D-10  0.179704D+01
+      4  0.735638D-11  0.151543D-02  0.289462D-10  0.186736D+01
+      5 -0.231549D-10 -0.684844D-04 -0.321341D-10  0.426818D-03  0.395599D+00
+      6 -0.693061D-04  0.131647D-10 -0.591700D-02  0.632801D-10 -0.416008D-10
+      7  0.299752D-03 -0.290671D-10  0.310333D-02 -0.689074D-10  0.525638D-10
+      8 -0.107459D-10  0.407139D-03 -0.276849D-11  0.743455D-03  0.562663D-03
+      9 -0.599846D-11  0.217968D-03  0.422886D-10  0.280384D-03 -0.220873D-04
+     10 -0.239661D-03 -0.842917D-11  0.392493D-02  0.103714D-10  0.123730D-10
+                6             7             8             9            10 
+      6  0.173935D+01
+      7  0.134387D-02  0.117881D+00
+      8 -0.596902D-10  0.189125D-10  0.810547D-01
+      9 -0.695383D-10 -0.309569D-11 -0.534951D-04  0.473071D-01
+     10 -0.387933D-02  0.200408D-02  0.346333D-11  0.712097D-12  0.226432D-01
+ MCSCF converged.
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (AG) (BU) (AG) (BU) (BU)
+       Virtual   (AG) (AG) (BU) (BU) (AG)
+ The electronic state is 1-AG.
+ Alpha  occ. eigenvalues --    0.00000   0.00000   0.00000   0.00000   0.00000
+ Alpha virt. eigenvalues --    0.00000   0.00000   0.00000   0.00000   0.00000
+          Condensed to atoms (all electrons):
+ Mulliken charges:
+               1
+     1  H   -0.144249
+     2  H    0.137557
+     3  H   -0.055343
+     4  H   -0.025291
+     5  H    0.087325
+     6  H    0.087325
+     7  H   -0.025291
+     8  H   -0.055343
+     9  H    0.137557
+    10  H   -0.144249
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+ Electronic spatial extent (au):  <R**2>=            131.1710
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              0.0000    Y=             -0.0000    Z=              0.0000  Tot=              0.0000
+
+ Test job not archived.
+ 1\1\GINC-SULU\SP\CASSCF\Gen\H10\LCJ1\31-Jan-2017\0\\#t casscf(10,10,nr
+ oot=3,davidsondiag)/gen scf(tight,novaracc,noincfock) geom=nocrowd tes
+ t\\mbs casscf calculation for a triangular lattice of 8 H atoms (made 
+ up of 10 iscosceles triangles h=0.76b=1.519342)\\0,1\H,0,0.759671,0.,1
+ .52\H,0,2.279013,0.,1.52\H,0,0.,0.,0.76\H,0,1.519342,0.,0.76\H,0,-0.75
+ 9671,0.,0.\H,0,0.759671,0.,0.\H,0,-1.519342,0.,-0.76\H,0,0.,0.,-0.76\H
+ ,0,-2.279013,0.,-1.52\H,0,-0.759671,0.,-1.52\\Version=ES64L-G09RevE.01
+ \State=1-AG\HF=-4.9406534\RMSD=0.000e+00\Dipole=0.,0.,0.\Quadrupole=2.
+ 6519724,-0.104357,-2.5476154,0.,2.7916752,0.\PG=C02H [SGH(H10)]\\@
+
+
+ BE CAREFUL NOT TO BECOME TOO GOOD OF A SONGBIRD OR 
+ THEY'LL THROW YOU INTO A CAGE.
+
+                                    -- SNOOPY TO WOODSTOCK
+ Job cpu time:       0 days  0 hours  1 minutes 52.1 seconds.
+ File lengths (MBytes):  RWF=    289 Int=      0 D2E=      0 Chk=      2 Scr=      2
+ Normal termination of Gaussian 09 at Tue Jan 31 14:42:07 2017.

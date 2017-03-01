@@ -1,0 +1,13 @@
+#!/bin/csh
+
+foreach libname (LinAlg ComplexLinAlg ComplexHermLinAlg)
+  rm lib$libname.a $libname.o
+  cp ZLib/$libname.f .
+  pgfortran -O4 -Mvect -Mprefetch -Mconcur=allcores -Mcache_align -fast -fastsse -c $libname.f
+end
+ar rcs libAllLinAlg.a LinAlg.o ComplexLinAlg.o ComplexHermLinAlg.o
+
+
+foreach libname (LinAlg ComplexLinAlg ComplexHermLinAlg)
+  rm $libname.o $libname.f
+end

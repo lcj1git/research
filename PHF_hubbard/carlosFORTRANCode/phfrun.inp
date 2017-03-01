@@ -1,0 +1,41 @@
+!
+!  Sample input file for phflat calculations.
+!
+!  ( * Verify phflat documentation or the runpar module for a detailed
+!  explanation of each of the variables. * )
+!
+!
+!  NOTES:
+!
+!  - All character values must be lowercase.
+!  - All namelists should be included, with the order provided, even
+!    if no variable is assigned.
+!
+!
+&ham_data
+  ham    = 'hubbard',
+  uhub   = 4.0d0,
+  t1hub  = 1.0d0 /
+!
+&lat_data
+  lattyp = 'square',
+  inx    = 4,
+  iny    = 4,
+  lpbc   = .true. /
+!
+&nel_data
+  nup    = 8,
+  ndn    = 8 /
+!
+&mtd_data
+  wfntyp = 'rhf',
+  method = 'hf' /
+!
+&opt_data
+  igstyp = 1,
+  igsmix = 1 /
+!
+&prj_data /
+!
+&stt_data /
+!

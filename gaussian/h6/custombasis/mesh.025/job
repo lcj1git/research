@@ -1,0 +1,86 @@
+#!/bin/bash
+#run casscf(6,6) E calculations for 6 H atoms in a planar pyramid of isosceles triangles, distorting length of third side relative to others
+#uses program writecmatrix.f to write the input file 'H6.com' for a given side length
+# extracts the resulting E from the output file 'H6.log'  and writes to fort.12
+
+declare -i numsteps=130
+declare -i numstates=5
+declare -i counter=1
+declare -i linenum
+declare -i n=1
+declare -i mult=1
+declare -x y=0.25
+declare -x stepsize=0.025 
+declare -x rrt3=0.57735013 #RECIPROCAL of the square root of 3
+declare -a e
+declare -a stab
+declare -a mult=( 1 3 )
+comfile='h6.com'
+logfile='h6.log'
+chkfile='h6.chk'
+
+for m in "${mult[@]}"
+do
+#for loop for desired multiplicities
+#comment heading for fort.12
+echo '# h6 energies for multiplicity = ' $m > fort.12
+echo '# atoms arranged in pyramid structure of four isosceles triangles, definied by single parameter y = the height of the triangles ' >> fort.12
+echo '# y', 'E(n=1)', 'E(n=2)', 'E(n=3)', 'E(n=4)', 'E(n=5)' >> fort.12
+#while loop for desired values of y
+	while [ $counter -le $numsteps ]; do
+#while loop for desired number of states
+		while [ $n -le $numstates ]; do
+#create g09 input file
+			echo $chkfile > $comfile
+			echo ' ' >> $comfile
+                        if [ $n -eq 1 ]
+                        then
+                                echo '#t casscf(6,6)/gen scf(tight,novaracc,noincfock) geom=nocrowd test' >> $comfile
+                        else
+                                echo '#t casscf(6,6,nroot='$n')/gen scf(tight,novaracc,noincfock) geom=nocrowd test' >> $comfile
+                        fi
+                        echo ' ' >> $comfile
+                        x=$(bc <<< "scale=6; $rrt3 / $y")
+                        x2=$(bc <<< "scale=6; 2 * $x")
+                        echo 'mbs cascf calculation for a triangular configuration of 6 H atoms (made up of 4 iscosceles triangles)' >> $comfile
+                        echo ' ' >> $comfile
+                        echo '0 '$m >> $comfile
+                        echo 'H 0.0 0.0 '$y >> $comfile
+                        echo 'H '$x' 0.0 0.0' >> $comfile
+                        echo 'H -'$x' 0.0 0.0' >> $comfile
+                        echo 'H 0.0 0.0 -'$y >> $comfile
+                        echo 'H -'$x2' 0.0 -'$y >> $comfile
+                        echo 'H '$x2' 0.0 -'$y >> $comfile
+                        echo ' ' >> $comfile
+                        echo '@H.gbs' >> $comfile
+                        echo ' ' >> $comfile
+#run cas(6,6) job
+			g09 < $comfile >& $logfile
+#grab e from output
+			linenumstring=$(grep -n '... Do an extra-iteration for final printing.' $logfile)
+			linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+			linenum=$linenum-1
+			estring=$(head -$linenum $logfile | tail -1)
+			e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+			n+=1
+#end of energy level n loop
+		done
+		n=1
+#write e's to fort.12
+		echo $y "${e[@]}" >> fort.12
+ 		y=$(echo $y + $stepsize | bc)
+		counter+=1
+#end of y loop
+	done
+	if [ $m -eq 1 ] 
+	then
+		mv fort.12 h6singlet
+	elif [ $m -eq 3 ]
+	then
+		mv fort.12 h6triplet
+	fi
+	mult+=2
+	counter=1
+	y=0.5
+#end of multiplicity m loop
+done

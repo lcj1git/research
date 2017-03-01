@@ -1,0 +1,451 @@
+ Entering Gaussian System, Link 0=g09
+ AtFile(1): H.gbs
+            H     0
+            S   10   1.00
+               1000.000000000000            0.000068713567
+                316.227766000000            0.000169141320
+                100.000000000000            0.000823394812
+                 31.622776600000            0.003425569236
+                 10.000000000000            0.013951996000
+                  3.162277660000            0.056909313560
+                  1.000000000000            0.198286399900
+                  0.316227766000            0.496922426700
+                  0.100000000000            0.369846276400
+                  0.031622776600            0.003752720039
+            ****
+ Initial command:
+ /projects/guscus/apps/gau/g09-e1/g09/l1.exe "/users/lcj1/gaussian/h6/custombasis/Gau-19116.inp" -scrdir="/users/lcj1/gaussian/h6/custombasis/"
+ Entering Link 1 = /projects/guscus/apps/gau/g09-e1/g09/l1.exe PID=     19117.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2015,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision E.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  ES64L-G09RevE.01 30-Nov-2015
+                 5-Jan-2017 
+ ******************************************
+ ----------------------------------------------------------------------
+ #t casscf(6,6,nroot=2)/gen scf(tight,novaracc,noincfock) geom=nocrowd 
+ test
+ ----------------------------------------------------------------------
+ ----------------------------------------------------------------------
+ mbs cascf calculation for a triangular configuration of 6 H atoms (mad
+ e up of 4 iscosceles triangles)
+ ----------------------------------------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 3
+ H                     0.        0.        0.525 
+ H                     1.09971   0.        0. 
+ H                    -1.09971   0.        0. 
+ H                     0.        0.       -0.525 
+ H                    -2.19943   0.       -0.525 
+ H                     2.19943   0.       -0.525 
+ 
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  H    0.000000
+     2  H    1.218604   0.000000
+     3  H    1.218604   2.199428   0.000000
+     4  H    1.050000   1.218604   1.218604   0.000000
+     5  H    2.437208   3.340653   1.218604   2.199428   0.000000
+     6  H    2.437208   1.218604   3.340653   2.199428   4.398856
+                    6
+     6  H    0.000000
+ Framework group  C2V[C2(HH),SGV(H4)]
+ Deg. of freedom     5
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0       -0.000000    0.000000    0.700000
+      2          1           0        0.000000    1.099714    0.175000
+      3          1           0       -0.000000   -1.099714    0.175000
+      4          1           0        0.000000   -0.000000   -0.350000
+      5          1           0        0.000000   -2.199428   -0.350000
+      6          1           0        0.000000    2.199428   -0.350000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    545.8014697     41.4641288     38.5365370
+     6 basis functions,    60 primitive gaussians,     6 cartesian basis functions
+     4 alpha electrons        2 beta electrons
+       nuclear repulsion energy         4.7026214597 Hartrees.
+ NAtoms=    6 NActive=    6 NUniq=    4 SFac= 2.25D+00 NAtFMM=   60 NAOKFM=F Big=F
+ ExpMin= 3.16D-02 ExpMax= 1.00D+03 ExpMxC= 1.00D+01 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2) (A1) (A1)
+       Virtual   (B2) (A1)
+ The electronic state of the initial guess is 3-A1.
+          Truncation Level=               99999
+          a=  2          b=  2          c=  2
+          a=N/2 - s   b=2s   c=n- (a+b)
+          no. active orbitals (n)  6
+          no. active ELECTRONS (N)=  6
+          SLATER DETERMINANT BASIS
+                                                  IRREPS TO BE RETAINED = 1 2 3 4
+                                                  GROUP IRREP. MULT. TABLE
+                                                      1    2    3    4
+                                                      2    1    4    3
+                                                      3    4    1    2
+                                                      4    3    2    1
+                                                  IRREP. LABELS FOR ORBITALS
+                                                   1 4 1 1 4 1
+          BOTTOM WEIGHT= 13     TOP WEIGHT= 29
+          Configuration         1 Symmetry 1 11aa00
+          Configuration         2 Symmetry 4 11a0a0
+          Configuration         3 Symmetry 4 1a1a00
+          Configuration         4 Symmetry 4 110aa0
+          Configuration         5 Symmetry 1 11a00a
+          Configuration         6 Symmetry 1 1a10a0
+          Configuration         7 Symmetry 1 a11a00
+          Configuration         8 Symmetry 4 1aa100
+          Configuration         9 Symmetry 1 1baaa0
+          Configuration        10 Symmetry 1 110a0a
+          Configuration        11 Symmetry 1 1abaa0
+          Configuration        12 Symmetry 4 1a100a
+          Configuration        13 Symmetry 4 a110a0
+          Configuration        14 Symmetry 1 1aaba0
+          Configuration        15 Symmetry 1 a1a100
+          Configuration        16 Symmetry 1 1aaab0
+          Configuration        17 Symmetry 4 b1aaa0
+          Configuration        18 Symmetry 4 1baa0a
+          Configuration        19 Symmetry 4 101aa0
+          Configuration        20 Symmetry 4 1100aa
+          Configuration        21 Symmetry 4 1aba0a
+          Configuration        22 Symmetry 4 a1baa0
+          Configuration        23 Symmetry 1 1a01a0
+          Configuration        24 Symmetry 1 a1100a
+          Configuration        25 Symmetry 4 1aab0a
+          Configuration        26 Symmetry 4 a1aba0
+          Configuration        27 Symmetry 4 1aa010
+          Configuration        28 Symmetry 4 aa1100
+          Configuration        29 Symmetry 4 a1aab0
+          Configuration        30 Symmetry 4 1aaa0b
+          Configuration        31 Symmetry 1 b1aa0a
+          Configuration        32 Symmetry 1 ba1aa0
+          Configuration        33 Symmetry 1 1ba0aa
+          Configuration        34 Symmetry 1 101a0a
+          Configuration        35 Symmetry 1 ab1aa0
+          Configuration        36 Symmetry 4 10a1a0
+          Configuration        37 Symmetry 1 1ab0aa
+          Configuration        38 Symmetry 1 a1ba0a
+          Configuration        39 Symmetry 4 1a010a
+          Configuration        40 Symmetry 4 a101a0
+          Configuration        41 Symmetry 4 1a0a10
+          Configuration        42 Symmetry 1 a1ab0a
+          Configuration        43 Symmetry 1 1aa0ba
+          Configuration        44 Symmetry 1 aa1ba0
+          Configuration        45 Symmetry 1 a1a010
+          Configuration        46 Symmetry 1 1aa0ab
+          Configuration        47 Symmetry 1 aa1ab0
+          Configuration        48 Symmetry 1 a1aa0b
+          Configuration        49 Symmetry 4 b1a0aa
+          Configuration        50 Symmetry 4 ba1a0a
+          Configuration        51 Symmetry 4 011aa0
+          Configuration        52 Symmetry 1 baa1a0
+          Configuration        53 Symmetry 1 1b0aaa
+          Configuration        54 Symmetry 4 1010aa
+          Configuration        55 Symmetry 4 ab1a0a
+          Configuration        56 Symmetry 1 10a10a
+          Configuration        57 Symmetry 1 aba1a0
+          Configuration        58 Symmetry 1 10aa10
+          Configuration        59 Symmetry 4 a1b0aa
+          Configuration        60 Symmetry 1 1a0baa
+          Configuration        61 Symmetry 1 a1010a
+          Configuration        62 Symmetry 1 1a0aba
+          Configuration        63 Symmetry 1 aab1a0
+          Configuration        64 Symmetry 1 a10a10
+          Configuration        65 Symmetry 1 1a0aab
+          Configuration        66 Symmetry 4 aa1b0a
+          Configuration        67 Symmetry 4 a1a0ba
+          Configuration        68 Symmetry 4 1aa001
+          Configuration        69 Symmetry 4 aa1010
+          Configuration        70 Symmetry 4 a1a0ab
+          Configuration        71 Symmetry 1 aaa1b0
+          Configuration        72 Symmetry 4 aa1a0b
+          Configuration        73 Symmetry 4 b10aaa
+          Configuration        74 Symmetry 1 ba10aa
+          Configuration        75 Symmetry 1 011a0a
+          Configuration        76 Symmetry 4 baa10a
+          Configuration        77 Symmetry 4 01a1a0
+          Configuration        78 Symmetry 4 baaa10
+          Configuration        79 Symmetry 4 10baaa
+          Configuration        80 Symmetry 1 ab10aa
+          Configuration        81 Symmetry 4 10abaa
+          Configuration        82 Symmetry 4 aba10a
+          Configuration        83 Symmetry 4 10aaba
+          Configuration        84 Symmetry 4 a011a0
+          Configuration        85 Symmetry 4 abaa10
+          Configuration        86 Symmetry 4 10aaab
+          Configuration        87 Symmetry 4 a10baa
+          Configuration        88 Symmetry 4 1a001a
+          Configuration        89 Symmetry 4 aab10a
+          Configuration        90 Symmetry 4 a10aba
+          Configuration        91 Symmetry 4 1a0a01
+          Configuration        92 Symmetry 4 aaba10
+          Configuration        93 Symmetry 4 a10aab
+          Configuration        94 Symmetry 1 aa10ba
+          Configuration        95 Symmetry 1 a1a001
+          Configuration        96 Symmetry 4 aaab10
+          Configuration        97 Symmetry 1 aa10ab
+          Configuration        98 Symmetry 4 aaa10b
+          Configuration        99 Symmetry 1 bbaaaa
+          Configuration       100 Symmetry 1 babaaa
+          Configuration       101 Symmetry 4 0110aa
+          Configuration       102 Symmetry 1 baabaa
+          Configuration       103 Symmetry 1 01a10a
+          Configuration       104 Symmetry 1 baaaba
+          Configuration       105 Symmetry 1 0a11a0
+          Configuration       106 Symmetry 1 01aa10
+          Configuration       107 Symmetry 1 baaaab
+          Configuration       108 Symmetry 1 abbaaa
+          Configuration       109 Symmetry 4 1001aa
+          Configuration       110 Symmetry 1 ababaa
+          Configuration       111 Symmetry 1 10a01a
+          Configuration       112 Symmetry 1 a0110a
+          Configuration       113 Symmetry 1 abaaba
+          Configuration       114 Symmetry 1 10aa01
+          Configuration       115 Symmetry 1 a01a10
+          Configuration       116 Symmetry 1 abaaab
+          Configuration       117 Symmetry 1 aabbaa
+          Configuration       118 Symmetry 1 a1001a
+          Configuration       119 Symmetry 1 1a00a1
+          Configuration       120 Symmetry 1 aababa
+          Configuration       121 Symmetry 1 a10a01
+          Configuration       122 Symmetry 4 aa0110
+          Configuration       123 Symmetry 1 aabaab
+          Configuration       124 Symmetry 1 aaabba
+          Configuration       125 Symmetry 4 aa1001
+          Configuration       126 Symmetry 1 aaabab
+          Configuration       127 Symmetry 1 aaaabb
+          Configuration       128 Symmetry 4 b01aaa
+          Configuration       129 Symmetry 4 01baaa
+          Configuration       130 Symmetry 1 ba01aa
+          Configuration       131 Symmetry 4 01abaa
+          Configuration       132 Symmetry 4 baa01a
+          Configuration       133 Symmetry 4 0a110a
+          Configuration       134 Symmetry 4 01aaba
+          Configuration       135 Symmetry 4 baaa01
+          Configuration       136 Symmetry 4 0a1a10
+          Configuration       137 Symmetry 4 01aaab
+          Configuration       138 Symmetry 1 ab01aa
+          Configuration       139 Symmetry 1 100a1a
+          Configuration       140 Symmetry 4 a01baa
+          Configuration       141 Symmetry 4 aba01a
+          Configuration       142 Symmetry 4 10a0a1
+          Configuration       143 Symmetry 4 a01aba
+          Configuration       144 Symmetry 4 abaa01
+          Configuration       145 Symmetry 1 a0a110
+          Configuration       146 Symmetry 4 a01aab
+          Configuration       147 Symmetry 4 aab01a
+          Configuration       148 Symmetry 4 a100a1
+          Configuration       149 Symmetry 1 aa01ba
+          Configuration       150 Symmetry 4 aaba01
+          Configuration       151 Symmetry 1 aa01ab
+          Configuration       152 Symmetry 4 aaab01
+          Configuration       153 Symmetry 4 aaa01b
+          Configuration       154 Symmetry 1 0b1aaa
+          Configuration       155 Symmetry 4 b0a1aa
+          Configuration       156 Symmetry 4 0101aa
+          Configuration       157 Symmetry 4 ba0a1a
+          Configuration       158 Symmetry 1 0a1baa
+          Configuration       159 Symmetry 1 01a01a
+          Configuration       160 Symmetry 1 baa0a1
+          Configuration       161 Symmetry 1 0a1aba
+          Configuration       162 Symmetry 1 01aa01
+          Configuration       163 Symmetry 4 0aa110
+          Configuration       164 Symmetry 1 0a1aab
+          Configuration       165 Symmetry 4 a0b1aa
+          Configuration       166 Symmetry 4 ab0a1a
+          Configuration       167 Symmetry 4 100aa1
+          Configuration       168 Symmetry 1 a0101a
+          Configuration       169 Symmetry 1 aba0a1
+          Configuration       170 Symmetry 4 a0a1ba
+          Configuration       171 Symmetry 1 a01a01
+          Configuration       172 Symmetry 4 a0a1ab
+          Configuration       173 Symmetry 4 aa0b1a
+          Configuration       174 Symmetry 1 aab0a1
+          Configuration       175 Symmetry 4 aa0101
+          Configuration       176 Symmetry 4 aa0a1b
+          Configuration       177 Symmetry 1 aaa0b1
+          Configuration       178 Symmetry 1 0ba1aa
+          Configuration       179 Symmetry 1 b0aa1a
+          Configuration       180 Symmetry 1 0ab1aa
+          Configuration       181 Symmetry 1 010a1a
+          Configuration       182 Symmetry 1 ba0aa1
+          Configuration       183 Symmetry 4 0a101a
+          Configuration       184 Symmetry 4 01a0a1
+          Configuration       185 Symmetry 1 0aa1ba
+          Configuration       186 Symmetry 4 0a1a01
+          Configuration       187 Symmetry 1 0aa1ab
+          Configuration       188 Symmetry 1 a0ba1a
+          Configuration       189 Symmetry 1 ab0aa1
+          Configuration       190 Symmetry 1 a0ab1a
+          Configuration       191 Symmetry 4 a010a1
+          Configuration       192 Symmetry 1 a0a101
+          Configuration       193 Symmetry 1 a0aa1b
+          Configuration       194 Symmetry 1 aa0ba1
+          Configuration       195 Symmetry 1 aa0ab1
+          Configuration       196 Symmetry 4 0011aa
+          Configuration       197 Symmetry 4 0baa1a
+          Configuration       198 Symmetry 4 b0aaa1
+          Configuration       199 Symmetry 4 0aba1a
+          Configuration       200 Symmetry 4 010aa1
+          Configuration       201 Symmetry 4 0aab1a
+          Configuration       202 Symmetry 1 0a10a1
+          Configuration       203 Symmetry 4 0aa101
+          Configuration       204 Symmetry 4 0aaa1b
+          Configuration       205 Symmetry 1 a0011a
+          Configuration       206 Symmetry 4 a0baa1
+          Configuration       207 Symmetry 4 a0aba1
+          Configuration       208 Symmetry 4 a0aab1
+          Configuration       209 Symmetry 4 aa0011
+          Configuration       210 Symmetry 1 001a1a
+          Configuration       211 Symmetry 1 0baaa1
+          Configuration       212 Symmetry 4 0a011a
+          Configuration       213 Symmetry 1 0abaa1
+          Configuration       214 Symmetry 1 0aaba1
+          Configuration       215 Symmetry 1 0aaab1
+          Configuration       216 Symmetry 4 a001a1
+          Configuration       217 Symmetry 1 a0a011
+          Configuration       218 Symmetry 1 00a11a
+          Configuration       219 Symmetry 4 001aa1
+          Configuration       220 Symmetry 1 0a01a1
+          Configuration       221 Symmetry 4 0aa011
+          Configuration       222 Symmetry 1 a00a11
+          Configuration       223 Symmetry 4 00a1a1
+          Configuration       224 Symmetry 4 0a0a11
+          Configuration       225 Symmetry 1 00aa11
+          NO OF BASIS FUNCTIONS =       225 NO TO BE DELETED =    0
+ CI Matrix Elements calculated here
+          NO. OF CONFIGURATIONS IN REFERENCE SPACE =    1
+                                   SECONDARY SPACE =  225
+                                   TERTIARY SPACE =  225
+          NO. OF ORBITALS =    6
+          NO. OF ELECTRONS =    6
+          NO. OF WEIGHTS =   17
+          REFERENCE STATE CONFIGURATIONS ARE:     0
+          NO. OF CORE ORBITALS =    0
+          OPTION:  NON-DIAGONAL HOLE LINE INTERACTIONS INCLUDED
+ Len28=      115739 LenMCI=       56454.
+ Enter MCSCF program.
+ NO. OF ORBITALS =  6     NO. OF CORE-ORBITALS =  0
+ NO. OF VALENCE-ORBITALS =  6      NO. OF VIRTUAL-ORBITALS =  0
+ USED ACCURACY IN CHECKING CONVERGENCE =  1.00D-08
+  Memory needed for Incore Integrals:                  262375
+  Integrals KEPT IN MEMORY
+ IBUJAK length=                     924
+ Integral file not found: evaluate integrals 
+ FoFCou: FMM=F IPFlag=           0 FMFlag=           0 FMFlg1=           0
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=     600 IOpCl=  0 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+Error: hangup
+   rax 0000000003e28c60, rbx 0000000000000008, rcx ffffffffffffffff
+   rdx 0000000000000000, rsp 00007ffcad686d38, rbp 0000000003e28c60
+   rsi 0000000003e28c60, rdi 0000000000000004, r8  0000000000000000
+   r9  0000000000000010, r10 0000000000000001, r11 0000000000000246
+   r12 0000000000000004, r13 0000000000000001, r14 00000000062598d0
+   r15 00000000007c518c
+Error: hangup
+   rax fffffffffffffffc, rbx 0000000000000001, rcx ffffffffffffffff
+   rdx 0000000000000000, rsp 00007ffd98cfd500, rbp 00007ffd98cfd5d0
+   rsi 00007ffd98cfd69c, rdi 0000000000004aad, r8  000000329c7904a0
+   r9  0000000000002000, r10 0000000000000000, r11 0000000000000246
+   r12 00007ffd98cfd69c, r13 000000000000008e, r14 0000000000000000
+   r15 00007ffd98d03f40
+  /lib64/libpthread.so.0() [0x329cc0f7e0]
+  /lib64/libc.so.6(waitpid+0x1e) [0x329c4ac7be]
+  /lib64/libc.so.6() [0x329c43e5c9]
+  g09(gsyst_+0x49) [0x40daf9]
+  g09(MAIN_+0x13b1) [0x40bf81]
+  g09(main+0x3d) [0x40abbd]
+  /lib64/libc.so.6(__libc_start_main+0xfd) [0x329c41ed1d]
+  g09() [0x40aab9]
+  /lib64/libpthread.so.0() [0x329cc0f7e0]
+  /lib64/libpthread.so.0(lseek64+0x10) [0x329cc0ef30]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(readwa_+0x3e) [0x7deaee]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(ntrio_+0x458) [0x83f768]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(fileio_+0x732) [0x7f44c2]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(rdmeij_+0x5f) [0x868caf]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(sref_+0xdca) [0x46134a]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(refsc_+0xb1d) [0x44bcad]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(mcscf_+0x198b) [0x43deeb]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(MAIN_+0xb0) [0x43c540]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe(main+0x3d) [0x43c47d]
+  /lib64/libc.so.6(__libc_start_main+0xfd) [0x329c41ed1d]
+  /projects/guscus/apps/gau/g09-e1/g09/l510.exe() [0x43c379]

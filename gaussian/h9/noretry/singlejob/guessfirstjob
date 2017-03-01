@@ -1,0 +1,83 @@
+#!/bin/bash
+
+declare -i linenum
+declare -i n=1
+declare -i mult=1
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+declare -a e
+comfile='h9.com'
+logfile='h9.log'
+chkfile='h9.chk'
+comcopy='h9cp.com'
+logcopy='h9cp.log'
+chkcopy='h9cp.chk'
+
+
+y=0.33
+x=$(bc <<< "scale=6; $rrt3 / $y")
+y2=$(bc <<< "scale=6; $y * 2")
+x2=$(bc <<< "scale=6; $x * 2")
+echo '%chk='$chkfile > $comfile
+echo '#t casscf(9,9,davidsondiag)/gen scf(tight,novaracc,noincfock) geom=nocrowd test' >> $comfile
+echo ' ' >> $comfile
+echo 'preliminary casscf(9,9) calculation to improve doublet convergence at slightly different configuration' >> $comfile
+echo 'y='$y >> $comfile
+echo '' >> $comfile
+echo '0 2' >> $comfile
+echo 'H 0.0 0.0 '$y2 >> $comfile
+echo 'H -'$x' 0.0 '$y >> $comfile
+echo 'H '$x' 0.0 '$y >> $comfile
+echo 'H -'$x2' 0.0 0.0' >> $comfile
+echo 'H 0.0 0.0 0.0' >> $comfile
+echo 'H '$x2' 0.0 0.0' >> $comfile
+echo 'H -'$x' 0.0 -'$y >> $comfile
+echo 'H '$x' 0.0 -'$y >> $comfile
+echo 'H 0.0 0.0 -'$y2 >> $comfile
+echo ' ' >> $comfile
+echo '@H.gbs' >> $comfile
+echo ' ' >> $comfile
+#run first calculation
+g09 < $comfile >& $logfile
+#copy checkpoint and log
+cp $comfile $comcopy
+cp $logfile $logcopy
+cp $chkfile $chkcopy
+y=0.32
+x=$(bc <<< "scale=6; $rrt3 / $y")
+y2=$(bc <<< "scale=6; $y * 2")
+x2=$(bc <<< "scale=6; $x * 2")
+echo '%chk='$chkfile > $comfile
+echo '#t casscf(9,9,davidsondiag)/gen scf(tight,novaracc,noincfock) guess=read geom=nocrowd test' >> $comfile
+echo ' ' >> $comfile
+echo 'preliminary casscf(9,9) doublet calculation with initial guess from nearby converged pt' >> $comfile
+echo 'y='$y >> $comfile
+echo ' ' >> $comfile
+echo '0 2' >> $comfile
+echo 'H 0.0 0.0 '$y2 >> $comfile
+echo 'H -'$x' 0.0 '$y >> $comfile
+echo 'H '$x' 0.0 '$y >> $comfile
+echo 'H -'$x2' 0.0 0.0' >> $comfile
+echo 'H 0.0 0.0 0.0' >> $comfile
+echo 'H '$x2' 0.0 0.0' >> $comfile
+echo 'H -'$x' 0.0 -'$y >> $comfile
+echo 'H '$x' 0.0 -'$y >> $comfile
+echo 'H 0.0 0.0 -'$y2 >> $comfile
+echo ' ' >> $comfile
+echo '@H.gbs' >> $comfile
+echo ' ' >> $comfile
+g09 < $comfile >& $logfile
+#grab e from output                       
+estring=$(grep 'EIGENVALUE' $logfile |tail -1)
+e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]{5}[0-9]*\s*')
+if [[ ${e[$n]} = "" ]]
+then
+	linenumstring=$(grep -n '... Do an extra-iteration for final printing.' $logfile)
+	linenum=$(echo $linenumstring | grep -o -E '[0-9]+')
+	linenum=$linenum-1
+	estring=$(head -$linenum $logfile | tail -1)
+	e[$n]=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]+\s')
+	if [[ ${e[$n]} = "" ]]
+	then
+		e[$n]='FC'
+	fi
+fi

@@ -1,0 +1,63 @@
+#!/bin/bash
+#run rhf stability calculation using gaussian
+#writes rhf E, rhf HOMO-1 -> LUMO+1 E's, RRHF,CRHF,RUHF hessian eigenvalues
+
+declare -i linenum
+declare -x step=0.25 #in alpha (degrees), not y
+declare -i keepgoing=1
+#vars for distortion param 
+declare -x alpha=5.0
+declare -x y
+declare -x yf=2.5
+#output files and gaussian files
+comfile='h12.com'
+logfile='h12.log'
+hessfile='h12hess'
+mofile='h12MOE'
+efile='h12RHFE'
+
+mkdir com log
+
+while [ $keepgoing -eq 1 ]; do
+#create input file for gaussian
+	echo $alpha > tmp
+        ./writez < tmp > $comfile
+	y=$(grep -o -E '\-*[0-9]+\.[0-9]*' fort.8)
+	rm tmp fort.8
+#run gaussian
+        g09 < $comfile >& $logfile
+#grab eigenvals from ouput
+#rrhf
+        stabstring=$(grep -E 'Internal RHF' $logfile)
+        rrhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        linenum=$linenum+1
+#crhf
+        stabstring=$(grep -E 'RRHF.*CRHF' $logfile)
+        crhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#ruhf
+        stabstring=$(grep -E 'RRHF.*RUHF' $logfile)
+        ruhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#write to file stable
+        echo $alpha $y $rrhf $crhf $ruhf >> $hessfile
+
+        estring=$(grep -E 'SCF Done:' $logfile)
+        estring=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        echo $alpha $y $estring >> $efile
+        occmostring=$(grep -E 'Alpha  occ. eigenvalues' $logfile)
+        occmostring=$(echo $occmostring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        occmo=($occmostring)
+        virtmostring=$(grep -E 'Alpha virt. eigenvalues' $logfile)
+        virtmostring=$(echo $virtmostring | grep -o -E '\-*[0-9]+\.[0-9]*')
+        virtmo=($virtmostring)
+	gap=$(echo ${virtmo[0]} - ${occmo[5]} | bc)
+#        echo $alpha $y ${occmo[4]} ${occmo[5]} ${virtmo[0]} ${virtmo[1]} $gap >> $mofile
+        echo $alpha $y ${occmo[@]} ${virtmo[@]} $gap >> $mofile
+
+	cp $comfile 'com/'$comfile'_alpha'$alpha
+	cp $logfile 'log/'$logfile'_alpha'$alpha
+
+#check if y is less than yi, if so keepgoing = 0, if not keepgoing = 1.
+	alpha=$(echo $alpha + $step | bc)
+        keepgoing=$(echo "$yf > $y" | bc -l)
+#end loop
+done

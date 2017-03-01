@@ -1,0 +1,2170 @@
+ Entering Gaussian System, Link 0=g09
+ Initial command:
+ /projects/guscus/apps/gau/g09-e1/g09/l1.exe "/users/lcj1/gaussian/H4/H4/Gau-5741.inp" -scrdir="/users/lcj1/gaussian/H4/H4/"
+ Entering Link 1 = /projects/guscus/apps/gau/g09-e1/g09/l1.exe PID=      5742.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2015,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision E.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  ES64L-G09RevE.01 30-Nov-2015
+                 5-Dec-2016 
+ ******************************************
+ %chk=H4model.chk
+ -----------------------
+ #T ccsd/3-21g scan test
+ -----------------------
+ ----------------------------------------------------------------------
+ pes of trapezoidal model of four H atoms scanned over varying values o
+ f angle delta, using ccsd in 3-21g basis
+ ----------------------------------------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ H
+ H                    1    a
+ H                    1    a        2    deltaPlus2pi
+ H                    2    a        1    deltaPlus2pi 3     0.       0
+       Variables:
+  deltaPLus2pi         90.     Scan 18    5.     
+  a                     1.6                      
+ 
+ Scan the potential surface.
+ Variable   Value     No. Steps Step-Size
+ -------- ----------- --------- ---------
+     1      90.000000      18      5.0000
+ A total of     19 points will be computed.
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2   90.000(     4)
+      4      4  H        2   1.600000(     3)      1   90.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.262742   0.000000
+     4  H    2.262742   1.600000   1.600000   0.000000
+ Framework group  D4H[2C2'(H.H)]
+ Deg. of freedom     1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    1.131371    0.000000
+      2          1           0        1.131371   -0.000000    0.000000
+      3          1           0       -1.131371    0.000000    0.000000
+      4          1           0       -0.000000   -1.131371    0.000000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    195.8808985    195.8808985     97.9404493
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.7906740123 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    1 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Initial guess orbital symmetries:
+       Occupied  (A1G) (EU)
+       Virtual   (EU) (B1G) (B1G) (EU) (EU) (A1G)
+ SCF Done:  E(RHF) =  -1.82216786253     A.U. after    7 cycles
+            NFock=  7  Conv=0.47D-09     -V/T= 2.1380
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134160913
+ LASXX=           92 LTotXX=          92 LenRXX=         240
+ LTotAB=         148 MaxLAS=         256 LenRXY=           0
+ NonZer=         332 LenScr=      655360 LnRSAI=         256
+ LnScr1=      655360 LExtra=           0 Total=      1311216
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1021121287D+01
+ E2 =    -0.4675014569D-01 EUMP2 =    -0.18689180082199D+01
+ MP4(R+Q)=  0.11462714D-02
+ E3=       -0.16137160D-01        EUMP3=      -0.18850551682D+01
+ E4(DQ)=   -0.75480983D-02        UMP4(DQ)=   -0.18926032666D+01
+ E4(SDQ)=  -0.10313352D-01        UMP4(SDQ)=  -0.18953685204D+01
+ DE(Corr)= -0.61642200E-01 E(Corr)=     -1.8838100628    
+ NORM(A)=   0.10565760D+01
+ DE(Corr)= -0.76197816E-01 E(CORR)=     -1.8983656784     Delta=-1.46D-02
+ NORM(A)=   0.11686824D+01
+ DE(Corr)= -0.95726848E-01 E(CORR)=     -1.9178947106     Delta=-1.95D-02
+ NORM(A)=   0.12494996D+01
+ DE(Corr)= -0.10329780     E(CORR)=     -1.9254656593     Delta=-7.57D-03
+ NORM(A)=   0.12601835D+01
+ DE(Corr)= -0.10361004     E(CORR)=     -1.9257779045     Delta=-3.12D-04
+ NORM(A)=   0.12674985D+01
+ DE(Corr)= -0.10402387     E(CORR)=     -1.9261917371     Delta=-4.14D-04
+ NORM(A)=   0.12669596D+01
+ DE(Corr)= -0.10393455     E(CORR)=     -1.9261024141     Delta= 8.93D-05
+ NORM(A)=   0.12672487D+01
+ DE(Corr)= -0.10395268     E(CORR)=     -1.9261205475     Delta=-1.81D-05
+ NORM(A)=   0.12670731D+01
+ DE(Corr)= -0.10393734     E(CORR)=     -1.9261052007     Delta= 1.53D-05
+ NORM(A)=   0.12671174D+01
+ DE(Corr)= -0.10394058     E(CORR)=     -1.9261084384     Delta=-3.24D-06
+ NORM(A)=   0.12671152D+01
+ DE(Corr)= -0.10394033     E(CORR)=     -1.9261081896     Delta= 2.49D-07
+ NORM(A)=   0.12671156D+01
+ DE(Corr)= -0.10394034     E(CORR)=     -1.9261082066     Delta=-1.70D-08
+ NORM(A)=   0.12671157D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+    AA            1         4           -0.157955D+00
+   ABAB           1    1    3    3      -0.406656D+00
+   ABAB           2    2    4    4      -0.394098D+00
+   ABAB           2    2    3    3       0.465405D+00
+ Largest amplitude= 4.65D-01
+ Discarding MO integrals.
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (?A) (?B)
+       Virtual   (?B) (?A) (?B) (?A) (?B) (?A)
+ Unable to determine electronic state:  an orbital has unidentified symmetry.
+ Alpha  occ. eigenvalues --   -0.51853  -0.26528
+ Alpha virt. eigenvalues --   -0.08921   0.14184   1.11384   1.11788   1.29277
+ Alpha virt. eigenvalues --    1.32729
+          Condensed to atoms (all electrons):
+ Mulliken charges:
+               1
+     1  H    0.455532
+     2  H   -0.455532
+     3  H   -0.455532
+     4  H    0.455532
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+ Electronic spatial extent (au):  <R**2>=             29.8512
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.0000    Y=              0.0000    Z=             -0.0000  Tot=              0.0000
+ Variable Step   Value    
+ -------- ---- -----------
+     1       1    1.658063
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2   95.000(     4)
+      4      4  H        2   1.600000(     3)      1   95.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.359287   0.000000
+     4  H    2.359287   1.600000   1.878898   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+ Omega: Change in point group or standard orientation.
+
+ Old FWG=D04H [2C2'(H1.H1)]
+ New FWG=C02V [SGV(H4)]
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.796956
+      2          1           0       -0.000000   -0.800000    0.796956
+      3          1           0        0.000000    0.939449   -0.796956
+      4          1           0       -0.000000   -0.939449   -0.796956
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    197.3802231    164.6744715     89.7750655
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.7224402369 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000   -0.000000    0.000000
+         Rot=    0.653281   -0.270598    0.653281    0.270598 Ang= -98.42 deg.
+ Initial guess orbital symmetries:
+       Occupied  (B2) (B2)
+       Virtual   (B2) (B2) (B2) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ An orbital has undefined symmetry, so N**3 symmetry is turned off.
+ SCF Done:  E(RHF) =  -1.89524708618     A.U. after   10 cycles
+            NFock= 10  Conv=0.38D-08     -V/T= 2.1675
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           2 MOrb=             2 LenV=     134161999
+ LASXX=          352 LTotXX=         352 LenRXX=         352
+ LTotAB=         504 MaxLAS=         576 LenRXY=         576
+ NonZer=         704 LenScr=      655360 LnRSAI=           0
+ LnScr1=           0 LExtra=           0 Total=       656288
+ MaxDsk=          -1 SrtSym=           F ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ SymMOI:  orbitals are not symmetric.
+ ANorm=    0.1035585850D+01
+ E2 =    -0.7543738312D-01 EUMP2 =    -0.19706844693050D+01
+ MP4(R+Q)=  0.29198174D-02
+ E3=       -0.34298010D-01        EUMP3=      -0.20049824792D+01
+ E4(DQ)=   -0.18249046D-01        UMP4(DQ)=   -0.20232315252D+01
+ E4(SDQ)=  -0.19957781D-01        UMP4(SDQ)=  -0.20249402605D+01
+ DE(Corr)= -0.10678681     E(Corr)=     -2.0020338987    
+ NORM(A)=   0.11221245D+01
+ DE(Corr)= -0.13701192     E(CORR)=     -2.0322590021     Delta=-3.02D-02
+ NORM(A)=   0.11874556D+01
+ DE(Corr)= -0.15141921     E(CORR)=     -2.0466662940     Delta=-1.44D-02
+ NORM(A)=   0.11993986D+01
+ DE(Corr)= -0.15230131     E(CORR)=     -2.0475483961     Delta=-8.82D-04
+ NORM(A)=   0.12595475D+01
+ DE(Corr)= -0.15815302     E(CORR)=     -2.0534001040     Delta=-5.85D-03
+ NORM(A)=   0.12709087D+01
+ DE(Corr)= -0.15973680     E(CORR)=     -2.0549838855     Delta=-1.58D-03
+ NORM(A)=   0.12631060D+01
+ DE(Corr)= -0.15894820     E(CORR)=     -2.0541952812     Delta= 7.89D-04
+ NORM(A)=   0.12663405D+01
+ DE(Corr)= -0.15928086     E(CORR)=     -2.0545279500     Delta=-3.33D-04
+ NORM(A)=   0.12668112D+01
+ DE(Corr)= -0.15935604     E(CORR)=     -2.0546031242     Delta=-7.52D-05
+ NORM(A)=   0.12662374D+01
+ DE(Corr)= -0.15929152     E(CORR)=     -2.0545386097     Delta= 6.45D-05
+ NORM(A)=   0.12663648D+01
+ DE(Corr)= -0.15930602     E(CORR)=     -2.0545531103     Delta=-1.45D-05
+ NORM(A)=   0.12663876D+01
+ DE(Corr)= -0.15930848     E(CORR)=     -2.0545555647     Delta=-2.45D-06
+ NORM(A)=   0.12663848D+01
+ DE(Corr)= -0.15930815     E(CORR)=     -2.0545552363     Delta= 3.28D-07
+ NORM(A)=   0.12663839D+01
+ DE(Corr)= -0.15930804     E(CORR)=     -2.0545551229     Delta= 1.13D-07
+ NORM(A)=   0.12663839D+01
+ DE(Corr)= -0.15930804     E(CORR)=     -2.0545551293     Delta=-6.44D-09
+ NORM(A)=   0.12663839D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    4    4      -0.150623D+00
+   ABAB           1    2    3    4       0.242019D+00
+   ABAB           1    2    4    3       0.160795D+00
+   ABAB           2    1    3    4       0.160795D+00
+   ABAB           2    1    4    3       0.242019D+00
+   ABAB           2    2    3    3      -0.593770D+00
+   ABAB           2    2    4    4      -0.101217D+00
+ Largest amplitude= 5.94D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       2    1.745329
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  100.000(     4)
+      4      4  H        2   1.600000(     3)      1  100.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.451342   0.000000
+     4  H    2.451342   1.600000   2.155674   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.787846
+      2          1           0       -0.000000   -0.800000    0.787846
+      3          1           0        0.000000    1.077837   -0.787846
+      4          1           0       -0.000000   -1.077837   -0.787846
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    201.9710715    139.1591211     82.3911733
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.6694332053 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.91278305244     A.U. after    7 cycles
+            NFock=  7  Conv=0.13D-08     -V/T= 2.1976
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161623
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1033292051D+01
+ E2 =    -0.7150307849D-01 EUMP2 =    -0.19842861309332D+01
+ MP4(R+Q)=  0.26184047D-02
+ E3=       -0.32828473D-01        EUMP3=      -0.20171146044D+01
+ E4(DQ)=   -0.17274912D-01        UMP4(DQ)=   -0.20343895168D+01
+ E4(SDQ)=  -0.18962468D-01        UMP4(SDQ)=  -0.20360770720D+01
+ DE(Corr)= -0.10169176     E(Corr)=     -2.0144748107    
+ NORM(A)=   0.11158794D+01
+ DE(Corr)= -0.13085129     E(CORR)=     -2.0436343405     Delta=-2.92D-02
+ NORM(A)=   0.11678064D+01
+ DE(Corr)= -0.14286530     E(CORR)=     -2.0556483541     Delta=-1.20D-02
+ NORM(A)=   0.11737812D+01
+ DE(Corr)= -0.14347819     E(CORR)=     -2.0562612389     Delta=-6.13D-04
+ NORM(A)=   0.11990679D+01
+ DE(Corr)= -0.14637681     E(CORR)=     -2.0591598654     Delta=-2.90D-03
+ NORM(A)=   0.12050528D+01
+ DE(Corr)= -0.14713924     E(CORR)=     -2.0599222954     Delta=-7.62D-04
+ NORM(A)=   0.12038622D+01
+ DE(Corr)= -0.14701719     E(CORR)=     -2.0598002453     Delta= 1.22D-04
+ NORM(A)=   0.12040057D+01
+ DE(Corr)= -0.14704032     E(CORR)=     -2.0598233759     Delta=-2.31D-05
+ NORM(A)=   0.12041711D+01
+ DE(Corr)= -0.14707082     E(CORR)=     -2.0598538730     Delta=-3.05D-05
+ NORM(A)=   0.12041149D+01
+ DE(Corr)= -0.14706374     E(CORR)=     -2.0598467900     Delta= 7.08D-06
+ NORM(A)=   0.12040925D+01
+ DE(Corr)= -0.14706100     E(CORR)=     -2.0598440574     Delta= 2.73D-06
+ NORM(A)=   0.12040950D+01
+ DE(Corr)= -0.14706133     E(CORR)=     -2.0598443862     Delta=-3.29D-07
+ NORM(A)=   0.12040950D+01
+ DE(Corr)= -0.14706131     E(CORR)=     -2.0598443646     Delta= 2.16D-08
+ NORM(A)=   0.12040951D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.109015D+00
+   ABAB           1    1    4    4      -0.149291D+00
+   ABAB           2    2    3    3      -0.474220D+00
+   ABAB           2    2    4    4      -0.111273D+00
+   ABAB           1    2    3    4       0.221351D+00
+   ABAB           1    2    4    3       0.153700D+00
+   ABAB           2    1    3    4       0.153700D+00
+   ABAB           2    1    4    3       0.221351D+00
+ Largest amplitude= 4.74D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       3    1.832596
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  105.000(     4)
+      4      4  H        2   1.600000(     3)      1  105.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.538731   0.000000
+     4  H    2.538731   1.600000   2.428221   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0       -0.000000    0.800000    0.772741
+      2          1           0       -0.000000   -0.800000    0.772741
+      3          1           0       -0.000000    1.214110   -0.772741
+      4          1           0       -0.000000   -1.214110   -0.772741
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    209.9445143    118.5997784     75.7869591
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.6270185104 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000    0.000000
+         Rot=    1.000000   -0.000000   -0.000000   -0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.92519662923     A.U. after    7 cycles
+            NFock=  7  Conv=0.18D-08     -V/T= 2.2222
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161623
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1031786392D+01
+ E2 =    -0.6882114732D-01 EUMP2 =    -0.19940177765538D+01
+ MP4(R+Q)=  0.24350439D-02
+ E3=       -0.31725811D-01        EUMP3=      -0.20257435871D+01
+ E4(DQ)=   -0.16621613D-01        UMP4(DQ)=   -0.20423652004D+01
+ E4(SDQ)=  -0.18226197D-01        UMP4(SDQ)=  -0.20439697838D+01
+ DE(Corr)= -0.98092026E-01 E(Corr)=     -2.0232886551    
+ NORM(A)=   0.11112327D+01
+ DE(Corr)= -0.12635178     E(CORR)=     -2.0515484046     Delta=-2.83D-02
+ NORM(A)=   0.11559305D+01
+ DE(Corr)= -0.13699051     E(CORR)=     -2.0621871408     Delta=-1.06D-02
+ NORM(A)=   0.11598507D+01
+ DE(Corr)= -0.13753379     E(CORR)=     -2.0627304227     Delta=-5.43D-04
+ NORM(A)=   0.11749572D+01
+ DE(Corr)= -0.13951843     E(CORR)=     -2.0647150547     Delta=-1.98D-03
+ NORM(A)=   0.11793361D+01
+ DE(Corr)= -0.14007449     E(CORR)=     -2.0652711166     Delta=-5.56D-04
+ NORM(A)=   0.11789012D+01
+ DE(Corr)= -0.14001160     E(CORR)=     -2.0652082278     Delta= 6.29D-05
+ NORM(A)=   0.11788436D+01
+ DE(Corr)= -0.14000423     E(CORR)=     -2.0652008598     Delta= 7.37D-06
+ NORM(A)=   0.11789101D+01
+ DE(Corr)= -0.14001805     E(CORR)=     -2.0652146756     Delta=-1.38D-05
+ NORM(A)=   0.11788918D+01
+ DE(Corr)= -0.14001566     E(CORR)=     -2.0652122897     Delta= 2.39D-06
+ NORM(A)=   0.11788871D+01
+ DE(Corr)= -0.14001505     E(CORR)=     -2.0652116768     Delta= 6.13D-07
+ NORM(A)=   0.11788878D+01
+ DE(Corr)= -0.14001515     E(CORR)=     -2.0652117822     Delta=-1.05D-07
+ NORM(A)=   0.11788879D+01
+ DE(Corr)= -0.14001516     E(CORR)=     -2.0652117923     Delta=-1.02D-08
+ NORM(A)=   0.11788880D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.108853D+00
+   ABAB           1    1    4    4      -0.152462D+00
+   ABAB           2    2    3    3      -0.424248D+00
+   ABAB           2    2    4    4      -0.108172D+00
+   ABAB           1    2    3    4       0.210954D+00
+   ABAB           1    2    4    3       0.146633D+00
+   ABAB           2    1    3    4       0.146633D+00
+   ABAB           2    1    4    3       0.210954D+00
+ Largest amplitude= 4.24D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       4    1.919862
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  110.000(     4)
+      4      4  H        2   1.600000(     3)      1  110.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.621287   0.000000
+     4  H    2.621287   1.600000   2.694464   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0       -0.000000    0.800000    0.751754
+      2          1           0       -0.000000   -0.800000    0.751754
+      3          1           0       -0.000000    1.347232   -0.751754
+      4          1           0       -0.000000   -1.347232   -0.751754
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    221.8300896    102.1279057     69.9320369
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.5923552781 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000   -0.000000
+         Rot=    1.000000   -0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.93373873877     A.U. after    6 cycles
+            NFock=  6  Conv=0.96D-08     -V/T= 2.2416
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161623
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030888092D+01
+ E2 =    -0.6715416710D-01 EUMP2 =    -0.20008929058722D+01
+ MP4(R+Q)=  0.23325667D-02
+ E3=       -0.30965929D-01        EUMP3=      -0.20318588347D+01
+ E4(DQ)=   -0.16173625D-01        UMP4(DQ)=   -0.20480324599D+01
+ E4(SDQ)=  -0.17695731D-01        UMP4(SDQ)=  -0.20495545661D+01
+ DE(Corr)= -0.95766925E-01 E(Corr)=     -2.0295056636    
+ NORM(A)=   0.11078914D+01
+ DE(Corr)= -0.12330184     E(CORR)=     -2.0570405794     Delta=-2.75D-02
+ NORM(A)=   0.11481969D+01
+ DE(Corr)= -0.13307364     E(CORR)=     -2.0668123782     Delta=-9.77D-03
+ NORM(A)=   0.11511916D+01
+ DE(Corr)= -0.13360407     E(CORR)=     -2.0673428094     Delta=-5.30D-04
+ NORM(A)=   0.11619858D+01
+ DE(Corr)= -0.13516852     E(CORR)=     -2.0689072539     Delta=-1.56D-03
+ NORM(A)=   0.11660707D+01
+ DE(Corr)= -0.13570922     E(CORR)=     -2.0694479538     Delta=-5.41D-04
+ NORM(A)=   0.11658496D+01
+ DE(Corr)= -0.13565209     E(CORR)=     -2.0693908314     Delta= 5.71D-05
+ NORM(A)=   0.11658148D+01
+ DE(Corr)= -0.13564048     E(CORR)=     -2.0693792222     Delta= 1.16D-05
+ NORM(A)=   0.11658587D+01
+ DE(Corr)= -0.13564804     E(CORR)=     -2.0693867741     Delta=-7.55D-06
+ NORM(A)=   0.11658501D+01
+ DE(Corr)= -0.13564646     E(CORR)=     -2.0693851968     Delta= 1.58D-06
+ NORM(A)=   0.11658487D+01
+ DE(Corr)= -0.13564615     E(CORR)=     -2.0693848923     Delta= 3.05D-07
+ NORM(A)=   0.11658491D+01
+ DE(Corr)= -0.13564618     E(CORR)=     -2.0693849194     Delta=-2.71D-08
+ NORM(A)=   0.11658492D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.106762D+00
+   ABAB           1    1    4    4      -0.155546D+00
+   ABAB           2    2    3    3      -0.399740D+00
+   ABAB           2    2    4    4      -0.102701D+00
+   ABAB           1    2    3    4       0.204567D+00
+   ABAB           1    2    4    3       0.140965D+00
+   ABAB           2    1    3    4       0.140965D+00
+   ABAB           2    1    4    3       0.204567D+00
+ Largest amplitude= 4.00D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       5    2.007129
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  115.000(     4)
+      4      4  H        2   1.600000(     3)      1  115.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.698853   0.000000
+     4  H    2.698853   1.600000   2.952378   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0       -0.000000    0.800000    0.725046
+      2          1           0       -0.000000   -0.800000    0.725046
+      3          1           0       -0.000000    1.476189   -0.725046
+      4          1           0       -0.000000   -1.476189   -0.725046
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    238.4737959     88.9377716     64.7787986
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.5635946231 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000   -0.000000   -0.000000
+         Rot=    1.000000    0.000000   -0.000000   -0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.93955044226     A.U. after    6 cycles
+            NFock=  6  Conv=0.69D-08     -V/T= 2.2565
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161623
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030379552D+01
+ E2 =    -0.6615863481D-01 EUMP2 =    -0.20057090770720D+01
+ MP4(R+Q)=  0.22788398D-02
+ E3=       -0.30457789D-01        EUMP3=      -0.20361668665D+01
+ E4(DQ)=   -0.15860672D-01        UMP4(DQ)=   -0.20520275382D+01
+ E4(SDQ)=  -0.17321805D-01        UMP4(SDQ)=  -0.20534886715D+01
+ DE(Corr)= -0.94315693E-01 E(Corr)=     -2.0338661350    
+ NORM(A)=   0.11055474D+01
+ DE(Corr)= -0.12129277     E(CORR)=     -2.0608432149     Delta=-2.70D-02
+ NORM(A)=   0.11430647D+01
+ DE(Corr)= -0.13049463     E(CORR)=     -2.0700450729     Delta=-9.20D-03
+ NORM(A)=   0.11455686D+01
+ DE(Corr)= -0.13103138     E(CORR)=     -2.0705818174     Delta=-5.37D-04
+ NORM(A)=   0.11542756D+01
+ DE(Corr)= -0.13237603     E(CORR)=     -2.0719264770     Delta=-1.34D-03
+ NORM(A)=   0.11583405D+01
+ DE(Corr)= -0.13293799     E(CORR)=     -2.0724884331     Delta=-5.62D-04
+ NORM(A)=   0.11582401D+01
+ DE(Corr)= -0.13288176     E(CORR)=     -2.0724322059     Delta= 5.62D-05
+ NORM(A)=   0.11582406D+01
+ DE(Corr)= -0.13287065     E(CORR)=     -2.0724210923     Delta= 1.11D-05
+ NORM(A)=   0.11582859D+01
+ DE(Corr)= -0.13287757     E(CORR)=     -2.0724280169     Delta=-6.92D-06
+ NORM(A)=   0.11582782D+01
+ DE(Corr)= -0.13287604     E(CORR)=     -2.0724264843     Delta= 1.53D-06
+ NORM(A)=   0.11582775D+01
+ DE(Corr)= -0.13287584     E(CORR)=     -2.0724262844     Delta= 2.00D-07
+ NORM(A)=   0.11582778D+01
+ DE(Corr)= -0.13287586     E(CORR)=     -2.0724263039     Delta=-1.95D-08
+ NORM(A)=   0.11582779D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.105120D+00
+   ABAB           1    1    4    4      -0.157683D+00
+   ABAB           2    2    3    3      -0.386527D+00
+   ABAB           1    2    3    4       0.200324D+00
+   ABAB           1    2    4    3       0.136813D+00
+   ABAB           2    1    3    4       0.136813D+00
+   ABAB           2    1    4    3       0.200324D+00
+ Largest amplitude= 3.87D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       6    2.094395
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  120.000(     4)
+      4      4  H        2   1.600000(     3)      1  120.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.771281   0.000000
+     4  H    2.771281   1.600000   3.200000   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.692820
+      2          1           0       -0.000000   -0.800000    0.692820
+      3          1           0        0.000000    1.600000   -0.692820
+      4          1           0       -0.000000   -1.600000   -0.692820
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    261.1745314     78.3523594     60.2710457
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.5394758986 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000   -0.000000    0.000000
+         Rot=    1.000000   -0.000000   -0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.94349352497     A.U. after    6 cycles
+            NFock=  6  Conv=0.38D-08     -V/T= 2.2677
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161623
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030107213D+01
+ E2 =    -0.6558481795D-01 EUMP2 =    -0.20090783429195D+01
+ MP4(R+Q)=  0.22534520D-02
+ E3=       -0.30123372D-01        EUMP3=      -0.20392017150D+01
+ E4(DQ)=   -0.15640228D-01        UMP4(DQ)=   -0.20548419430D+01
+ E4(SDQ)=  -0.17061165D-01        UMP4(SDQ)=  -0.20562628796D+01
+ DE(Corr)= -0.93431498E-01 E(Corr)=     -2.0369250230    
+ NORM(A)=   0.11039251D+01
+ DE(Corr)= -0.11999037     E(CORR)=     -2.0634838915     Delta=-2.66D-02
+ NORM(A)=   0.11396235D+01
+ DE(Corr)= -0.12880481     E(CORR)=     -2.0722983380     Delta=-8.81D-03
+ NORM(A)=   0.11418428D+01
+ DE(Corr)= -0.12935442     E(CORR)=     -2.0728479426     Delta=-5.50D-04
+ NORM(A)=   0.11494841D+01
+ DE(Corr)= -0.13058122     E(CORR)=     -2.0740747488     Delta=-1.23D-03
+ NORM(A)=   0.11535901D+01
+ DE(Corr)= -0.13116565     E(CORR)=     -2.0746591770     Delta=-5.84D-04
+ NORM(A)=   0.11535709D+01
+ DE(Corr)= -0.13110988     E(CORR)=     -2.0746034064     Delta= 5.58D-05
+ NORM(A)=   0.11536000D+01
+ DE(Corr)= -0.13110132     E(CORR)=     -2.0745948431     Delta= 8.56D-06
+ NORM(A)=   0.11536416D+01
+ DE(Corr)= -0.13110772     E(CORR)=     -2.0746012492     Delta=-6.41D-06
+ NORM(A)=   0.11536356D+01
+ DE(Corr)= -0.13110656     E(CORR)=     -2.0746000848     Delta= 1.16D-06
+ NORM(A)=   0.11536351D+01
+ DE(Corr)= -0.13110642     E(CORR)=     -2.0745999478     Delta= 1.37D-07
+ NORM(A)=   0.11536353D+01
+ DE(Corr)= -0.13110644     E(CORR)=     -2.0745999645     Delta=-1.67D-08
+ NORM(A)=   0.11536353D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.104245D+00
+   ABAB           1    1    4    4      -0.158953D+00
+   ABAB           2    2    3    3      -0.379001D+00
+   ABAB           1    2    3    4       0.197446D+00
+   ABAB           1    2    4    3       0.133902D+00
+   ABAB           2    1    3    4       0.133902D+00
+   ABAB           2    1    4    3       0.197446D+00
+ Largest amplitude= 3.79D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       7    2.181662
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  125.000(     4)
+      4      4  H        2   1.600000(     3)      1  125.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.838435   0.000000
+     4  H    2.838435   1.600000   3.435445   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.655322
+      2          1           0       -0.000000   -0.800000    0.655322
+      3          1           0        0.000000    1.717722   -0.655322
+      4          1           0       -0.000000   -1.717722   -0.655322
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    291.9194612     69.8294582     56.3500724
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.5191073493 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000   -0.000000
+         Rot=    1.000000    0.000000    0.000000   -0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.94617361459     A.U. after    6 cycles
+            NFock=  6  Conv=0.34D-08     -V/T= 2.2759
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161651
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1029975073D+01
+ E2 =    -0.6527186652D-01 EUMP2 =    -0.20114454811098D+01
+ MP4(R+Q)=  0.22442401D-02
+ E3=       -0.29907016D-01        EUMP3=      -0.20413524974D+01
+ E4(DQ)=   -0.15484986D-01        UMP4(DQ)=   -0.20568374836D+01
+ E4(SDQ)=  -0.16880875D-01        UMP4(SDQ)=  -0.20582333727D+01
+ DE(Corr)= -0.92910127E-01 E(Corr)=     -2.0390837421    
+ NORM(A)=   0.11028146D+01
+ DE(Corr)= -0.11916030     E(CORR)=     -2.0653339191     Delta=-2.63D-02
+ NORM(A)=   0.11372968D+01
+ DE(Corr)= -0.12770271     E(CORR)=     -2.0738763289     Delta=-8.54D-03
+ NORM(A)=   0.11393419D+01
+ DE(Corr)= -0.12826670     E(CORR)=     -2.0744403173     Delta=-5.64D-04
+ NORM(A)=   0.11464206D+01
+ DE(Corr)= -0.12942965     E(CORR)=     -2.0756032616     Delta=-1.16D-03
+ NORM(A)=   0.11505948D+01
+ DE(Corr)= -0.13003360     E(CORR)=     -2.0762072162     Delta=-6.04D-04
+ NORM(A)=   0.11506310D+01
+ DE(Corr)= -0.12997830     E(CORR)=     -2.0761519172     Delta= 5.53D-05
+ NORM(A)=   0.11506796D+01
+ DE(Corr)= -0.12997242     E(CORR)=     -2.0761460344     Delta= 5.88D-06
+ NORM(A)=   0.11507165D+01
+ DE(Corr)= -0.12997822     E(CORR)=     -2.0761518394     Delta=-5.80D-06
+ NORM(A)=   0.11507119D+01
+ DE(Corr)= -0.12997736     E(CORR)=     -2.0761509721     Delta= 8.67D-07
+ NORM(A)=   0.11507114D+01
+ DE(Corr)= -0.12997725     E(CORR)=     -2.0761508597     Delta= 1.12D-07
+ NORM(A)=   0.11507116D+01
+ DE(Corr)= -0.12997726     E(CORR)=     -2.0761508760     Delta=-1.63D-08
+ NORM(A)=   0.11507116D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.103981D+00
+   ABAB           1    1    4    4      -0.159605D+00
+   ABAB           2    2    3    3      -0.374566D+00
+   ABAB           1    2    3    4       0.195496D+00
+   ABAB           1    2    4    3       0.131917D+00
+   ABAB           2    1    3    4       0.131917D+00
+   ABAB           2    1    4    3       0.195496D+00
+ Largest amplitude= 3.75D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       8    2.268928
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  130.000(     4)
+      4      4  H        2   1.600000(     3)      1  130.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.900185   0.000000
+     4  H    2.900185   1.600000   3.656920   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.612836
+      2          1           0       -0.000000   -0.800000    0.612836
+      3          1           0        0.000000    1.828460   -0.612836
+      4          1           0       -0.000000   -1.828460   -0.612836
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    333.7983261     62.9452092     52.9586586
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.5018394927 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000   -0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.94800156580     A.U. after    6 cycles
+            NFock=  6  Conv=0.23D-08     -V/T= 2.2817
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161651
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1029925067D+01
+ E2 =    -0.6511875167D-01 EUMP2 =    -0.20131203174657D+01
+ MP4(R+Q)=  0.22440481D-02
+ E3=       -0.29770199D-01        EUMP3=      -0.20428905161D+01
+ E4(DQ)=   -0.15375947D-01        UMP4(DQ)=   -0.20582664635D+01
+ E4(SDQ)=  -0.16756866D-01        UMP4(SDQ)=  -0.20596473826D+01
+ DE(Corr)= -0.92619216E-01 E(Corr)=     -2.0406207822    
+ NORM(A)=   0.11020621D+01
+ DE(Corr)= -0.11864335     E(CORR)=     -2.0666449202     Delta=-2.60D-02
+ NORM(A)=   0.11357124D+01
+ DE(Corr)= -0.12698913     E(CORR)=     -2.0749906913     Delta=-8.35D-03
+ NORM(A)=   0.11376465D+01
+ DE(Corr)= -0.12756697     E(CORR)=     -2.0755685408     Delta=-5.78D-04
+ NORM(A)=   0.11444225D+01
+ DE(Corr)= -0.12869491     E(CORR)=     -2.0766964802     Delta=-1.13D-03
+ NORM(A)=   0.11486815D+01
+ DE(Corr)= -0.12931615     E(CORR)=     -2.0773177196     Delta=-6.21D-04
+ NORM(A)=   0.11487567D+01
+ DE(Corr)= -0.12926138     E(CORR)=     -2.0772629457     Delta= 5.48D-05
+ NORM(A)=   0.11488181D+01
+ DE(Corr)= -0.12925762     E(CORR)=     -2.0772591876     Delta= 3.76D-06
+ NORM(A)=   0.11488511D+01
+ DE(Corr)= -0.12926289     E(CORR)=     -2.0772644590     Delta=-5.27D-06
+ NORM(A)=   0.11488477D+01
+ DE(Corr)= -0.12926226     E(CORR)=     -2.0772638258     Delta= 6.33D-07
+ NORM(A)=   0.11488471D+01
+ DE(Corr)= -0.12926216     E(CORR)=     -2.0772637211     Delta= 1.05D-07
+ NORM(A)=   0.11488473D+01
+ DE(Corr)= -0.12926217     E(CORR)=     -2.0772637375     Delta=-1.64D-08
+ NORM(A)=   0.11488473D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.104118D+00
+   ABAB           1    1    4    4      -0.159857D+00
+   ABAB           2    2    3    3      -0.371897D+00
+   ABAB           1    2    3    4       0.194188D+00
+   ABAB           1    2    4    3       0.130593D+00
+   ABAB           2    1    3    4       0.130593D+00
+   ABAB           2    1    4    3       0.194188D+00
+ Largest amplitude= 3.72D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1       9    2.356194
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  135.000(     4)
+      4      4  H        2   1.600000(     3)      1  135.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   2.956415   0.000000
+     4  H    2.956415   1.600000   3.862742   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.565685
+      2          1           0       -0.000000   -0.800000    0.565685
+      3          1           0        0.000000    1.931371   -0.565685
+      4          1           0       -0.000000   -1.931371   -0.565685
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    391.7617971     57.3721869     50.0434878
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4871883035 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.94925392581     A.U. after    6 cycles
+            NFock=  6  Conv=0.29D-08     -V/T= 2.2859
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161651
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1029921828D+01
+ E2 =    -0.6506153071D-01 EUMP2 =    -0.20143154565253D+01
+ MP4(R+Q)=  0.22486264D-02
+ E3=       -0.29685820D-01        EUMP3=      -0.20440012769D+01
+ E4(DQ)=   -0.15299120D-01        UMP4(DQ)=   -0.20593003972D+01
+ E4(SDQ)=  -0.16671549D-01        UMP4(SDQ)=  -0.20606728260D+01
+ DE(Corr)= -0.92471978E-01 E(Corr)=     -2.0417259040    
+ NORM(A)=   0.11015545D+01
+ DE(Corr)= -0.11833033     E(CORR)=     -2.0675842568     Delta=-2.59D-02
+ NORM(A)=   0.11346250D+01
+ DE(Corr)= -0.12653098     E(CORR)=     -2.0757849029     Delta=-8.20D-03
+ NORM(A)=   0.11364866D+01
+ DE(Corr)= -0.12712143     E(CORR)=     -2.0763753534     Delta=-5.90D-04
+ NORM(A)=   0.11430981D+01
+ DE(Corr)= -0.12822985     E(CORR)=     -2.0774837739     Delta=-1.11D-03
+ NORM(A)=   0.11474505D+01
+ DE(Corr)= -0.12886673     E(CORR)=     -2.0781206554     Delta=-6.37D-04
+ NORM(A)=   0.11475543D+01
+ DE(Corr)= -0.12881256     E(CORR)=     -2.0780664874     Delta= 5.42D-05
+ NORM(A)=   0.11476245D+01
+ DE(Corr)= -0.12881033     E(CORR)=     -2.0780642575     Delta= 2.23D-06
+ NORM(A)=   0.11476545D+01
+ DE(Corr)= -0.12881517     E(CORR)=     -2.0780690994     Delta=-4.84D-06
+ NORM(A)=   0.11476522D+01
+ DE(Corr)= -0.12881474     E(CORR)=     -2.0780686675     Delta= 4.32D-07
+ NORM(A)=   0.11476516D+01
+ DE(Corr)= -0.12881464     E(CORR)=     -2.0780685649     Delta= 1.03D-07
+ NORM(A)=   0.11476518D+01
+ DE(Corr)= -0.12881465     E(CORR)=     -2.0780685805     Delta=-1.56D-08
+ NORM(A)=   0.11476518D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.104493D+00
+   ABAB           1    1    4    4      -0.159868D+00
+   ABAB           2    2    3    3      -0.370266D+00
+   ABAB           1    2    3    4       0.193321D+00
+   ABAB           1    2    4    3       0.129725D+00
+   ABAB           2    1    3    4       0.129725D+00
+   ABAB           2    1    4    3       0.193321D+00
+ Largest amplitude= 3.70D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      10    2.443461
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  140.000(     4)
+      4      4  H        2   1.600000(     3)      1  140.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.007016   0.000000
+     4  H    3.007016   1.600000   4.051342   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0       -0.000000    0.800000    0.514230
+      2          1           0       -0.000000   -0.800000    0.514230
+      3          1           0       -0.000000    2.025671   -0.514230
+      4          1           0       -0.000000   -2.025671   -0.514230
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    474.0859601     52.8588227     47.5564548
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4747866564 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000    0.000000
+         Rot=    1.000000   -0.000000   -0.000000   -0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95011774082     A.U. after    6 cycles
+            NFock=  6  Conv=0.41D-08     -V/T= 2.2889
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161651
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1029943476D+01
+ E2 =    -0.6505929077D-01 EUMP2 =    -0.20151770315933D+01
+ MP4(R+Q)=  0.22554210D-02
+ E3=       -0.29634765D-01        EUMP3=      -0.20448117966D+01
+ E4(DQ)=   -0.15244197D-01        UMP4(DQ)=   -0.20600559937D+01
+ E4(SDQ)=  -0.16612230D-01        UMP4(SDQ)=  -0.20614240266D+01
+ DE(Corr)= -0.92410937E-01 E(Corr)=     -2.0425286783    
+ NORM(A)=   0.11012091D+01
+ DE(Corr)= -0.11814616     E(CORR)=     -2.0682639024     Delta=-2.57D-02
+ NORM(A)=   0.11338712D+01
+ DE(Corr)= -0.12623856     E(CORR)=     -2.0763563031     Delta=-8.09D-03
+ NORM(A)=   0.11356844D+01
+ DE(Corr)= -0.12684018     E(CORR)=     -2.0769579164     Delta=-6.02D-04
+ NORM(A)=   0.11422063D+01
+ DE(Corr)= -0.12793736     E(CORR)=     -2.0780550980     Delta=-1.10D-03
+ NORM(A)=   0.11466532D+01
+ DE(Corr)= -0.12858840     E(CORR)=     -2.0787061389     Delta=-6.51D-04
+ NORM(A)=   0.11467793D+01
+ DE(Corr)= -0.12853493     E(CORR)=     -2.0786526716     Delta= 5.35D-05
+ NORM(A)=   0.11468556D+01
+ DE(Corr)= -0.12853375     E(CORR)=     -2.0786514867     Delta= 1.18D-06
+ NORM(A)=   0.11468836D+01
+ DE(Corr)= -0.12853825     E(CORR)=     -2.0786559958     Delta=-4.51D-06
+ NORM(A)=   0.11468823D+01
+ DE(Corr)= -0.12853800     E(CORR)=     -2.0786557448     Delta= 2.51D-07
+ NORM(A)=   0.11468815D+01
+ DE(Corr)= -0.12853790     E(CORR)=     -2.0786556441     Delta= 1.01D-07
+ NORM(A)=   0.11468818D+01
+ DE(Corr)= -0.12853792     E(CORR)=     -2.0786556578     Delta=-1.38D-08
+ NORM(A)=   0.11468818D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.104987D+00
+   ABAB           1    1    4    4      -0.159746D+00
+   ABAB           2    2    3    3      -0.369254D+00
+   ABAB           1    2    3    4       0.192753D+00
+   ABAB           1    2    4    3       0.129163D+00
+   ABAB           2    1    3    4       0.129163D+00
+   ABAB           2    1    4    3       0.192753D+00
+ Largest amplitude= 3.69D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      11    2.530727
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  145.000(     4)
+      4      4  H        2   1.600000(     3)      1  145.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.051894   0.000000
+     4  H    3.051894   1.600000   4.221287   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.458861
+      2          1           0       -0.000000   -0.800000    0.458861
+      3          1           0        0.000000    2.110643   -0.458861
+      4          1           0       -0.000000   -2.110643   -0.458861
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    595.4008973     49.2122971     45.4552375
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4643525632 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000   -0.000000   -0.000000
+         Rot=    1.000000    0.000000   -0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95071946031     A.U. after    6 cycles
+            NFock=  6  Conv=0.40D-08     -V/T= 2.2910
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161651
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1029976481D+01
+ E2 =    -0.6508594861D-01 EUMP2 =    -0.20158054089135D+01
+ MP4(R+Q)=  0.22629013D-02
+ E3=       -0.29603963D-01        EUMP3=      -0.20454093723D+01
+ E4(DQ)=   -0.15203921D-01        UMP4(DQ)=   -0.20606132930D+01
+ E4(SDQ)=  -0.16570089D-01        UMP4(SDQ)=  -0.20619794615D+01
+ DE(Corr)= -0.92398473E-01 E(Corr)=     -2.0431179330    
+ NORM(A)=   0.11009685D+01
+ DE(Corr)= -0.11804036     E(CORR)=     -2.0687598217     Delta=-2.56D-02
+ NORM(A)=   0.11333419D+01
+ DE(Corr)= -0.12605191     E(CORR)=     -2.0767713721     Delta=-8.01D-03
+ NORM(A)=   0.11351224D+01
+ DE(Corr)= -0.12666328     E(CORR)=     -2.0773827370     Delta=-6.11D-04
+ NORM(A)=   0.11415951D+01
+ DE(Corr)= -0.12775361     E(CORR)=     -2.0784730708     Delta=-1.09D-03
+ NORM(A)=   0.11461322D+01
+ DE(Corr)= -0.12841728     E(CORR)=     -2.0791367429     Delta=-6.64D-04
+ NORM(A)=   0.11462764D+01
+ DE(Corr)= -0.12836459     E(CORR)=     -2.0790840548     Delta= 5.27D-05
+ NORM(A)=   0.11463570D+01
+ DE(Corr)= -0.12836409     E(CORR)=     -2.0790835548     Delta= 5.00D-07
+ NORM(A)=   0.11463835D+01
+ DE(Corr)= -0.12836835     E(CORR)=     -2.0790878112     Delta=-4.26D-06
+ NORM(A)=   0.11463831D+01
+ DE(Corr)= -0.12836826     E(CORR)=     -2.0790877227     Delta= 8.84D-08
+ NORM(A)=   0.11463823D+01
+ DE(Corr)= -0.12836817     E(CORR)=     -2.0790876256     Delta= 9.71D-08
+ NORM(A)=   0.11463825D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.105522D+00
+   ABAB           1    1    4    4      -0.159561D+00
+   ABAB           2    2    3    3      -0.368615D+00
+   ABAB           1    2    3    4       0.192382D+00
+   ABAB           1    2    4    3       0.128800D+00
+   ABAB           2    1    3    4       0.128800D+00
+   ABAB           2    1    4    3       0.192382D+00
+ Largest amplitude= 3.69D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      12    2.617994
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  150.000(     4)
+      4      4  H        2   1.600000(     3)      1  150.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.090963   0.000000
+     4  H    3.090963   1.600000   4.371281   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.400000
+      2          1           0       -0.000000   -0.800000    0.400000
+      3          1           0        0.000000    2.185641   -0.400000
+      4          1           0       -0.000000   -2.185641   -0.400000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):    783.5235942     46.2851009     43.7034088
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4556678041 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000   -0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95114354942     A.U. after    6 cycles
+            NFock=  6  Conv=0.28D-08     -V/T= 2.2925
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161651
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         320 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         320
+ LnScr1=      655360 LExtra=           0 Total=      1311472
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030012640D+01
+ E2 =    -0.6512519819D-01 EUMP2 =    -0.20162687476116D+01
+ MP4(R+Q)=  0.22701688D-02
+ E3=       -0.29584972D-01        EUMP3=      -0.20458537193D+01
+ E4(DQ)=   -0.15173512D-01        UMP4(DQ)=   -0.20610272311D+01
+ E4(SDQ)=  -0.16539318D-01        UMP4(SDQ)=  -0.20623930374D+01
+ DE(Corr)= -0.92410733E-01 E(Corr)=     -2.0435542828    
+ NORM(A)=   0.11007948D+01
+ DE(Corr)= -0.11798037     E(CORR)=     -2.0691239217     Delta=-2.56D-02
+ NORM(A)=   0.11329652D+01
+ DE(Corr)= -0.12593188     E(CORR)=     -2.0770754322     Delta=-7.95D-03
+ NORM(A)=   0.11347234D+01
+ DE(Corr)= -0.12655166     E(CORR)=     -2.0776952110     Delta=-6.20D-04
+ NORM(A)=   0.11411684D+01
+ DE(Corr)= -0.12763748     E(CORR)=     -2.0787810278     Delta=-1.09D-03
+ NORM(A)=   0.11457875D+01
+ DE(Corr)= -0.12831216     E(CORR)=     -2.0794557125     Delta=-6.75D-04
+ NORM(A)=   0.11459467D+01
+ DE(Corr)= -0.12826029     E(CORR)=     -2.0794038420     Delta= 5.19D-05
+ NORM(A)=   0.11460303D+01
+ DE(Corr)= -0.12826022     E(CORR)=     -2.0794037706     Delta= 7.14D-08
+ NORM(A)=   0.11460558D+01
+ DE(Corr)= -0.12826429     E(CORR)=     -2.0794078378     Delta=-4.07D-06
+ NORM(A)=   0.11460562D+01
+ DE(Corr)= -0.12826434     E(CORR)=     -2.0794078923     Delta=-5.46D-08
+ NORM(A)=   0.11460554D+01
+ DE(Corr)= -0.12826425     E(CORR)=     -2.0794078003     Delta= 9.20D-08
+ NORM(A)=   0.11460556D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.106042D+00
+   ABAB           1    1    4    4      -0.159358D+00
+   ABAB           2    2    3    3      -0.368200D+00
+   ABAB           1    2    3    4       0.192140D+00
+   ABAB           1    2    4    3       0.128565D+00
+   ABAB           2    1    3    4       0.128565D+00
+   ABAB           2    1    4    3       0.192140D+00
+ Largest amplitude= 3.68D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      13    2.705260
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  155.000(     4)
+      4      4  H        2   1.600000(     3)      1  155.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.124147   0.000000
+     4  H    3.124147   1.600000   4.500185   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.338095
+      2          1           0       -0.000000   -0.800000    0.338095
+      3          1           0        0.000000    2.250092   -0.338095
+      4          1           0       -0.000000   -2.250092   -0.338095
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):   1096.7195084     43.9647975     42.2702853
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4485632281 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95144534881     A.U. after    6 cycles
+            NFock=  6  Conv=0.14D-08     -V/T= 2.2936
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161682
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         304 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         304
+ LnScr1=      655360 LExtra=           0 Total=      1311456
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030047143D+01
+ E2 =    -0.6516713370D-01 EUMP2 =    -0.20166124825147D+01
+ MP4(R+Q)=  0.22767131D-02
+ E3=       -0.29572705D-01        EUMP3=      -0.20461851871D+01
+ E4(DQ)=   -0.15150047D-01        UMP4(DQ)=   -0.20613352343D+01
+ E4(SDQ)=  -0.16516311D-01        UMP4(SDQ)=  -0.20627014981D+01
+ DE(Corr)= -0.92433239E-01 E(Corr)=     -2.0438785881    
+ NORM(A)=   0.11006653D+01
+ DE(Corr)= -0.11794625     E(CORR)=     -2.0693915982     Delta=-2.55D-02
+ NORM(A)=   0.11326944D+01
+ DE(Corr)= -0.12585370     E(CORR)=     -2.0772990522     Delta=-7.91D-03
+ NORM(A)=   0.11344375D+01
+ DE(Corr)= -0.12648061     E(CORR)=     -2.0779259638     Delta=-6.27D-04
+ NORM(A)=   0.11408661D+01
+ DE(Corr)= -0.12756320     E(CORR)=     -2.0790085479     Delta=-1.08D-03
+ NORM(A)=   0.11455564D+01
+ DE(Corr)= -0.12824721     E(CORR)=     -2.0796925593     Delta=-6.84D-04
+ NORM(A)=   0.11457280D+01
+ DE(Corr)= -0.12819614     E(CORR)=     -2.0796414931     Delta= 5.11D-05
+ NORM(A)=   0.11458138D+01
+ DE(Corr)= -0.12819633     E(CORR)=     -2.0796416746     Delta=-1.81D-07
+ NORM(A)=   0.11458387D+01
+ DE(Corr)= -0.12820025     E(CORR)=     -2.0796456019     Delta=-3.93D-06
+ NORM(A)=   0.11458398D+01
+ DE(Corr)= -0.12820043     E(CORR)=     -2.0796457786     Delta=-1.77D-07
+ NORM(A)=   0.11458389D+01
+ DE(Corr)= -0.12820034     E(CORR)=     -2.0796456923     Delta= 8.63D-08
+ NORM(A)=   0.11458391D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.106515D+00
+   ABAB           1    1    4    4      -0.159163D+00
+   ABAB           2    2    3    3      -0.367924D+00
+   ABAB           1    2    3    4       0.191982D+00
+   ABAB           1    2    4    3       0.128410D+00
+   ABAB           2    1    3    4       0.128410D+00
+   ABAB           2    1    4    3       0.191982D+00
+ Largest amplitude= 3.68D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      14    2.792527
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  160.000(     4)
+      4      4  H        2   1.600000(     3)      1  160.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.151385   0.000000
+     4  H    3.151385   1.600000   4.607016   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.273616
+      2          1           0       -0.000000   -0.800000    0.273616
+      3          1           0        0.000000    2.303508   -0.273616
+      4          1           0       -0.000000   -2.303508   -0.273616
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):   1674.5137509     42.1663682     41.1306466
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4429084760 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000   -0.000000
+         Rot=    1.000000   -0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95166036684     A.U. after    6 cycles
+            NFock=  6  Conv=0.56D-09     -V/T= 2.2943
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161682
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         304 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         304
+ LnScr1=      655360 LExtra=           0 Total=      1311456
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030077275D+01
+ E2 =    -0.6520592232D-01 EUMP2 =    -0.20168662891594D+01
+ MP4(R+Q)=  0.22822555D-02
+ E3=       -0.29564338D-01        EUMP3=      -0.20464306271D+01
+ E4(DQ)=   -0.15131876D-01        UMP4(DQ)=   -0.20615625034D+01
+ E4(SDQ)=  -0.16498962D-01        UMP4(SDQ)=  -0.20629295896D+01
+ DE(Corr)= -0.92457614E-01 E(Corr)=     -2.0441179804    
+ NORM(A)=   0.11005671D+01
+ DE(Corr)= -0.11792643     E(CORR)=     -2.0695867999     Delta=-2.55D-02
+ NORM(A)=   0.11324996D+01
+ DE(Corr)= -0.12580218     E(CORR)=     -2.0774625496     Delta=-7.88D-03
+ NORM(A)=   0.11342325D+01
+ DE(Corr)= -0.12643497     E(CORR)=     -2.0780953359     Delta=-6.33D-04
+ NORM(A)=   0.11406508D+01
+ DE(Corr)= -0.12751511     E(CORR)=     -2.0791754788     Delta=-1.08D-03
+ NORM(A)=   0.11454002D+01
+ DE(Corr)= -0.12820673     E(CORR)=     -2.0798670999     Delta=-6.92D-04
+ NORM(A)=   0.11455820D+01
+ DE(Corr)= -0.12815641     E(CORR)=     -2.0798167719     Delta= 5.03D-05
+ NORM(A)=   0.11456693D+01
+ DE(Corr)= -0.12815672     E(CORR)=     -2.0798170916     Delta=-3.20D-07
+ NORM(A)=   0.11456937D+01
+ DE(Corr)= -0.12816055     E(CORR)=     -2.0798209175     Delta=-3.83D-06
+ NORM(A)=   0.11456954D+01
+ DE(Corr)= -0.12816083     E(CORR)=     -2.0798211942     Delta=-2.77D-07
+ NORM(A)=   0.11456945D+01
+ DE(Corr)= -0.12816075     E(CORR)=     -2.0798211135     Delta= 8.08D-08
+ NORM(A)=   0.11456947D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.106919D+00
+   ABAB           1    1    4    4      -0.158992D+00
+   ABAB           2    2    3    3      -0.367735D+00
+   ABAB           1    2    3    4       0.191879D+00
+   ABAB           1    2    4    3       0.128308D+00
+   ABAB           2    1    3    4       0.128308D+00
+   ABAB           2    1    4    3       0.191879D+00
+ Largest amplitude= 3.68D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      15    2.879793
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  165.000(     4)
+      4      4  H        2   1.600000(     3)      1  165.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.172624   0.000000
+     4  H    3.172624   1.600000   4.690963   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.207055
+      2          1           0       -0.000000   -0.800000    0.207055
+      3          1           0        0.000000    2.345481   -0.207055
+      4          1           0       -0.000000   -2.345481   -0.207055
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):   2924.1498624     40.8265773     40.2644111
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4386047343 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95181092756     A.U. after    6 cycles
+            NFock=  6  Conv=0.22D-09     -V/T= 2.2948
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161682
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         304 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         304
+ LnScr1=      655360 LExtra=           0 Total=      1311456
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030101567D+01
+ E2 =    -0.6523823395D-01 EUMP2 =    -0.20170491615099D+01
+ MP4(R+Q)=  0.22866492D-02
+ E3=       -0.29558453D-01        EUMP3=      -0.20466076141D+01
+ E4(DQ)=   -0.15118147D-01        UMP4(DQ)=   -0.20617257613D+01
+ E4(SDQ)=  -0.16486119D-01        UMP4(SDQ)=  -0.20630937332D+01
+ DE(Corr)= -0.92479253E-01 E(Corr)=     -2.0442901809    
+ NORM(A)=   0.11004937D+01
+ DE(Corr)= -0.11791461     E(CORR)=     -2.0697255360     Delta=-2.54D-02
+ NORM(A)=   0.11323622D+01
+ DE(Corr)= -0.12576828     E(CORR)=     -2.0775792092     Delta=-7.85D-03
+ NORM(A)=   0.11340884D+01
+ DE(Corr)= -0.12640568     E(CORR)=     -2.0782166057     Delta=-6.37D-04
+ NORM(A)=   0.11404999D+01
+ DE(Corr)= -0.12748397     E(CORR)=     -2.0792948955     Delta=-1.08D-03
+ NORM(A)=   0.11452954D+01
+ DE(Corr)= -0.12818148     E(CORR)=     -2.0799924079     Delta=-6.98D-04
+ NORM(A)=   0.11454851D+01
+ DE(Corr)= -0.12813178     E(CORR)=     -2.0799427051     Delta= 4.97D-05
+ NORM(A)=   0.11455735D+01
+ DE(Corr)= -0.12813217     E(CORR)=     -2.0799430927     Delta=-3.88D-07
+ NORM(A)=   0.11455976D+01
+ DE(Corr)= -0.12813592     E(CORR)=     -2.0799468470     Delta=-3.75D-06
+ NORM(A)=   0.11455997D+01
+ DE(Corr)= -0.12813627     E(CORR)=     -2.0799472016     Delta=-3.55D-07
+ NORM(A)=   0.11455989D+01
+ DE(Corr)= -0.12813620     E(CORR)=     -2.0799471256     Delta= 7.60D-08
+ NORM(A)=   0.11455990D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.107243D+00
+   ABAB           1    1    4    4      -0.158854D+00
+   ABAB           2    2    3    3      -0.367606D+00
+   ABAB           1    2    3    4       0.191812D+00
+   ABAB           1    2    4    3       0.128240D+00
+   ABAB           2    1    3    4       0.128240D+00
+   ABAB           2    1    4    3       0.191812D+00
+ Largest amplitude= 3.68D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      16    2.967060
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  170.000(     4)
+      4      4  H        2   1.600000(     3)      1  170.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.187823   0.000000
+     4  H    3.187823   1.600000   4.751385   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.138919
+      2          1           0       -0.000000   -0.800000    0.138919
+      3          1           0        0.000000    2.375692   -0.138919
+      4          1           0       -0.000000   -2.375692   -0.138919
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):   6496.0839320     39.8998990     39.6563241
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4355796368 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000   -0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95191073414     A.U. after    6 cycles
+            NFock=  6  Conv=0.13D-09     -V/T= 2.2952
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161682
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         304 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         304
+ LnScr1=      655360 LExtra=           0 Total=      1311456
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030119261D+01
+ E2 =    -0.6526222757D-01 EUMP2 =    -0.20171729617096D+01
+ MP4(R+Q)=  0.22898203D-02
+ E3=       -0.29554427D-01        EUMP3=      -0.20467273883D+01
+ E4(DQ)=   -0.15108470D-01        UMP4(DQ)=   -0.20618358578D+01
+ E4(SDQ)=  -0.16477194D-01        UMP4(SDQ)=  -0.20632045818D+01
+ DE(Corr)= -0.92495770E-01 E(Corr)=     -2.0444065040    
+ NORM(A)=   0.11004421D+01
+ DE(Corr)= -0.11790755     E(CORR)=     -2.0698182807     Delta=-2.54D-02
+ NORM(A)=   0.11322706D+01
+ DE(Corr)= -0.12574679     E(CORR)=     -2.0776575209     Delta=-7.84D-03
+ NORM(A)=   0.11339926D+01
+ DE(Corr)= -0.12638751     E(CORR)=     -2.0782982399     Delta=-6.41D-04
+ NORM(A)=   0.11403996D+01
+ DE(Corr)= -0.12746447     E(CORR)=     -2.0793752028     Delta=-1.08D-03
+ NORM(A)=   0.11452282D+01
+ DE(Corr)= -0.12816617     E(CORR)=     -2.0800769027     Delta=-7.02D-04
+ NORM(A)=   0.11454236D+01
+ DE(Corr)= -0.12811694     E(CORR)=     -2.0800276739     Delta= 4.92D-05
+ NORM(A)=   0.11455126D+01
+ DE(Corr)= -0.12811736     E(CORR)=     -2.0800280902     Delta=-4.16D-07
+ NORM(A)=   0.11455365D+01
+ DE(Corr)= -0.12812106     E(CORR)=     -2.0800317970     Delta=-3.71D-06
+ NORM(A)=   0.11455390D+01
+ DE(Corr)= -0.12812147     E(CORR)=     -2.0800322071     Delta=-4.10D-07
+ NORM(A)=   0.11455381D+01
+ DE(Corr)= -0.12812140     E(CORR)=     -2.0800321347     Delta= 7.25D-08
+ NORM(A)=   0.11455383D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.107477D+00
+   ABAB           1    1    4    4      -0.158753D+00
+   ABAB           2    2    3    3      -0.367521D+00
+   ABAB           1    2    3    4       0.191771D+00
+   ABAB           1    2    4    3       0.128196D+00
+   ABAB           2    1    3    4       0.128196D+00
+   ABAB           2    1    4    3       0.191771D+00
+ Largest amplitude= 3.68D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      17    3.054326
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  175.000(     4)
+      4      4  H        2   1.600000(     3)      1  175.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.196954   0.000000
+     4  H    3.196954   1.600000   4.787823   0.000000
+ Framework group  C2V[SGV(H4)]
+ Deg. of freedom     3
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.800000    0.069725
+      2          1           0       -0.000000   -0.800000    0.069725
+      3          1           0        0.000000    2.393912   -0.069725
+      4          1           0       -0.000000   -2.393912   -0.069725
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):  25786.9555050     39.3556640     39.2956915
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4337837493 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=    -0.000000   -0.000000   -0.000000
+         Rot=    1.000000    0.000000   -0.000000   -0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (A1) (B2)
+       Virtual   (A1) (A1) (A1) (B2) (B2) (B2)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95196783779     A.U. after    6 cycles
+            NFock=  6  Conv=0.83D-10     -V/T= 2.2954
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161682
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         304 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         304
+ LnScr1=      655360 LExtra=           0 Total=      1311456
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030129985D+01
+ E2 =    -0.6527692951D-01 EUMP2 =    -0.20172447672922D+01
+ MP4(R+Q)=  0.22917331D-02
+ E3=       -0.29552042D-01        EUMP3=      -0.20467968092D+01
+ E4(DQ)=   -0.15102692D-01        UMP4(DQ)=   -0.20618995008D+01
+ E4(SDQ)=  -0.16471911D-01        UMP4(SDQ)=  -0.20632687206D+01
+ DE(Corr)= -0.92506006E-01 E(Corr)=     -2.0444738442    
+ NORM(A)=   0.11004114D+01
+ DE(Corr)= -0.11790372     E(CORR)=     -2.0698715618     Delta=-2.54D-02
+ NORM(A)=   0.11322180D+01
+ DE(Corr)= -0.12573483     E(CORR)=     -2.0777026634     Delta=-7.83D-03
+ NORM(A)=   0.11339377D+01
+ DE(Corr)= -0.12637755     E(CORR)=     -2.0783453900     Delta=-6.43D-04
+ NORM(A)=   0.11403421D+01
+ DE(Corr)= -0.12745371     E(CORR)=     -2.0794215486     Delta=-1.08D-03
+ NORM(A)=   0.11451905D+01
+ DE(Corr)= -0.12815791     E(CORR)=     -2.0801257511     Delta=-7.04D-04
+ NORM(A)=   0.11453893D+01
+ DE(Corr)= -0.12810898     E(CORR)=     -2.0800768176     Delta= 4.89D-05
+ NORM(A)=   0.11454787D+01
+ DE(Corr)= -0.12810941     E(CORR)=     -2.0800772436     Delta=-4.26D-07
+ NORM(A)=   0.11455025D+01
+ DE(Corr)= -0.12811309     E(CORR)=     -2.0800809233     Delta=-3.68D-06
+ NORM(A)=   0.11455052D+01
+ DE(Corr)= -0.12811353     E(CORR)=     -2.0800813667     Delta=-4.43D-07
+ NORM(A)=   0.11455043D+01
+ DE(Corr)= -0.12811346     E(CORR)=     -2.0800812964     Delta= 7.02D-08
+ NORM(A)=   0.11455045D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.107619D+00
+   ABAB           1    1    4    4      -0.158692D+00
+   ABAB           2    2    3    3      -0.367472D+00
+   ABAB           1    2    3    4       0.191748D+00
+   ABAB           1    2    4    3       0.128172D+00
+   ABAB           2    1    3    4       0.128172D+00
+   ABAB           2    1    4    3       0.191748D+00
+ Largest amplitude= 3.67D-01
+ Discarding MO integrals.
+ Variable Step   Value    
+ -------- ---- -----------
+     1      18    3.141593
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  H 
+      2      2  H        1   1.600000(     1)
+      3      3  H        1   1.600000(     2)      2  180.000(     4)
+      4      4  H        2   1.600000(     3)      1  180.000(     5)      3    0.000(     6)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  H    0.000000
+     2  H    1.600000   0.000000
+     3  H    1.600000   3.200000   0.000000
+     4  H    3.200000   1.600000   4.800000   0.000000
+ Framework group  D*H[C*(HH.HH)]
+ Deg. of freedom     2
+ Omega: Change in point group or standard orientation.
+
+ Old FWG=C02V [SGV(H4)]
+ New FWG=D*H  [C*(H1H1.H1H1)]
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.000000    0.800000
+      2          1           0        0.000000    0.000000   -0.800000
+      3          1           0        0.000000    0.000000    2.400000
+      4          1           0        0.000000    0.000000   -2.400000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):      0.0000000     39.1761797     39.1761797
+     8 basis functions,    12 primitive gaussians,     8 cartesian basis functions
+     2 alpha electrons        2 beta electrons
+       nuclear repulsion energy         1.4331882733 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Initial guess from the checkpoint file:  "H4model.chk"
+ B after Tr=     0.000000    0.000000   -0.000000
+         Rot=    0.706751   -0.706751   -0.022416   -0.022416 Ang= -90.06 deg.
+ Initial guess orbital symmetries:
+       Occupied  (SGG) (SGU)
+       Virtual   (SGG) (SGG) (SGG) (SGU) (SGU) (SGU)
+ ExpMin= 1.83D-01 ExpMax= 5.45D+00 ExpMxC= 5.45D+00 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ SCF Done:  E(RHF) =  -1.95198643858     A.U. after    6 cycles
+            NFock=  6  Conv=0.30D-10     -V/T= 2.2955
+ NROrb=      8 NOA=     2 NOB=     2 NVA=     6 NVB=     6
+ Semi-Direct transformation.
+ ModeAB=           4 MOrb=             2 LenV=     134161046
+ LASXX=          178 LTotXX=         178 LenRXX=         432
+ LTotAB=         254 MaxLAS=         304 LenRXY=           0
+ NonZer=         610 LenScr=      655360 LnRSAI=         304
+ LnScr1=      655360 LExtra=           0 Total=      1311456
+ MaxDsk=          -1 SrtSym=           T ITran=            4
+ JobTyp=0 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ ANorm=    0.1030133575D+01
+ E2 =    -0.6528187559D-01 EUMP2 =    -0.20172683141641D+01
+ MP4(R+Q)=  0.22923722D-02
+ E3=       -0.29551248D-01        EUMP3=      -0.20468195626D+01
+ E4(DQ)=   -0.15100768D-01        UMP4(DQ)=   -0.20619203309D+01
+ E4(SDQ)=  -0.16470161D-01        UMP4(SDQ)=  -0.20632897231D+01
+ DE(Corr)= -0.92509464E-01 E(Corr)=     -2.0444959026    
+ NORM(A)=   0.11004011D+01
+ DE(Corr)= -0.11790251     E(CORR)=     -2.0698889446     Delta=-2.54D-02
+ NORM(A)=   0.11322008D+01
+ DE(Corr)= -0.12573098     E(CORR)=     -2.0777174189     Delta=-7.83D-03
+ NORM(A)=   0.11339198D+01
+ DE(Corr)= -0.12637438     E(CORR)=     -2.0783608172     Delta=-6.43D-04
+ NORM(A)=   0.11403233D+01
+ DE(Corr)= -0.12745027     E(CORR)=     -2.0794367057     Delta=-1.08D-03
+ NORM(A)=   0.11451784D+01
+ DE(Corr)= -0.12815530     E(CORR)=     -2.0801417407     Delta=-7.05D-04
+ NORM(A)=   0.11453783D+01
+ DE(Corr)= -0.12810647     E(CORR)=     -2.0800929075     Delta= 4.88D-05
+ NORM(A)=   0.11454678D+01
+ DE(Corr)= -0.12810690     E(CORR)=     -2.0800933355     Delta=-4.28D-07
+ NORM(A)=   0.11454916D+01
+ DE(Corr)= -0.12811057     E(CORR)=     -2.0800970064     Delta=-3.67D-06
+ NORM(A)=   0.11454943D+01
+ DE(Corr)= -0.12811102     E(CORR)=     -2.0800974608     Delta=-4.54D-07
+ NORM(A)=   0.11454935D+01
+ DE(Corr)= -0.12811095     E(CORR)=     -2.0800973913     Delta= 6.95D-08
+ NORM(A)=   0.11454936D+01
+ Dominant configurations:
+ ***********************
+ Spin Case        I    J    A    B          Value
+   ABAB           1    1    3    3      -0.107667D+00
+   ABAB           1    1    4    4      -0.158671D+00
+   ABAB           2    2    3    3      -0.367457D+00
+   ABAB           1    2    3    4       0.191741D+00
+   ABAB           1    2    4    3       0.128164D+00
+   ABAB           2    1    3    4       0.128164D+00
+   ABAB           2    1    4    3       0.191741D+00
+ Largest amplitude= 3.67D-01
+ Discarding MO integrals.
+ Scan completed.
+ 
+ Summary of the potential surface scan:
+   N  deltaPLus2pi      SCF          MP2          MP3    
+ ----  ---------  -----------  -----------  -----------
+    1    90.0000     -1.82217     -1.86892     -1.88506
+    2    95.0000     -1.89525     -1.97068     -2.00498
+    3   100.0000     -1.91278     -1.98429     -2.01711
+    4   105.0000     -1.92520     -1.99402     -2.02574
+    5   110.0000     -1.93374     -2.00089     -2.03186
+    6   115.0000     -1.93955     -2.00571     -2.03617
+    7   120.0000     -1.94349     -2.00908     -2.03920
+    8   125.0000     -1.94617     -2.01145     -2.04135
+    9   130.0000     -1.94800     -2.01312     -2.04289
+   10   135.0000     -1.94925     -2.01432     -2.04400
+   11   140.0000     -1.95012     -2.01518     -2.04481
+   12   145.0000     -1.95072     -2.01581     -2.04541
+   13   150.0000     -1.95114     -2.01627     -2.04585
+   14   155.0000     -1.95145     -2.01661     -2.04619
+   15   160.0000     -1.95166     -2.01687     -2.04643
+   16   165.0000     -1.95181     -2.01705     -2.04661
+   17   170.0000     -1.95191     -2.01717     -2.04673
+   18   175.0000     -1.95197     -2.01724     -2.04680
+   19   180.0000     -1.95199     -2.01727     -2.04682
+ ----  ---------  -----------  -----------  -----------
+  
+
+ Test job not archived.
+ 1\1\GINC-SULU\Scan\RCCSD-FC\3-21G\H4\LCJ1\05-Dec-2016\1\\#T ccsd/3-21g
+  scan test\\pes of trapezoidal model of four H atoms scanned over vary
+ ing values of angle delta, using ccsd in 3-21g basis\\0,1\H\H,1,a\H,1,
+ a,2,deltaPLus2pi\H,2,a,1,deltaPLus2pi,3,0.,0\\deltaPLus2pi=90.,s,18,5.
+ \a=1.6\\Version=ES64L-G09RevE.01\HF=-1.8221679,-1.8952471,-1.9127831,-
+ 1.9251966,-1.9337387,-1.9395504,-1.9434935,-1.9461736,-1.9480016,-1.94
+ 92539,-1.9501177,-1.9507195,-1.9511435,-1.9514453,-1.9516604,-1.951810
+ 9,-1.9519107,-1.9519678,-1.9519864\MP2=-1.868918,-1.9706845,-1.9842861
+ ,-1.9940178,-2.0008929,-2.0057091,-2.0090783,-2.0114455,-2.0131203,-2.
+ 0143155,-2.015177,-2.0158054,-2.0162687,-2.0166125,-2.0168663,-2.01704
+ 92,-2.017173,-2.0172448,-2.0172683\MP3=-1.8850552,-2.0049825,-2.017114
+ 6,-2.0257436,-2.0318588,-2.0361669,-2.0392017,-2.0413525,-2.0428905,-2
+ .0440013,-2.0448118,-2.0454094,-2.0458537,-2.0461852,-2.0464306,-2.046
+ 6076,-2.0467274,-2.0467968,-2.0468196\MP4D=-1.8937495,-2.0261513,-2.03
+ 70079,-2.0448002,-2.050365,-2.0543064,-2.0570954,-2.0590817,-2.0605105
+ ,-2.061549,-2.0623114,-2.0628762,-2.0632974,-2.0636119,-2.0638448,-2.0
+ 640124,-2.0641257,-2.0641912,-2.0642127\MP4DQ=-1.8926033,-2.0232315,-2
+ .0343895,-2.0423652,-2.0480325,-2.0520275,-2.0548419,-2.0568375,-2.058
+ 2665,-2.0593004,-2.060056,-2.0606133,-2.0610272,-2.0613352,-2.0615625,
+ -2.0617258,-2.0618359,-2.0618995,-2.0619203\MP4SDQ=-1.8953685,-2.02494
+ 03,-2.0360771,-2.0439698,-2.0495546,-2.0534887,-2.0562629,-2.0582334,-
+ 2.0596474,-2.0606728,-2.061424,-2.0619795,-2.062393,-2.0627015,-2.0629
+ 296,-2.0630937,-2.0632046,-2.0632687,-2.0632897\CCSD=-1.9261082,-2.054
+ 5551,-2.0598444,-2.0652118,-2.0693849,-2.0724263,-2.0746,-2.0761509,-2
+ .0772637,-2.0780686,-2.0786557,-2.0790876,-2.0794078,-2.0796457,-2.079
+ 8211,-2.0799471,-2.0800321,-2.0800813,-2.0800974\RMSD=4.712e-10,3.843e
+ -09,1.290e-09,1.842e-09,9.643e-09,6.896e-09,3.818e-09,3.375e-09,2.318e
+ -09,2.929e-09,4.091e-09,4.031e-09,2.806e-09,1.396e-09,5.584e-10,2.190e
+ -10,1.252e-10,8.280e-11,2.996e-11\PG=D*H [C*(H1H1.H1H1)]\\@
+
+
+ ADVERTISING--  HE WHO HAS SOMETHING TO SELL AND GOES AND WHISPERS
+                IN A WELL, IS NOT SO APT TO GET THE DOLLARS AS HE
+                WHO CLIMBS A TREE AND HOLLERS.
+
+                   -- FROM THE BACK OF A SUGAR PACKET
+ Job cpu time:       0 days  0 hours  0 minutes 10.0 seconds.
+ File lengths (MBytes):  RWF=    132 Int=      0 D2E=      0 Chk=      2 Scr=      2
+ Normal termination of Gaussian 09 at Mon Dec  5 12:02:09 2016.

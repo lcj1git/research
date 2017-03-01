@@ -1,0 +1,121 @@
+
+ +------------------------------------------------------+
+ |                                                      |
+ | phflat - program to perform projected HF / HFB based |
+ |          calculations on 1D / 2D spin lattices       |
+ |                                                      |
+ |                             CAJH, v0.02  --  11.2012 |
+ +------------------------------------------------------+
+
+
+  phflat started on sulu.rice.edu at Thu Nov 17 15:06:45 2016.
+  phflat running on up to      4 thread(s).
+
+
+  Hamiltonian parameters :
+
+    iham   =            1  --  Hubbard Hamiltonian
+    uhub   =       8.0000
+    t1hub  =       1.0000
+    t2hub  =       0.0000
+    t3hub  =       0.0000
+
+  Lattice parameters :
+
+    ilatty =            1  --  square 1D / 2D lattice
+    inx    =            8
+    iny    =            8
+    lpbc   =            T
+
+  Number of electrons :
+
+    nup    =           32
+    ndn    =           32
+
+  Method selection :
+
+    iwfnty =            2  --  UHF determinant
+    imethd =            8  --  SG + spin-projected HF
+
+  Optimization parameters :
+
+    iprint =            0
+    igstyp =            0
+    igsnbf =            0
+    igsmix =            5
+    igsnmx =            0
+    maxit  =          512
+    mxfunc =         2048
+    nbuf   =           30
+    gtol   =    1.000E-04
+    iopt   =            1  --  FED type optimization
+
+  Projection parameters :
+
+    imult  =            1
+    ngrdb  =           20
+    igrdb  =            2
+    ikx    =            0
+    iky    =            0
+    sx     =            1
+    sy     =            1
+    sxy    =            1
+
+  State control :
+
+    lread  =            T
+    lsave  =            T
+    lnewdt =            F
+    lnewst =            F
+
+
+  SCF start.
+
+
+ initial values:
+
+ f     =     -22.009911502044
+ gnorm =       0.000033857428
+
+ iter  =                    1
+ nfunc =                    3
+ f     =     -22.009911502199
+ gnorm =       0.000022826687
+ step  =         8.083377E-02
+
+ The minimization terminated without errors.
+
+  Final diagonalization of Hamiltonian matrix (hmstat) among states: 
+
+ hmstat matrix (real) :
+                        1
+        1   -2.200991E+01
+
+ hmstat matrix (imag) :
+                        1
+        1    0.000000E+00
+
+ ovstat matrix (real) :
+                        1
+        1    1.000000E+00
+
+ ovstat matrix (imag) :
+                        1
+        1    0.000000E+00
+
+ hmstat eigenvalues :
+                        1
+        1   -2.200991E+01
+
+ hmstat eigenvectors (real) :
+                        1
+        1    1.000000E+00
+
+ hmstat eigenvectors (imag) :
+                        1
+        1    0.000000E+00
+
+
+  SCF done. Successful completion.
+  Elapsed time:        76.87 sec.
+

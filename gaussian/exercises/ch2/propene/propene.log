@@ -1,0 +1,246 @@
+ Entering Gaussian System, Link 0=g09
+ Initial command:
+ /projects/guscus/apps/gau/g09-e1/g09/l1.exe "/users/lcj1/gaussian/ch2/Gau-20562.inp" -scrdir="/users/lcj1/gaussian/ch2/"
+ Entering Link 1 = /projects/guscus/apps/gau/g09-e1/g09/l1.exe PID=     20563.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2015,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision E.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  ES64L-G09RevE.01 30-Nov-2015
+                22-Nov-2016 
+ ******************************************
+ ----------------------------------
+ #T RHF/6-31G(d) Test POpt=Z-Matrix
+ ----------------------------------
+ ----------------------
+ propene single point E
+ ----------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ C1
+ C2                   C1    1.34 
+ C3                   C2    1.52     C1    120. 
+ H1                   C1    1.09     C2   -120.     C3    0.       0
+ H2                   C1    1.09     C2    120.     C3    0.       0
+ H3                   C2    1.09     C1   -120.     C3    0.       0
+ H4                   C3    1.09     C2    109.5    C1    0.       0
+ H5                   C3    1.09     C2    109.5    C1    54.75    0
+ H6                   C3    1.09     C2    109.5    C1   -54.75    0
+ 
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Initialization pass.
+ No Z-matrix variables, so optimization will use Cartesian coordinates.
+ Number of steps in this run=     37 maximum allowed number of steps=    100.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  C 
+      2      2  C        1   1.340000(     1)
+      3      3  C        2   1.520000(     2)      1  120.000(     9)
+      4      4  H        1   1.090000(     3)      2 -120.000(    10)      3    0.000(    16)      0
+      5      5  H        1   1.090000(     4)      2  120.000(    11)      3    0.000(    17)      0
+      6      6  H        2   1.090000(     5)      1 -120.000(    12)      3    0.000(    18)      0
+      7      7  H        3   1.090000(     6)      2  109.500(    13)      1    0.000(    19)      0
+      8      8  H        3   1.090000(     7)      2  109.500(    14)      1   54.750(    20)      0
+      9      9  H        3   1.090000(     8)      2  109.500(    15)      1  -54.750(    21)      0
+ ---------------------------------------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  C    0.000000
+     2  C    1.340000   0.000000
+     3  C    2.478467   1.520000   0.000000
+     4  H    1.090000   2.108151   3.479238   0.000000
+     5  H    1.090000   2.108151   2.671086   1.887935   0.000000
+     6  H    2.108151   1.090000   2.270529   2.430000   3.077207
+     7  H    2.557310   2.145834   1.090000   3.646276   2.279325
+     8  H    2.747404   2.145834   1.090000   3.782026   2.650279
+     9  H    2.747404   2.145834   1.090000   3.782026   2.650279
+                    6          7          8          9
+     6  H    0.000000
+     7  H    3.128244   0.000000
+     8  H    2.994270   0.944895   0.000000
+     9  H    2.994270   0.944895   1.678164   0.000000
+ Framework group  CS[SG(C3H4),X(H2)]
+ Deg. of freedom    14
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6           0        1.223164    0.044128    0.000000
+      2          6           0        0.000000    0.591367    0.000000
+      3          6           0       -1.231319   -0.299842   -0.000000
+      4          1           0        2.106149    0.683218    0.000000
+      5          1           0        1.335140   -1.040106    0.000000
+      6          1           0       -0.111976    1.675600    0.000000
+      7          1           0       -0.923632   -1.345514   -0.000000
+      8          1           0       -1.178374   -0.993555    0.839082
+      9          1           0       -1.178374   -0.993555   -0.839082
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):     39.7194754     10.1873027      8.4945999
+    57 basis functions,   108 primitive gaussians,    57 cartesian basis functions
+    12 alpha electrons       12 beta electrons
+       nuclear repulsion energy        71.6078437369 Hartrees.
+ NAtoms=    9 NActive=    9 NUniq=    8 SFac= 1.27D+00 NAtFMM=   60 NAOKFM=F Big=F
+ ExpMin= 1.61D-01 ExpMax= 3.05D+03 ExpMxC= 4.57D+02 IAcc=1 IRadAn=         1 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       1 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         1 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Initial guess orbital symmetries:
+       Occupied  (A') (A') (A') (A') (A') (A') (A') (A') (A") (A')
+                 (A") (A')
+       Virtual   (A") (A') (A') (A') (A') (A") (A') (A') (A') (A')
+                 (A') (A") (A') (A") (A') (A') (A") (A') (A') (A")
+                 (A') (A') (A') (A') (A') (A') (A") (A") (A') (A")
+                 (A') (A') (A') (A') (A") (A') (A") (A') (A") (A')
+                 (A') (A') (A') (A') (A')
+ The electronic state of the initial guess is 1-A'.
+ SCF Done:  E(RHF) =  -116.858131677     A.U. after   13 cycles
+            NFock= 13  Conv=0.28D-08     -V/T= 1.9987
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (A') (A') (A') (A') (A') (A') (A') (A') (A") (A')
+                 (A") (A')
+       Virtual   (A") (A') (A') (A') (A') (A") (A') (A') (A') (A')
+                 (A") (A') (A') (A") (A') (A") (A') (A') (A') (A")
+                 (A') (A') (A') (A') (A') (A') (A") (A') (A") (A")
+                 (A') (A') (A') (A') (A") (A') (A") (A') (A") (A')
+                 (A') (A') (A') (A') (A')
+ The electronic state is 1-A'.
+ Alpha  occ. eigenvalues --  -11.24211 -11.22670 -11.21586  -1.11736  -0.99571
+ Alpha  occ. eigenvalues --   -0.78690  -0.63688  -0.59264  -0.59060  -0.51825
+ Alpha  occ. eigenvalues --   -0.36211  -0.35736
+ Alpha virt. eigenvalues --    0.16429   0.20774   0.26677   0.27307   0.30341
+ Alpha virt. eigenvalues --    0.33786   0.34157   0.45133   0.53730   0.68356
+ Alpha virt. eigenvalues --    0.75031   0.77822   0.80767   0.82355   0.85736
+ Alpha virt. eigenvalues --    0.91068   0.91807   1.07041   1.10063   1.11539
+ Alpha virt. eigenvalues --    1.13204   1.15059   1.18539   1.20699   1.34202
+ Alpha virt. eigenvalues --    1.49579   1.69817   1.69845   1.75303   1.99333
+ Alpha virt. eigenvalues --    2.11974   2.22049   2.27606   2.38023   2.45624
+ Alpha virt. eigenvalues --    2.52169   2.53512   2.63562   2.78514   2.86591
+ Alpha virt. eigenvalues --    3.13227   3.14969   4.50540   4.58287   4.79653
+          Condensed to atoms (all electrons):
+ Mulliken charges:
+               1
+     1  C   -0.397757
+     2  C   -0.181563
+     3  C   -0.534225
+     4  H    0.176157
+     5  H    0.158646
+     6  H    0.202280
+     7  H    0.221763
+     8  H    0.177349
+     9  H    0.177349
+ Sum of Mulliken charges =   0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  C   -0.062954
+     2  C    0.020716
+     3  C    0.042237
+ Electronic spatial extent (au):  <R**2>=            190.4816
+ Charge=              0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              1.5356    Y=             -1.7469    Z=              0.0000  Tot=              2.3259
+ Calling FoFJK, ICntrl=      2127 FMM=F ISym2X=1 I1Cent= 0 IOpClX= 0 NMat=1 NMatS=1 NMatT=0.
+ Error on Z-matrix line number      4:  angle Alpha is outside the valid range of 0 to 180.
+ Error on Z-matrix line number      6:  angle Alpha is outside the valid range of 0 to 180.
+ Conversion from Z-matrix to cartesian coordinates failed:
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  C 
+      2      2  C        1   1.340000(     1)
+      3      3  C        2   1.520000(     2)      1  120.000(     9)
+      4      4  H        1   1.090000(     3)      2 -120.000(    10)      3    0.000(    16)      0
+      5      5  H        1   1.090000(     4)      2  120.000(    11)      3    0.000(    17)      0
+      6      6  H        2   1.090000(     5)      1 -120.000(    12)      3    0.000(    18)      0
+      7      7  H        3   1.090000(     6)      2  109.500(    13)      1    0.000(    19)      0
+      8      8  H        3   1.090000(     7)      2  109.500(    14)      1   54.750(    20)      0
+      9      9  H        3   1.090000(     8)      2  109.500(    15)      1  -54.750(    21)      0
+ ---------------------------------------------------------------------------------------------------
+ Error termination via Lnk1e in /projects/guscus/apps/gau/g09-e1/g09/l716.exe at Tue Nov 22 15:02:15 2016.
+ Job cpu time:       0 days  0 hours  0 minutes  1.3 seconds.
+ File lengths (MBytes):  RWF=     67 Int=      0 D2E=      0 Chk=      2 Scr=      2

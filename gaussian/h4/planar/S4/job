@@ -1,0 +1,9 @@
+#!/bin/bash
+
+declare -i number
+
+numberstring=$(grep -n 'Summary' S4model.log)
+number=$(echo $numberstring | grep -o -E '[0-9]+')
+number=$number+62
+echo '#n,r,scf,mp2,mp3,mp4sd,mp4sdq,mp4sdtq' > fort.12
+head -$number S4model.log | tail -60 > fort.12

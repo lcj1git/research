@@ -1,0 +1,51 @@
+#!/bin/bash
+# run hf stability calculations for the h8singlet
+
+declare -i linenum
+declare -i m=1
+declare -x y=2.772
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+declare -a e
+comfile='h8.com'
+logfile='h8.log'
+chkfile='h8.chk'
+
+echo '%chk='$chkfile > $comfile
+#echo '%nosave' >> $comfile
+echo ' ' >> $comfile
+echo '#t rhf/gen scf(tight,novaracc,noincfock) stable(crhf) guess=read guess=mix geom=nocrowd test' >> $comfile
+echo ' ' >> $comfile
+x=$(bc <<< "scale=6; $rrt3 / $y")
+x2=$(bc <<< "scale=6; 2 * $x")
+y2=$(bc <<< "scale=6; 2 * $y")
+echo 'scf stability calculation for a triangular configuration of 8 H atoms (made up of 8 iscosceles triangles)' >> $comfile
+echo ' ' >> $comfile
+echo '0 '$m >> $comfile
+echo 'H '$x' 0.0 '$y2 >> $comfile
+echo 'H 0.0 0.0 '$y >> $comfile
+echo 'H '$x2' 0.0 '$y >> $comfile
+echo 'H -'$x' 0.0 0.0' >> $comfile
+echo 'H '$x' 0.0 0.0' >> $comfile
+echo 'H -'$x2' 0.0 -'$y >> $comfile
+echo 'H 0.0 0.0 -'$y >> $comfile
+echo 'H -'$x' 0.0 -'$y2 >> $comfile
+echo ' ' >> $comfile
+echo '@H.gbs' >> $comfile
+echo ' ' >> $comfile
+g09 < $comfile >& $logfile
+#grab eigenvals from ouput
+#rrhf
+stabstring=$(grep -E 'Internal RHF' $logfile)
+rrhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+linenum=$linenum+1
+#crhf
+stabstring=$(grep -E 'RRHF.*CRHF' $logfile)
+crhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+#ruhf
+stabstring=$(grep -E 'RRHF.*RUHF' $logfile)
+ruhf=$(echo $stabstring | grep -o -E '\-*[0-9]+\.[0-9]*')
+echo $y $rrhf $crhf $ruhf
+if [[ $stabstring = "" ]]
+then
+	echo 'stabstring is empty'
+fi

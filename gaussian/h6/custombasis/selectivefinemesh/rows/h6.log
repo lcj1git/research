@@ -1,0 +1,492 @@
+ Entering Gaussian System, Link 0=g09
+ AtFile(1): H.gbs
+            H     0
+            S   10   1.00
+               1000.000000000000            0.000068713567
+                316.227766000000            0.000169141320
+                100.000000000000            0.000823394812
+                 31.622776600000            0.003425569236
+                 10.000000000000            0.013951996000
+                  3.162277660000            0.056909313560
+                  1.000000000000            0.198286399900
+                  0.316227766000            0.496922426700
+                  0.100000000000            0.369846276400
+                  0.031622776600            0.003752720039
+            ****
+ Initial command:
+ /projects/guscus/apps/gau/g09-e1/g09/l1.exe "/users/lcj1/gaussian/h6/custombasis/selectivefinemesh/rows/Gau-16460.inp" -scrdir="/users/lcj1/gaussian/h6/custombasis/selectivefinemesh/rows/"
+ Entering Link 1 = /projects/guscus/apps/gau/g09-e1/g09/l1.exe PID=     16461.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2015,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision E.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  ES64L-G09RevE.01 30-Nov-2015
+                20-Jan-2017 
+ ******************************************
+ ----------------------------------------------------------------------
+ # casscf(6,6,nroot=3,fulldiag)/gen scf(tight,novaracc,noincfock) geom=
+ nocrowd test
+ ----------------------------------------------------------------------
+ 1/38=1/1;
+ 2/12=1,17=6,18=5,40=1/2;
+ 3/5=7,16=1,25=1,32=1,116=101/1,2,3;
+ 4/17=6,18=6/1,5;
+ 5/5=100002,17=1000000,28=3,32=2,38=1/10;
+ 6/7=2,8=2,9=2,10=2,28=1/1;
+ 99/5=1,9=1/99;
+ ----------------------------------------------------------------------
+ mbs cascf calculation for a triangular configuration of 6 H atoms (mad
+ e up of 4 iscosceles triangles)
+ ----------------------------------------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ H                     0.        0.        2.995 
+ H                     0.19277   0.        0. 
+ H                    -0.19277   0.        0. 
+ H                     0.        0.       -2.995 
+ H                    -0.38554   0.       -2.995 
+ H                    -0.19277   0.       -5.99 
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.000000    0.000000    2.995000
+      2          1           0        0.192771    0.000000    0.000000
+      3          1           0       -0.192771    0.000000    0.000000
+      4          1           0        0.000000    0.000000   -2.995000
+      5          1           0       -0.385542    0.000000   -2.995000
+      6          1           0       -0.192771    0.000000   -5.990000
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  H    0.000000
+     2  H    3.001197   0.000000
+     3  H    3.001197   0.385542   0.000000
+     4  H    5.990000   3.001197   3.001197   0.000000
+     5  H    6.002395   3.050323   3.001197   0.385542   0.000000
+     6  H    8.987068   6.002395   5.990000   3.001197   3.001197
+                    6
+     6  H    0.000000
+ Stoichiometry    H6
+ Framework group  C2H[SGH(H6)]
+ Deg. of freedom     5
+ Full point group                 C2H     NOp   4
+ Largest Abelian subgroup         C2H     NOp   4
+ Largest concise Abelian subgroup C2      NOp   2
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          1           0        0.384746    4.477032   -0.000000
+      2          1           0        0.384746    1.475835   -0.000000
+      3          1           0        0.000000    1.500599    0.000000
+      4          1           0       -0.000000   -1.500599    0.000000
+      5          1           0       -0.384746   -1.475835   -0.000000
+      6          1           0       -0.384746   -4.477032   -0.000000
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):   3095.0872467     10.1555375     10.1223243
+ General basis read from cards:  (5D, 7F)
+ There are     3 symmetry adapted cartesian basis functions of AG  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of BG  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of AU  symmetry.
+ There are     3 symmetry adapted cartesian basis functions of BU  symmetry.
+ There are     3 symmetry adapted basis functions of AG  symmetry.
+ There are     0 symmetry adapted basis functions of BG  symmetry.
+ There are     0 symmetry adapted basis functions of AU  symmetry.
+ There are     3 symmetry adapted basis functions of BU  symmetry.
+     6 basis functions,    60 primitive gaussians,     6 cartesian basis functions
+     3 alpha electrons        3 beta electrons
+       nuclear repulsion energy         4.5647355040 Hartrees.
+ NAtoms=    6 NActive=    6 NUniq=    3 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Regular integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ The smallest eigenvalue of the overlap matrix is  7.838D-02
+ NBasis=     6 RedAO= F EigKep=  0.00D+00  NBF=     3     0     0     3
+ NBsUse=     6 1.00D-04 EigRej=  0.00D+00 NBFU=     3     0     0     3
+ ExpMin= 3.16D-02 ExpMax= 1.00D+03 ExpMxC= 1.00D+01 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Initial guess orbital symmetries:
+       Occupied  (BU) (AG) (AG)
+       Virtual   (BU) (BU) (AG)
+ The electronic state of the initial guess is 1-AG.
+          Truncation Level=               99999
+          a=  3          b=  0          c=  3
+          a=N/2 - s   b=2s   c=n- (a+b)
+          no. active orbitals (n)  6
+          no. active ELECTRONS (N)=  6
+                                                  IRREPS TO BE RETAINED = 1 2 3 4
+                                                  GROUP IRREP. MULT. TABLE
+                                                      1    2    3    4
+                                                      2    1    4    3
+                                                      3    4    1    2
+                                                      4    3    2    1
+                                                  IRREP. LABELS FOR ORBITALS
+                                                   4 1 1 4 4 1
+          BOTTOM WEIGHT= 12     TOP WEIGHT= 30
+          Configuration         1 Symmetry 1 111000
+          Configuration         2 Symmetry 4 11ab00
+          Configuration         3 Symmetry 1 110100
+          Configuration         4 Symmetry 4 1a1b00
+          Configuration         5 Symmetry 4 11a0b0
+          Configuration         6 Symmetry 1 1ab100
+          Configuration         7 Symmetry 1 110ab0
+          Configuration         8 Symmetry 1 a11b00
+          Configuration         9 Symmetry 4 1a10b0
+          Configuration        10 Symmetry 1 11a00b
+          Configuration        11 Symmetry 1 101100
+          Configuration        12 Symmetry 4 a1b100
+          Configuration        13 Symmetry 1 1abab0
+          Configuration        14 Symmetry 1 110010
+          Configuration        15 Symmetry 4 110a0b
+          Configuration        16 Symmetry 1 a110b0
+          Configuration        17 Symmetry 1 1aabb0
+          Configuration        18 Symmetry 1 1a100b
+          Configuration        19 Symmetry 4 ab1100
+          Configuration        20 Symmetry 1 101ab0
+          Configuration        21 Symmetry 4 a1bab0
+          Configuration        22 Symmetry 1 1ab010
+          Configuration        23 Symmetry 4 1a01b0
+          Configuration        24 Symmetry 4 1aba0b
+          Configuration        25 Symmetry 4 1100ab
+          Configuration        26 Symmetry 4 a1abb0
+          Configuration        27 Symmetry 4 a1100b
+          Configuration        28 Symmetry 4 1aab0b
+          Configuration        29 Symmetry 1 011100
+          Configuration        30 Symmetry 4 ab1ab0
+          Configuration        31 Symmetry 1 101010
+          Configuration        32 Symmetry 4 10a1b0
+          Configuration        33 Symmetry 4 101a0b
+          Configuration        34 Symmetry 4 a1b010
+          Configuration        35 Symmetry 1 a101b0
+          Configuration        36 Symmetry 1 a1ba0b
+          Configuration        37 Symmetry 4 1a0b10
+          Configuration        38 Symmetry 4 1ab0ab
+          Configuration        39 Symmetry 1 1a010b
+          Configuration        40 Symmetry 1 110001
+          Configuration        41 Symmetry 4 aa1bb0
+          Configuration        42 Symmetry 1 a1ab0b
+          Configuration        43 Symmetry 4 1aa0bb
+          Configuration        44 Symmetry 1 011ab0
+          Configuration        45 Symmetry 4 ab1010
+          Configuration        46 Symmetry 1 aba1b0
+          Configuration        47 Symmetry 1 ab1a0b
+          Configuration        48 Symmetry 4 10ab10
+          Configuration        49 Symmetry 4 1010ab
+          Configuration        50 Symmetry 1 10a10b
+          Configuration        51 Symmetry 1 a10b10
+          Configuration        52 Symmetry 1 a1b0ab
+          Configuration        53 Symmetry 1 aab1b0
+          Configuration        54 Symmetry 4 a1010b
+          Configuration        55 Symmetry 1 1a0bab
+          Configuration        56 Symmetry 1 1ab001
+          Configuration        57 Symmetry 1 1a0abb
+          Configuration        58 Symmetry 1 aa1b0b
+          Configuration        59 Symmetry 1 a1a0bb
+          Configuration        60 Symmetry 1 011010
+          Configuration        61 Symmetry 4 01a1b0
+          Configuration        62 Symmetry 4 011a0b
+          Configuration        63 Symmetry 1 abab10
+          Configuration        64 Symmetry 1 ab10ab
+          Configuration        65 Symmetry 1 a011b0
+          Configuration        66 Symmetry 4 aba10b
+          Configuration        67 Symmetry 1 100110
+          Configuration        68 Symmetry 1 10abab
+          Configuration        69 Symmetry 1 101001
+          Configuration        70 Symmetry 1 10aabb
+          Configuration        71 Symmetry 1 aabb10
+          Configuration        72 Symmetry 4 a10bab
+          Configuration        73 Symmetry 4 a1b001
+          Configuration        74 Symmetry 4 aab10b
+          Configuration        75 Symmetry 4 a10abb
+          Configuration        76 Symmetry 4 1a0b01
+          Configuration        77 Symmetry 1 1a001b
+          Configuration        78 Symmetry 1 aa10bb
+          Configuration        79 Symmetry 4 01ab10
+          Configuration        80 Symmetry 4 0110ab
+          Configuration        81 Symmetry 4 0a11b0
+          Configuration        82 Symmetry 1 01a10b
+          Configuration        83 Symmetry 4 ab0110
+          Configuration        84 Symmetry 1 a01b10
+          Configuration        85 Symmetry 4 ababab
+          Configuration        86 Symmetry 4 ab1001
+          Configuration        87 Symmetry 4 a0110b
+          Configuration        88 Symmetry 4 abaabb
+          Configuration        89 Symmetry 4 1001ab
+          Configuration        90 Symmetry 4 10ab01
+          Configuration        91 Symmetry 1 10a01b
+          Configuration        92 Symmetry 4 aabbab
+          Configuration        93 Symmetry 1 a10b01
+          Configuration        94 Symmetry 4 a1001b
+          Configuration        95 Symmetry 4 aababb
+          Configuration        96 Symmetry 4 1a00b1
+          Configuration        97 Symmetry 4 aaabbb
+          Configuration        98 Symmetry 1 010110
+          Configuration        99 Symmetry 4 0a1b10
+          Configuration       100 Symmetry 1 01abab
+          Configuration       101 Symmetry 1 011001
+          Configuration       102 Symmetry 1 0a110b
+          Configuration       103 Symmetry 1 01aabb
+          Configuration       104 Symmetry 4 a0b110
+          Configuration       105 Symmetry 1 ab01ab
+          Configuration       106 Symmetry 4 a01bab
+          Configuration       107 Symmetry 1 abab01
+          Configuration       108 Symmetry 4 aba01b
+          Configuration       109 Symmetry 4 a01abb
+          Configuration       110 Symmetry 1 100101
+          Configuration       111 Symmetry 4 100a1b
+          Configuration       112 Symmetry 4 10a0b1
+          Configuration       113 Symmetry 1 aabb01
+          Configuration       114 Symmetry 4 aab01b
+          Configuration       115 Symmetry 1 a100b1
+          Configuration       116 Symmetry 1 aa01bb
+          Configuration       117 Symmetry 1 0ab110
+          Configuration       118 Symmetry 4 0101ab
+          Configuration       119 Symmetry 1 0a1bab
+          Configuration       120 Symmetry 4 01ab01
+          Configuration       121 Symmetry 1 01a01b
+          Configuration       122 Symmetry 1 0a1abb
+          Configuration       123 Symmetry 1 a0b1ab
+          Configuration       124 Symmetry 4 ab0101
+          Configuration       125 Symmetry 1 ab0a1b
+          Configuration       126 Symmetry 1 a01b01
+          Configuration       127 Symmetry 4 a0101b
+          Configuration       128 Symmetry 1 aba0b1
+          Configuration       129 Symmetry 1 a0a1bb
+          Configuration       130 Symmetry 1 100ab1
+          Configuration       131 Symmetry 1 aab0b1
+          Configuration       132 Symmetry 1 aa0b1b
+          Configuration       133 Symmetry 1 001110
+          Configuration       134 Symmetry 4 0ab1ab
+          Configuration       135 Symmetry 1 010101
+          Configuration       136 Symmetry 4 010a1b
+          Configuration       137 Symmetry 4 0a1b01
+          Configuration       138 Symmetry 1 0a101b
+          Configuration       139 Symmetry 4 01a0b1
+          Configuration       140 Symmetry 4 0aa1bb
+          Configuration       141 Symmetry 4 a0b101
+          Configuration       142 Symmetry 1 a0ba1b
+          Configuration       143 Symmetry 4 ab0ab1
+          Configuration       144 Symmetry 1 a010b1
+          Configuration       145 Symmetry 1 a0ab1b
+          Configuration       146 Symmetry 1 100011
+          Configuration       147 Symmetry 4 aa0bb1
+          Configuration       148 Symmetry 4 0011ab
+          Configuration       149 Symmetry 1 0ab101
+          Configuration       150 Symmetry 4 0aba1b
+          Configuration       151 Symmetry 1 010ab1
+          Configuration       152 Symmetry 4 0a10b1
+          Configuration       153 Symmetry 4 0aab1b
+          Configuration       154 Symmetry 4 a0bab1
+          Configuration       155 Symmetry 4 a0011b
+          Configuration       156 Symmetry 4 ab0011
+          Configuration       157 Symmetry 4 a0abb1
+          Configuration       158 Symmetry 1 001101
+          Configuration       159 Symmetry 4 001a1b
+          Configuration       160 Symmetry 1 0abab1
+          Configuration       161 Symmetry 1 0a011b
+          Configuration       162 Symmetry 1 010011
+          Configuration       163 Symmetry 1 0aabb1
+          Configuration       164 Symmetry 4 a0b011
+          Configuration       165 Symmetry 1 a001b1
+          Configuration       166 Symmetry 1 001ab1
+          Configuration       167 Symmetry 1 00a11b
+          Configuration       168 Symmetry 1 0ab011
+          Configuration       169 Symmetry 4 0a01b1
+          Configuration       170 Symmetry 1 a00b11
+          Configuration       171 Symmetry 1 001011
+          Configuration       172 Symmetry 4 00a1b1
+          Configuration       173 Symmetry 4 0a0b11
+          Configuration       174 Symmetry 4 00ab11
+          Configuration       175 Symmetry 1 000111
+          NO OF BASIS FUNCTIONS =       175 NO TO BE DELETED =    0
+ CI Matrix Elements calculated here
+          NO. OF CONFIGURATIONS IN REFERENCE SPACE =    1
+                                   SECONDARY SPACE =  175
+                                   TERTIARY SPACE =  175
+          NO. OF ORBITALS =    6
+          NO. OF ELECTRONS =    6
+          NO. OF WEIGHTS =   19
+          REFERENCE STATE CONFIGURATIONS ARE:     0
+          NO. OF CORE ORBITALS =    0
+          OPTION:  NON-DIAGONAL HOLE LINE INTERACTIONS INCLUDED
+ Len28=       94025 LenMCI=       51962.
+ Enter MCSCF program.
+ NO. OF ORBITALS =  6     NO. OF CORE-ORBITALS =  0
+ NO. OF VALENCE-ORBITALS =  6      NO. OF VIRTUAL-ORBITALS =  0
+ USED ACCURACY IN CHECKING CONVERGENCE =  1.00D-08
+  Memory needed for Incore Integrals:                  262375
+  Integrals KEPT IN MEMORY
+ IBUJAK length=                     924
+ Integral file not found: evaluate integrals 
+ FoFCou: FMM=F IPFlag=           0 FMFlag=           0 FMFlg1=           0
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=     600 IOpCl=  0 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Defining IBUGAM
+ 2ND ORD PT ENERGY     CV    0.000000   CU    0.000000   UV    0.000000
+ TOTAL                      -1.942022
+ ITN=  1 MaxIt= 64 E=     -1.9420221308 DE=-1.94D+00 Acc= 1.00D-08 Lan=  0
+ ITN=  2 MaxIt= 64 E=     -1.9420221308 DE=-1.51D-14 Acc= 1.00D-08 Lan=  0
+ ... Do an extra-iteration for final printing.
+ Final one electron symbolic density matrix:
+                1             2             3             4             5 
+      1  0.199222D+01
+      2 -0.175681D-11  0.199258D+01
+      3 -0.187841D-10  0.125953D-12  0.999770D+00
+      4 -0.299404D-14 -0.159619D-10  0.374790D-07  0.100021D+01
+      5 -0.535362D-15  0.655373D-11  0.152411D-12 -0.136886D-13  0.768827D-02
+      6  0.337706D-10 -0.409399D-14 -0.836727D-13  0.299520D-12 -0.218198D-11
+                6 
+      6  0.753650D-02
+ MCSCF converged.
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (BU) (AG) (AG)
+       Virtual   (BU) (BU) (AG)
+ The electronic state is 1-AG.
+ Alpha  occ. eigenvalues --    0.00000   0.00000   0.00000
+ Alpha virt. eigenvalues --    0.00000   0.00000   0.00000
+          Condensed to atoms (all electrons):
+               1          2          3          4          5          6
+     1  H    1.003747  -0.001882  -0.001881   0.000000   0.000001  -0.000000
+     2  H   -0.001882   0.568880   0.436386  -0.001956  -0.001579   0.000001
+     3  H   -0.001881   0.436386   0.569666  -0.002049  -0.001956   0.000000
+     4  H    0.000000  -0.001956  -0.002049   0.569666   0.436386  -0.001881
+     5  H    0.000001  -0.001579  -0.001956   0.436386   0.568880  -0.001882
+     6  H   -0.000000   0.000001   0.000000  -0.001881  -0.001882   1.003747
+ Mulliken charges:
+               1
+     1  H    0.000015
+     2  H    0.000151
+     3  H   -0.000166
+     4  H   -0.000166
+     5  H    0.000151
+     6  H    0.000015
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+ Electronic spatial extent (au):  <R**2>=            195.0666
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.0000    Y=             -0.0000    Z=             -0.0000  Tot=              0.0000
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -7.8904   YY=             -8.3976   ZZ=             -8.1347
+   XY=             -0.0395   XZ=              0.0000   YZ=              0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              0.2505   YY=             -0.2567   ZZ=              0.0062
+   XY=             -0.0395   XZ=              0.0000   YZ=              0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=             -0.0000  YYY=             -0.0000  ZZZ=              0.0000  XYY=             -0.0000
+  XXY=             -0.0000  XXZ=              0.0000  XZZ=             -0.0000  YZZ=             -0.0000
+  YYZ=              0.0000  XYZ=             -0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=            -14.5435 YYYY=           -414.5872 ZZZZ=            -10.2537 XXXY=            -18.3832
+ XXXZ=              0.0000 YYYX=            -19.3222 YYYZ=              0.0000 ZZZX=              0.0000
+ ZZZY=              0.0000 XXYY=            -69.7674 XXZZ=             -4.1437 YYZZ=            -69.5194
+ XXYZ=              0.0000 YYXZ=              0.0000 ZZXY=             -6.1961
+ N-N= 4.564735504045D+00 E-N=-1.292825552685D+01  KE= 2.855968198187D+00
+
+ Test job not archived.
+ 1\1\GINC-SULU\SP\CASSCF\Gen\H6\LCJ1\20-Jan-2017\0\\# casscf(6,6,nroot=
+ 3,fulldiag)/gen scf(tight,novaracc,noincfock) geom=nocrowd test\\mbs c
+ ascf calculation for a triangular configuration of 6 H atoms (made up 
+ of 4 iscosceles triangles)\\0,1\H,0,0.,0.,2.995\H,0,0.192771,0.,0.\H,0
+ ,-0.192771,0.,0.\H,0,0.,0.,-2.995\H,0,-0.385542,0.,-2.995\H,0,-0.19277
+ 1,0.,-5.99\\Version=ES64L-G09RevE.01\State=1-AG\HF=-1.9420221\RMSD=0.0
+ 00e+00\Dipole=0.,0.,-0.0000003\Quadrupole=0.1884508,0.0046221,-0.19307
+ 29,0.,-0.0049505,0.\PG=C02H [SGH(H6)]\\@
+
+
+ HE THAT WALD REACHE THE SWEITE ROSE
+ SULD NOW AND THEN BE SCRATCHED WT THE SCHARPE BREERES.
+ -- PROVERBS AND REASONS OF THE YEAR 1585
+           AS REPRINTED IN PAISLEY MAGAZINE 1828.
+ Job cpu time:       0 days  0 hours  0 minutes  2.6 seconds.
+ File lengths (MBytes):  RWF=     82 Int=      0 D2E=      0 Chk=      2 Scr=      2
+ Normal termination of Gaussian 09 at Fri Jan 20 19:01:31 2017.

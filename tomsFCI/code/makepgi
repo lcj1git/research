@@ -1,0 +1,7 @@
+#!/bin/csh
+
+pgfortran -c Precision.f90 Constants.f90 HamiltonianData.f90 IO.f90
+pgfortran -O4 -Mvect -Mprefetch -Mconcur=allcores -Mcache_align -fast -fastsse -o xCode Precision.o Constants.o HamiltonianData.o IO.o ObaraSaika.f90 DoIntegrals.f90 DIIS.f90 UHF.f90 UHFWrap.f90 IntTrans.f90 IndexCI.f90 Hamiltonian.f90 CI.f90 Wrappers.f90 AllCase.f90 Functions.f90 CITools.f90 Main.f90 -L . -l AllLinAlgPGI
+
+rm *.o *.mod *.f
+

@@ -1,0 +1,69 @@
+#!/bin/bash
+#run casscf(10,10) E calculations for 10 H atoms in a triangualr lattice, stretching heigh while compressing width of triangles
+
+declare -i linenum
+declare -i n=1
+declare -i m=1
+declare -x yi=0.83
+declare -x yf=2.5
+declare -x y=$yi
+declare -x step=0.01
+declare -x tinystep=0.005
+declare -i keepgoing=1
+declare -x dist
+declare -i gt0
+declare -i usefinemesh
+declare -a sigpts=( 4.0 )
+declare -x rrt3=0.5773503 #RECIPROCAL of the square root of 3
+declare -a e
+declare -a chkfiles
+
+prgrmotp='Output'
+otp='h12singlet_2rows'
+trck='trackjob'
+
+#echo 'h12 in two rows' > $trck
+#echo '# h12 energies for multiplicity = ' $m > $otp
+#echo '# y', 'E(n=1)', 'E(n=2)', 'E(n=3), E(n=4), E(n=5)' >> $otp
+#while loop for desired values of y
+while [ $keepgoing -eq 1 ]; do
+	echo 'y ='$y >> $trck
+#while loop for desired number of states
+#create input file
+	echo $y > tmp
+	./writeinp < tmp 
+	rm tmp
+#run xcode
+	./xCode >> $trck
+#grab e from output                       
+        estring=$(grep 'FCI Energy of state' $prgrmotp)
+        estring=$(echo $estring | grep -o -E '\-*[0-9]+\.[0-9]{5}[0-9]*\s*')
+#write e's to $otp
+	echo $y $estring >> $otp
+#check if y is near a significant value, and if so use $tinystep
+#if not, use $step
+	usefinemesh=0
+	for p in "${sigpts[@]}"
+	do
+# take abs val of the distance between y and p
+		dist=$(echo $y - $p | bc)
+		gt0=$(echo "$dist > 0.0" | bc -l)
+		if [ $gt0 -eq 0 ] # if dist < 0, multiply by -1
+		then
+			dist=$(bc <<< "scale=6; -1 *  $dist ")
+		fi
+		if [ $usefinemesh -eq 0 ] #only reset usefinemesh if it is 0/false. if true do not modify. 
+		then
+ 			usefinemesh=$(echo "0.1 > $dist" | bc -l) #usefinemesh is 1/true if .1 > dist
+		fi
+	done
+	if [ $usefinemesh -eq 1 ]
+	then
+		y=$(echo $y + $tinystep | bc)
+	else
+		y=$(echo $y + $step | bc)
+	fi
+#check if y has surpassed the max. if so keepgoing = 0, is not keepgoing = 1.
+	keepgoing=$(echo "$yf > $y" | bc -l)
+#end of y loop
+done
